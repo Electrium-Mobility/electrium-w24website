@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[4639],{7468:e=>{e.exports=JSON.parse('{"label":"hello","permalink":"/electrium-w24website/blog/tags/hello","allTagsPath":"/electrium-w24website/blog/tags","count":2,"unlisted":false}')}}]);
