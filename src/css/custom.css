@@ -3,6 +3,25 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
+ @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,500,600,700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500&display=swap');
+
+ @font-face {
+  font-family: 'Nunito-Regular';
+  src: url('../../static/fonts/Nunito/static/Nunito-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lexend-Bold';
+  src: url('../../static/fonts/Lexend/static/Lexend-Regular.ttf') format('truetype');
+}
+
+/* :root {
+  --ifm-color-primary: #2e32ae;
+  --ifm-font-family-base: 'Poppins-Regular';
+  --ifm-heading-font-family: 'Poppins-Bold';
+  --ifm-font-family-monospace: 'Poppins-Regular';
+} */
 
 /* You can override the default Infima variables here. */
 :root {
@@ -15,6 +34,10 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-font-family-base: 'Nunito';
+  --ifm-heading-font-family: 'Lexend';
+  
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -28,3 +51,5 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
