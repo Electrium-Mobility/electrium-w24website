@@ -71,22 +71,29 @@ const config: Config = {
   ],
 
   themeConfig: {
+    colorMode: {
+      // Customize the colors for light and dark modes
+      respectPrefersColorScheme: false,
+    },
+
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: '',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo-light-mode.png',
+        src: 'img/logo-light-mode.png', // Light mode logo source
+        srcDark: 'img/logo-dark-mode.png',
       },
       items: [
+        {to: '/about', label: 'About', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Projects',
         },
-        {to: '/about', label: 'About', position: 'left'},
+        {to: '/contact', label: 'Contact', position: 'left'},
         // UNCOMMENT TO SHOW BLOG
         // {to: '/blog', label: 'Blog', position: 'left'},
         {

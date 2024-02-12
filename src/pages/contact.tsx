@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaEnvelope, FaDiscord, FaInstagram } from 'react-icons/fa';
 import Link from "@docusaurus/Link";
 import clsx from "clsx";
+import Layout from '@theme/Layout';
 import styles from "@site/src/pages/index.module.css";
 import Heading from "@theme/Heading";
 import SquaredButton from '../components/UI Components/SquaredButton';
@@ -17,21 +18,23 @@ function ContactPageHeader() {
     };
 
     return (
-        <header className={clsx('hero hero--primary', styles.heroBanner)}>
-            <div className="container">
-                <Heading as="h1" className="hero__title">
-                    Contact Us
-                </Heading>
-                <p className="hero__subtitle">Have any questions? <br/>
-                    Interested in learning more about Electrium? <br/>
-                    Let's chat!</p>
-                    <div style={flexContainerStyle}>
-                        <SquaredButton to="mailto:your-email@example.com" icon={FaEnvelope} />
-                        <SquaredButton to="https://www.discord.com" icon={FaDiscord} />
-                        <SquaredButton to="https://www.instagram.com/yourusername" icon={FaInstagram} />
-                    </div>
-            </div>
-        </header>
+        <Layout>
+            <header className={clsx('hero hero--primary', styles.heroBanner)}>
+                <div className="container">
+                    <Heading as="h1" className="hero__title">
+                        Contact Us
+                    </Heading>
+                    <p className="hero__subtitle">Have any questions? <br/>
+                        Interested in learning more about Electrium? <br/>
+                        Let's chat!</p>
+                        <div style={flexContainerStyle}>
+                            <SquaredButton to="mailto:your-email@example.com" icon={FaEnvelope} />
+                            <SquaredButton to="https://www.discord.com" icon={FaDiscord} />
+                            <SquaredButton to="https://www.instagram.com/yourusername" icon={FaInstagram} />
+                        </div>
+                </div>
+            </header>
+        </Layout>
     );
 }
 export default ContactPageHeader;
