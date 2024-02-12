@@ -15,12 +15,12 @@
 
  @font-face {
   font-family: 'Nunito';
-  src: url('../../static/fonts/Nunito/static/Nunito-Regular.ttf') format('truetype');
+  src: url('../../static/fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Lexend';
-  src: url('../../static/fonts/Lexend/static/Lexend-Regular.ttf') format('truetype');
+  src: url('../../static/fonts/Lexend/Lexend-VariableFont_wght.ttf') format('truetype');
 } 
 
 /* :root {
@@ -44,7 +44,7 @@
 
   --ifm-font-family-base: 'Nunito';
   --ifm-heading-font-family: 'Lexend';
-  
+  --ifm-font-family-monospace: 'Nunito';
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -57,6 +57,47 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  /* For dark mode
+  .navbar__brand img {
+    content: url(../img/logo-dark-mode.png);
+  } */
 }
 
 
+
+/* [data-theme='light'] .navbar__brand img {
+  content: url(../img/logo-light-mode.png);
+} */
+
+@media screen and (max-width: 996px) {
+  :root {
+    --ifm-font-size-base: 18px;
+  }
+  article header h1 {
+    font-size: 1.5rem !important;
+  }
+  .hero .hero__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 997px) {
+  :root {
+    --ifm-font-size-base: 17px;
+  }
+  article header h1 {
+    font-size: 2rem !important;
+  }
+}
+
+.navbar {
+  img{
+    max-height: 1.5rem;
+    padding-top: 0.25rem;
+    padding-left: 1rem;
+  }
+  font-weight: bolder;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+}
