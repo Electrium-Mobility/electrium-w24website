@@ -9,31 +9,77 @@ import SquaredButton from '../components/UI Components/SquaredButton';
 
 function ContactPageHeader() {
 
-    // Flex container style
-    const flexContainerStyle = {
-        display: 'flex',
-        justifyContent: 'space-around', // Distribute space evenly around items
-        flexWrap: 'wrap', // Allow wrapping for smaller screens
-        maxWidth: '100%', // Limit max width to the parent container
-    };
-
     return (
         <Layout>
-            <header className={clsx('hero hero--primary', styles.heroBanner)}>
+            <section className="relative md:py-24 py-16">
+
+
+
                 <div className="container">
-                    <Heading as="h1" className="hero__title">
-                        Contact Us
-                    </Heading>
-                    <p className="hero__subtitle">Have any questions? <br/>
-                        Interested in learning more about Electrium? <br/>
-                        Let's chat!</p>
-                        <div style={flexContainerStyle}>
-                            <SquaredButton to="mailto:your-email@example.com" icon={FaEnvelope} />
-                            <SquaredButton to="https://www.discord.com" icon={FaDiscord} />
-                            <SquaredButton to="https://www.instagram.com/yourusername" icon={FaInstagram} />
+                    <div className="grid grid-cols-1 pt-16 pb-8 text-center">
+                        <h3 className="pt-12 mb-4 md:leading-normal text-4xl leading-normal font-semibold">Contact Us</h3>
+
+                        <p className="mt-4 text-slate-400 max-w-xl mx-auto"> Have any questions?</p>
+                        <p className="mt-1 text-slate-400 max-w-xl mx-auto">Interested in learning
+                            more about Electrium?</p>
+                        <p className="mt-1 text-slate-400 max-w-xl mx-auto"> Let's chat! </p>
+                    </div>
+
+
+                    <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[30px]">
+                        <div className="text-center px-6 mt-6">
+                            <div
+                                className="w-20 h-20 bg-green-600/5 text-green-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
+                                <FaEnvelope />
+                            </div>
+
+                            <div className="content mt-7">
+                                <h5 className="title h5 text-xl font-medium">Email</h5>
+
+                                <div className="mt-5">
+                                    <a href="mailto:electriummobility@gmail.com"
+                                       className="btn btn-link text-green-600 hover:text-green-600 after:bg-green-600 duration-500 ease-in-out">electriummobility@gmail.com</a>
+                                </div>
+                            </div>
                         </div>
+
+                        <div className="text-center px-6 mt-6">
+                            <div
+                                className="w-20 h-20 bg-green-600/5 text-green-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
+                                <FaDiscord />
+                            </div>
+
+                            <div className="content mt-7">
+                                <h5 className="title h5 text-xl font-medium">Discord</h5>
+
+                                <div className="mt-5">
+                                    <a href="https://discord.gg/jggFVza4XR" target="_blank"
+                                       className="btn btn-link text-green-600 hover:text-green-600 after:bg-green-600 duration-500 ease-in-out">Join
+                                        our discord server</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="text-center px-6 mt-6">
+                            <div
+                                className="w-20 h-20 bg-green-600/5 text-green-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
+                                <FaInstagram />
+                            </div>
+
+                            <div className="content mt-7">
+                                <h5 className="title h5 text-xl font-medium">Instagram</h5>
+
+                                <div className="mt-5">
+                                    <a href="https://www.instagram.com/electriummobility/" target="_blank"
+                                       className="btn btn-link text-green-600 hover:text-green-600 after:bg-green-600 duration-500 ease-in-out">Message
+                                        us on instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </header>
+
+            </section>
         </Layout>
     );
 }
