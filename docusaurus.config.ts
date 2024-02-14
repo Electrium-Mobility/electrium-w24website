@@ -94,6 +94,7 @@ const config: Config = {
           label: 'Projects',
         },
         {to: '/contact', label: 'Contact', position: 'left'},
+        {to: '/team', label: 'Team', position: 'left'},
         // UNCOMMENT TO SHOW BLOG
         // {to: '/blog', label: 'Blog', position: 'left'},
         {
