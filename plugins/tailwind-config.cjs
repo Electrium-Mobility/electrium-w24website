@@ -4,8 +4,8 @@ function tailwindPlugin(context, options) {
       configurePostCss(postcssOptions) {
         postcssOptions.plugins = [
           require('postcss-import'),
-          require('tailwindcss'),
           require('tailwindcss/nesting'),
+          require('tailwindcss'),
           require('autoprefixer'),
         ];
         return postcssOptions;
