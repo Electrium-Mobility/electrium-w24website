@@ -22,9 +22,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Inter"', ...fontFamily.sans],
-        jakarta: ['"Plus Jakarta Sans"', ...fontFamily.sans],
-        mono: ['"Fira Code"', ...fontFamily.mono],
+        'nunito': ['Nunito', 'sans-serif'],
       },
       borderRadius: {
         sm: "4px",

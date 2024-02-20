@@ -77,7 +77,7 @@ const config: Config = {
     },
 
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    //image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: '',
       logo: {
@@ -87,14 +87,14 @@ const config: Config = {
       },
       items: [
         {to: '/about', label: 'About', position: 'left'},
+        {to: '/team', label: 'Team', position: 'left'},
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'projectSidebar',
           position: 'left',
           label: 'Projects',
         },
         {to: '/contact', label: 'Contact', position: 'left'},
-        {to: '/team', label: 'Team', position: 'left'},
         // UNCOMMENT TO SHOW BLOG
         // {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -138,7 +138,7 @@ const config: Config = {
           items: [
             {
               label: 'Blog',
-              to: '/blog',
+              to: '/about',
             },
             {
               label: 'GitHub',
