@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import tailwindPlugin from "./plugins/tailwind-config.cjs"; // add this
 
 const config: Config = {
-  title: 'My Site',
+  title: 'Electrium Mobility',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.png',
 
@@ -50,7 +50,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Electrium-Mobility/electrium-w24website/tree/main/',
         },
         blog: false,
 
@@ -60,11 +60,10 @@ const config: Config = {
         //   // Please change this to your repo.
         //   // Remove this to remove the "edit this page" links.
         //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        //     'https://github.com/Electrium-Mobility/electrium-w24website/tree/main/',
         // },
         theme: {
           customCss: './src/css/custom.css',
-          // customCss: [require.resolve("./src/css/custom.css"), require.resolve("./src/css/tailwind.css")],
         },
       } satisfies Preset.Options,
     ],
