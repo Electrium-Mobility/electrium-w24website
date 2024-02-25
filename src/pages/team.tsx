@@ -26,7 +26,7 @@ function Team() {
                             </div>
   
                           <div className="content">
-                              <p className="title h5 text-lg font-medium text-emerald-600 mb-1">Sherwin Ciu</p>
+                              <p className="title h5 text-lg font-medium text-emerald-600 mb-1">Sherwin Chiu</p>
                               <p className="text-slate-400">Electrium Lead</p>
                           </div>
                       </div>  
