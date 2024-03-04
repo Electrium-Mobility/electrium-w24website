@@ -10,6 +10,7 @@ import React from "react";
 import BikeLogo from '@site/static/img/bike-graphic-2.svg';
 
 import ContactPageHeader from "@site/src/pages/contact";
+import HomePageIntro from "@site/src/components/UI Components/HomePageIntro";
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
     return (
@@ -38,7 +39,8 @@ function HomepageHeader() {
 
 
                         <div className="md:col-span-5">
-                            <BikeLogo />
+                            <BikeLogo className="w-fit h-96 sm:w-fit sm:h-48 md:w-fit md:h-96" />
+
                         </div>
 
                     </div>
@@ -52,6 +54,8 @@ function HomepageHeader() {
 }
 
 
+
+
 export default function Home(): JSX.Element {
     const {siteConfig} = useDocusaurusContext();
     return (
@@ -59,7 +63,7 @@ export default function Home(): JSX.Element {
             description="Description will go into a meta tag in <head />">
             <HomepageHeader />
             <main>
-
+                <HomePageIntro />
             </main>
         </Layout>
     );
