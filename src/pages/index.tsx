@@ -13,7 +13,7 @@ import ContactPageHeader from "@site/src/pages/contact";
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
     return (
-        <Layout>
+
             <section className="relative table w-full py-36 lg:py-44">
                 <div className="container">
                     <div className="grid md:grid-cols-12 grid-cols-1 items-center mt-10 gap-[30px]">
@@ -47,7 +47,7 @@ function HomepageHeader() {
 
             </section>
 
-        </Layout>
+
     );
 }
 
@@ -59,7 +59,7 @@ export default function Home(): JSX.Element {
             description="Description will go into a meta tag in <head />">
             <HomepageHeader />
             <main>
-                <HomepageFeatures />
+
             </main>
         </Layout>
     );
