@@ -11,6 +11,7 @@ import BikeLogo from '@site/static/img/bike-graphic-2.svg';
 
 import ContactPageHeader from "@site/src/pages/contact";
 import HomePageIntro from "@site/src/components/UI Components/HomePageIntro";
+import GetInvolved from "@site/src/components/UI Components/GetInvolved";
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
     return (
@@ -27,12 +28,12 @@ function HomepageHeader() {
                                     transportation in the form of Personal Electric Vehicles.</p>
 
                                 <div className="mt-6">
-                                    <a href="join-our-team.html"
+                                    <Link to="/team"
                                        className="btn bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md ltr:mr-2 rtl:ml-2 mt-2 p-4"> Join
-                                        Our Team </a>
-                                    <a href="sponsors.html"
+                                        Our Team </Link>
+                                    <Link to="/sponsor"
                                        className="btn bg-transparent hover:bg-green-600 border-green-600 text-green-600 hover:text-white rounded-md p-4"> Become
-                                        A Sponsor</a>
+                                        A Sponsor</Link>
                                 </div>
                             </div>
                         </div>
@@ -64,6 +65,7 @@ export default function Home(): JSX.Element {
             <HomepageHeader />
             <main>
                 <HomePageIntro />
+                <GetInvolved />
             </main>
         </Layout>
     );
