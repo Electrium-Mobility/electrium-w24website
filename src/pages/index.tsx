@@ -31,7 +31,7 @@ function HomepageHeader() {
                                     <Link to="/team"
                                        className="btn bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md ltr:mr-2 rtl:ml-2 mt-2 p-4"> Join
                                         Our Team </Link>
-                                    <Link to="/sponsor"
+                                    <Link to="/team"
                                        className="btn bg-transparent hover:bg-green-600 border-green-600 text-green-600 hover:text-white rounded-md p-4"> Become
                                         A Sponsor</Link>
                                 </div>
