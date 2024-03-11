@@ -16,7 +16,7 @@ const config: Config = {
   
   // ...
   url: 'https://electriummobility.github.io', // Your website URL
-  baseUrl: '/electrium-w24website',
+  baseUrl: '/',
   projectName: 'electrium-w24website',
   organizationName: 'electrium-mobility',
   trailingSlash: false,
@@ -80,7 +80,7 @@ const config: Config = {
     navbar: {
       title: '',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Electrium Mobility Logo',
         src: 'img/logo-light-mode.png', // Light mode logo source
         srcDark: 'img/logo-dark-mode.png',
       },
@@ -97,8 +97,8 @@ const config: Config = {
         // UNCOMMENT TO SHOW BLOG
         // {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://imodules.uwaterloo.ca/s/1802/21/form.aspx?sid=1802&gid=2&pgid=1266&cid=3030&bledit=1&dids=296',
+          label: 'Donate',
           position: 'right',
         },
       ],

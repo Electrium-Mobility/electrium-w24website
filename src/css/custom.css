@@ -49,7 +49,7 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary: rgb(34 197 94);
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
@@ -96,8 +96,12 @@
     max-height: 1.5rem;
     padding-top: 0.25rem;
     padding-left: 1rem;
+    padding-right: 2rem;
   }
   font-weight: bolder;
   font-size: 1rem;
   padding: 1rem 1rem;
+}
+.navbar__item {
+  margin-right: 20px; /* Adjust the spacing between navbar items */
 }
