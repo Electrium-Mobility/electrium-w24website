@@ -28,6 +28,9 @@ jobs:
       - name: Build site
         run: npm run build
 
+      - name: add CNAME
+        run: echo electriummobility.com > CNAME
+        
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3 # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
         with:
