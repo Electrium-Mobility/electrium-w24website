@@ -16,7 +16,7 @@ const config: Config = {
   
   // ...
   url: 'https://electriummobility.github.io', // Your website URL
-  baseUrl: '/electrium-w24website/',
+  baseUrl: '/',
   projectName: 'electrium-w24website',
   organizationName: 'electrium-mobility',
   trailingSlash: false,
