@@ -28,10 +28,10 @@ function HomepageHeader() {
                                     transportation in the form of Personal Electric Vehicles.</p>
 
                                 <div className="mt-6">
-                                    <Link to="/team"
-                                       className="btn bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md ltr:mr-2 rtl:ml-2 mt-2 p-4"> Join
+                                    <Link to="/join-our-team"
+                                       className="btn bg-green-600 hover:bg-transparent border-green-600 hover:border-green-600 text-white rounded-md ltr:mr-2 rtl:ml-2 mt-2 p-4"> Join
                                         Our Team </Link>
-                                    <Link to="/team"
+                                    <Link to="/sponsors"
                                        className="btn bg-transparent hover:bg-green-600 border-green-600 text-green-600 hover:text-white rounded-md p-4"> Become
                                         A Sponsor</Link>
                                 </div>
