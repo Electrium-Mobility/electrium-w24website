@@ -14,13 +14,13 @@ const GetInvolved =() => {
                     <div className="rounded-md bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 p-6">
                         <h5 className="text-2xl font-semibold mb-4">Join Our Team</h5>
                         <p className="text-slate-400 mb-4">Join us and unleash your creativity and passion for sustainable transportation. As a member, you'll have the opportunity to gain hands-on experience in design and engineering.</p>
-                        <Link to="/team" className="btn btn-link hover:text-green-600 after:bg-green-600 duration-500 ease-in-out">Learn How<i className="uil uil-arrow-right align-middle"></i></Link>
+                        <Link to="/join-our-team" className="btn btn-link hover:text-green-600 after:bg-green-600 duration-500 ease-in-out">Learn How<i className="uil uil-arrow-right align-middle"></i></Link>
                     </div>
 
                     <div className="rounded-md bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 p-6">
                         <h5 className="text-2xl font-semibold mb-4">Become A Sponsor</h5>
                         <p className="text-slate-400 mb-4">Become a valued sponsor support our mission of advancing affordable and sustainable transportation solutions</p>
-                        <Link to="/team" className="btn btn-link hover:text-green-600 after:bg-green-600 duration-500 ease-in-out">Learn How<i className="uil uil-arrow-right align-middle"></i></Link>
+                        <Link to="/sponsors" className="btn btn-link hover:text-green-600 after:bg-green-600 duration-500 ease-in-out">Learn How<i className="uil uil-arrow-right align-middle"></i></Link>
                     </div>
 
                     <br/>
