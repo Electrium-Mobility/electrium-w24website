@@ -16,6 +16,7 @@ import panago from "/static/img/sponsors/panago_logo.png";
 import panagoDark from "/static/img/sponsors/panago_logo_light.png";
 import imprint from "/static/img/sponsors/4imprint-logo-light.jpg";
 import imprintDark from "/static/img/sponsors/4imprint-logo.png";
+import enova from "/static/img/sponsors/Enova_Logo.jpg";
 
 import domino from "/static/img/sponsors/dominos_logo.png";
 import wcfu from "/static/img/sponsors/WFCU_logo.png";
@@ -52,6 +53,10 @@ export default function Sponsors() {
       {
         imgUrl: imprint,
         darkImg: imprintDark,
+      },
+      {
+        imgUrl: enova,
+        darkImg: enova,
       },
     ],
     silver: [
