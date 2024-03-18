@@ -93,6 +93,7 @@ const config: Config = {
           position: 'left',
           label: 'Projects',
         },
+        {to: '/sponsors', label: 'Sponsors', position: 'left'},
         {to: '/contact', label: 'Contact', position: 'left'},
         // UNCOMMENT TO SHOW BLOG
         // {to: '/blog', label: 'Blog', position: 'left'},
