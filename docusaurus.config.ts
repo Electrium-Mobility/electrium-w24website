@@ -108,11 +108,49 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Pages',
           items: [
             {
-              label: 'Tutorial',
+              label: 'About',
+              to: '/about',
+            },
+            {
+              label: 'Team',
+              to: '/team',
+            },
+            {
+              label: ' Contact',
+              to: '/contact',
+            }
+          ],
+        },
+        {
+          title: 'Recent Projects',
+          items: [
+            {
+              label: 'Electric Bike',
               to: '/docs/W2024-projects/project1_2023',
+            },
+            {
+              label: 'Electric Skateboard',
+              to: '/docs/W2024-projects/project2_2023',
+            },
+            {
+              label: 'OneWheel',
+              to: '/docs/W2024-projects/project3_2023',
+            },
+          ],
+        },
+        {
+          title: 'Get Involved',
+          items: [
+            {
+              label: 'Join Our Team',
+              to: '/join-our-team',
+            },
+            {
+              label: 'Become A Sponsor',
+              to: '/sponsors',
             },
           ],
         },
@@ -120,34 +158,39 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Support Us',
+              to: 'https://imodules.uwaterloo.ca/s/1802/21/form.aspx?sid=1802&gid=2&pgid=1266&cid=3030&bledit=1&dids=296',
+            },
+            {
+              label: 'YouTube',
+              to: 'https://www.youtube.com/@electriummobility',
+            },
+            {
+              label: 'Instagram',
+              to: 'https://www.instagram.com/electriummobility/',
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              to: 'https://discord.com/invite/jggFVza4XR',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/about',
+              label: 'Linkedin',
+              to: 'https://www.linkedin.com/company/electrium-mobility/',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Email',
+              to: 'mailto:electriummobility@gmail.com',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      logo: {
+        alt: 'My Site Logo',
+        src: 'img/logo-dark-mode.png',
+        href: '/',
+        height: 50,
+      },
+      copyright: `Copyright © ${new Date().getFullYear()} Electrium Mobility. All Rights Reserved.`,
     },
     prism: {
       theme: prismThemes.github,
