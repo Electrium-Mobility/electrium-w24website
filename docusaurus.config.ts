@@ -145,11 +145,11 @@ const config: Config = {
           items: [
             {
               label: 'Join Our Team',
-              to: 'join-our-team.html',
+              to: '/join-our-team',
             },
             {
               label: 'Become A Sponsor',
-              to: 'sponsors.html',
+              to: '/sponsors',
             },
           ],
         },
