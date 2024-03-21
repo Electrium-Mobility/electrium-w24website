@@ -1,7 +1,104 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import Sherwin from "/static/img/team_headshots/SherwinCopy.png";
+import Vishesh from "/static/img/team_headshots/VisheshCopy.png"
+import Jerry from "/static/img/team_headshots/Jerry.jpeg"
+import Andrew from "/static/img/team_headshots/Andrew.jpeg"
+import Victor from "/static/img/team_headshots/Victor.jpg"
+import Shari from "/static/img/team_headshots/Shari.jpg"
+import Samantha from "/static/img/team_headshots/Samantha.png"
+import Enoch from "/static/img/team_headshots/Enoch.jpg";
+import ElectriumLogo from "/static/img/favicon.png";
+
+//import TeamLead from "../components/Team/team";
+
+function TeamLead({ headshot, name, position }) {
+  return (
+    <div className="group text-center">
+        <div className="relative inline-block mx-auto h-32 w-32 rounded-full overflow-hidden">
+          <img src={headshot} />
+        </div>
+
+      <div className="content">
+          <p className="title h5 text-lg font-medium text-emerald-600 mb-1">{name}</p>
+          <p className="text-slate-400">{position}</p>
+      </div>
+    </div> 
+  );
+}
 
 function Team() {
+
+  const generalLeads = [
+    {
+      name: "Vishesh Garg",
+      position: "Electrium Lead",
+      headshot: Vishesh,
+    },
+    {
+      name: "Jerry Chen",
+      position: "Mechanical Lead",
+      headshot: Jerry,
+    },
+    {
+      name: "Damir Gazizullin",
+      position: "Electrical Lead",
+      headshot: ElectriumLogo,
+    },
+    {
+      name: "Victor Kalenda",
+      position: "Firmware Lead",
+      headshot: Victor,
+    },
+  ];
+
+  const teamLeads = [
+    {
+      name: "Jerry Chen",
+      position: "Bafkiets Lead",
+      headshot: Jerry,
+    },
+    {
+      name: "Faisal Shahbaz",
+      position: "Bafkiets Lead",
+      headshot: ElectriumLogo,
+    },
+    {
+      name: "Meghan",
+      position: "Stealth Bike Lead",
+      headshot: ElectriumLogo,
+    },
+    {
+      name: "Farbeen Haque",
+      position: "Scooter Lead",
+      headshot: ElectriumLogo,
+    },
+    {
+      name: "Shari Sun",
+      position: "Skateboard Lead",
+      headshot: Shari,
+    },
+    {
+      name: "Samantha Chong",
+      position: "CF Skateboard Lead",
+      headshot: Samantha,
+    },
+    {
+      name: "Vishesh Garg",
+      position: "Vroom Lead",
+      headshot: Vishesh,
+    },
+    {
+      name: "Enoch Tin",
+      position: "Finance & Marketing Lead",
+      headshot: Enoch,
+    },
+    {
+      name: "Andrew Au",
+      position: "Web Development Team Lead",
+      headshot: Andrew,
+    },
+  ];
   return (
       <Layout>
 
@@ -20,38 +117,9 @@ function Team() {
                   </div>
   
                   <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-0 gap-[30px]">
-                      <div className="group text-center">
-                            <div className="relative inline-block mx-auto h-32 w-32 rounded-full overflow-hidden">
-                              <img src={require("/static/img/team_headshots/SherwinCopy.png").default} />
-                            </div>
-  
-                          <div className="content">
-                              <p className="title h5 text-lg font-medium text-emerald-600 mb-1">Sherwin Chiu</p>
-                              <p className="text-slate-400">Electrium Lead</p>
-                          </div>
-                      </div>  
-
-                      <div className="group text-center">
-                            <div className="relative inline-block mx-auto h-32 w-32 rounded-full overflow-hidden">
-                              <img src={require("/static/img/team_headshots/WinstonCopy.png").default} />
-                            </div>
-  
-                          <div className="content">
-                              <p className="title h5 text-lg font-medium text-emerald-600 mb-1">Winston Lu</p>
-                              <p className="text-slate-400">Electrium General Lead</p>
-                          </div>
-                      </div> 
-
-                      <div className="group text-center">
-                            <div className="relative inline-block mx-auto h-32 w-32 rounded-full overflow-hidden">
-                              <img src={require("/static/img/team_headshots/LoganCopy.png").default} />
-                            </div>
-  
-                          <div className="content">
-                              <p className="title h5 text-lg font-medium text-emerald-600 mb-1">Logan Fournier</p>
-                              <p className="text-slate-400">Electrium General Lead</p>
-                          </div>
-                      </div>  
+                    {generalLeads.map((lead, index) => (
+                      <TeamLead headshot={lead.headshot} name={lead.name} position={lead.position} />
+                    )) }
                   </div>
 
                   <div className="grid grid-cols-1 pt-16 pb-8 text-center">
@@ -59,70 +127,9 @@ function Team() {
                   </div>
   
                   <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-0 gap-[30px]">
-                      <div className="group text-center">
-                            <div className="relative inline-block mx-auto h-32 w-32 rounded-full overflow-hidden">
-                              <img src={require("/static/img/team_headshots/VisheshCopy.png").default} />
-                            </div>
-  
-                          <div className="content">
-                              <p className="title h5 text-lg font-medium text-emerald-600 mb-1">Vishesh Garg</p>
-                              <p className="text-slate-400">Electric Bike Team Lead</p>
-                          </div>
-                      </div>  
-
-                      <div className="group text-center">
-                            <div className="relative inline-block mx-auto h-32 w-32 rounded-full overflow-hidden">
-                              <img src={require("/static/img/team_headshots/CindyCopy.png").default} />
-                            </div>
-  
-                          <div className="content">
-                              <p className="title h5 text-lg font-medium text-emerald-600 mb-1">Cindy Peng</p>
-                              <p className="text-slate-400">Electric Skateboard Team Lead</p>
-                          </div>
-                      </div> 
-
-                      <div className="group text-center">
-                            <div className="relative inline-block mx-auto h-32 w-32 rounded-full overflow-hidden">
-                              <img src={require("/static/img/team_headshots/Junsong.JPG").default} />
-                            </div>
-  
-                          <div className="content">
-                              <p className="title h5 text-lg font-medium text-emerald-600 mb-1">Junsong Li</p>
-                              <p className="text-slate-400">OneWheel Team Lead</p>
-                          </div>
-                      </div>  
-                      <div className="group text-center">
-                            <div className="relative inline-block mx-auto h-32 w-32 rounded-full overflow-hidden">
-                              <img src={require("/static/img/team_headshots/vivianCopy.png").default} />
-                            </div>
-  
-                          <div className="content">
-                              <p className="title h5 text-lg font-medium text-emerald-600 mb-1">Vivian Dai</p>
-                              <p className="text-slate-400">Web Development Team Lead</p>
-                          </div>
-                      </div>  
-
-                      <div className="group text-center">
-                            <div className="relative inline-block mx-auto h-32 w-32 rounded-full overflow-hidden">
-                              <img src={require("/static/img/team_headshots/RachelCopy.png").default} />
-                            </div>
-  
-                          <div className="content">
-                              <p className="title h5 text-lg font-medium text-emerald-600 mb-1">Rachel Lam</p>
-                              <p className="text-slate-400">Management & Marketing Team Lead</p>
-                          </div>
-                      </div> 
-
-                      <div className="group text-center">
-                            <div className="relative inline-block mx-auto h-32 w-32 rounded-full overflow-hidden">
-                              <img src={require("/static/img/team_headshots/Enoch.jpg").default} />
-                            </div>
-  
-                          <div className="content">
-                              <p className="title h5 text-lg font-medium text-emerald-600 mb-1">Enoch Tin</p>
-                              <p className="text-slate-400">Finance Team Lead</p>
-                          </div>
-                      </div>  
+                  {teamLeads.map((lead, index) => (
+                      <TeamLead headshot={lead.headshot} name={lead.name} position={lead.position} />
+                    )) }                  
                   </div>
 
                   <div className="container">

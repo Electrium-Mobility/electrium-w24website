@@ -22,7 +22,7 @@ import domino from "/static/img/sponsors/dominos_logo.png";
 import wcfu from "/static/img/sponsors/WFCU_logo.png";
 import wcfuDark from "/static/img/sponsors/WFCU_logo_light.png";
 
-import Sponsor from "./sponsor";
+import Sponsor from "../components/Sponsors/sponsor";
 
 export default function Sponsors() {
   //surely there's a better way to do this :")
