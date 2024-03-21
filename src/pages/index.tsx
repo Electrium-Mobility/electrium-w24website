@@ -13,9 +13,7 @@ import ContactPageHeader from "@site/src/pages/contact";
 import HomePageIntro from "@site/src/components/UI Components/HomePageIntro";
 import GetInvolved from "@site/src/components/UI Components/GetInvolved";
 function HomepageHeader() {
-    const {siteConfig} = useDocusaurusContext();
     return (
-
             <section className="relative table w-full py-36 lg:py-44">
                 <div className="container">
                     <div className="grid md:grid-cols-12 grid-cols-1 items-center mt-10 gap-[30px]">
@@ -38,10 +36,8 @@ function HomepageHeader() {
                             </div>
                         </div>
 
-
                         <div className="md:col-span-5">
                             <BikeLogo className="w-fit h-96 sm:w-fit sm:h-48 md:w-fit md:h-96" />
-
                         </div>
 
                     </div>
@@ -61,7 +57,7 @@ export default function Home(): JSX.Element {
     const {siteConfig} = useDocusaurusContext();
     return (
         <Layout
-            description="Description will go into a meta tag in <head />">
+            description="Electrium Mobility!!!!"> {/*Description will go into a meta tag in <head /> */}
             <HomepageHeader />
             <main>
                 <HomePageIntro />
