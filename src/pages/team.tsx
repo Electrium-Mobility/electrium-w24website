@@ -8,6 +8,8 @@ import Victor from "/static/img/team_headshots/Victor.jpg"
 import Shari from "/static/img/team_headshots/Shari.jpg"
 import Samantha from "/static/img/team_headshots/Samantha.png"
 import Enoch from "/static/img/team_headshots/Enoch.jpg";
+import Faisal from "/static/img/team_headshots/Faisal.jpeg";
+import Damir from "/static/img/team_headshots/Damir.jpg";
 import ElectriumLogo from "/static/img/favicon.png";
 
 //import TeamLead from "../components/Team/team";
@@ -43,7 +45,7 @@ function Team() {
     {
       name: "Damir Gazizullin",
       position: "Electrical Lead",
-      headshot: ElectriumLogo,
+      headshot: Damir,
     },
     {
       name: "Victor Kalenda",
@@ -61,7 +63,7 @@ function Team() {
     {
       name: "Faisal Shahbaz",
       position: "Bafkiets Lead",
-      headshot: ElectriumLogo,
+      headshot: Faisal,
     },
     {
       name: "Meghan",
