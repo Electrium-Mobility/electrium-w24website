@@ -6,6 +6,7 @@ import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 
 import weef from "/static/img/sponsors/weef_logo.png";
+import engsoc from "/static/img/sponsors/engsoc_logo.png";
 import Altium from "/static/img/sponsors/Altium_Logo.png";
 import AltiumDark from "/static/img/sponsors/Altium_Logo_light.png";
 import mef from "/static/img/sponsors/mef_logo.png";
@@ -33,16 +34,20 @@ export default function Sponsors() {
         darkImg: weef,
       },
       {
+        imgUrl: engsoc,
+        darkImg: engsoc,
+      },
+      {
         imgUrl: Altium,
         darkImg: AltiumDark,
       },
       {
-        imgUrl: mef,
-        darkImg: mef,
-      },
-      {
         imgUrl: wusa,
         darkImg: wusaDark,
+      },
+      {
+        imgUrl: mef,
+        darkImg: mef,
       },
     ],
     gold: [
@@ -89,60 +94,81 @@ export default function Sponsors() {
                 about becoming a sponsor!
               </p>
               <div className="mt-6">
-                <LinkButton to="/contact">Become a Sponsor</LinkButton>
+                <Link
+                  to="/team"
+                  className="btn bg-green-600 hover:bg-transparent border-green-600 text-white rounded-md ltr:mr-2 rtl:ml-2 mt-2 p-4"
+                >
+                  Become a Sponsor
+                </Link>
               </div>
             </div>
           </div>
         </section>
       </div>
-      <div>
-        <h4 className="text-center mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
-          Platinum
-        </h4>
-        {sponsors.platinum.map((sponsor, index) => (
-          <Sponsor
-            key={index}
-            imgUrl={sponsor.imgUrl}
-            darkImgUrl={sponsor.darkImg}
-            tier="platinum"
-          />
-        ))}
-        <br />
-        <h4 className="text-center mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
-          Gold
-        </h4>
-        {sponsors.gold.map((sponsor, index) => (
-          <Sponsor
-            key={index}
-            imgUrl={sponsor.imgUrl}
-            darkImgUrl={sponsor.darkImg}
-            tier="gold"
-          />
-        ))}
+
+      <div className="flex flex-column">
+        <div>
+          <h4 className="text-center mt-6 mb-4 md:text-4xl md:leading-normal text-3xl leading-normal font-semibold">
+            Platinum
+          </h4>
+          <div className="flex flex-row flex-wrap justify-center items-center">
+            {sponsors.platinum.map((sponsor, index) => (
+              <Sponsor
+                key={index}
+                imgUrl={sponsor.imgUrl}
+                darkImgUrl={sponsor.darkImg}
+                tier="platinum"
+              />
+            ))}
+          </div>
+
+          <br />
+          <h4 className="text-center mb-4 md:text-4xl md:leading-normal text-3xl leading-normal font-semibold">
+            Gold
+          </h4>
+          <div className="flex flex-row flex-wrap justify-center items-center">
+            {sponsors.gold.map((sponsor, index) => (
+              <Sponsor
+                key={index}
+                imgUrl={sponsor.imgUrl}
+                darkImgUrl={sponsor.darkImg}
+                tier="gold"
+              />
+            ))}
+          </div>
+
+          <br />
+          <div>
+            <h4 className="text-center mb-4 md:text-4xl md:leading-normal text-3xl leading-normal font-semibold">
+              Silver
+            </h4>
+            {sponsors.silver.map((sponsor, index) => (
+              <Sponsor
+                key={index}
+                imgUrl={sponsor.imgUrl}
+                darkImgUrl={sponsor.darkImg}
+                tier="silver"
+              />
+            ))}
+          </div>
+
+          <br />
+          <div>
+            <h4 className="text-center mb-4 md:text-4xl md:leading-normal text-3xl leading-normal font-semibold">
+              Bronze
+            </h4>
+            {sponsors.bronze.map((sponsor, index) => (
+              <Sponsor
+                key={index}
+                imgUrl={sponsor.imgUrl}
+                darkImgUrl={sponsor.darkImg}
+                tier="bronze"
+              />
+            ))}
+          </div>
+          <br />
+        </div>
       </div>
-      <br />
-      <h4 className="text-center mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
-        Silver
-      </h4>
-      {sponsors.silver.map((sponsor, index) => (
-        <Sponsor
-          key={index}
-          imgUrl={sponsor.imgUrl}
-          darkImgUrl={sponsor.darkImg}
-          tier="silver"
-        />
-      ))}
-      <h4 className="text-center mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
-        Bronze
-      </h4>
-      {sponsors.bronze.map((sponsor, index) => (
-        <Sponsor
-          key={index}
-          imgUrl={sponsor.imgUrl}
-          darkImgUrl={sponsor.darkImg}
-          tier="bronze"
-        />
-      ))}
     </Layout>
   );
 }
