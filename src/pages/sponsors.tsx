@@ -95,7 +95,7 @@ export default function Sponsors() {
               </p>
               <div className="mt-6">
                 <Link
-                  to="/team"
+                  to="/contact"
                   className="btn bg-green-600 hover:bg-transparent border-green-600 text-white rounded-md ltr:mr-2 rtl:ml-2 mt-2 p-4"
                 >
                   Become a Sponsor

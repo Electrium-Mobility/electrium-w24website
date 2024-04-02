@@ -17,7 +17,7 @@ function JoinOurTeam() {
                         <p className="text-slate-400 max-w-xl mx-auto">We are a community of students dedicated to learning and building cool things. Our focus is to create a welcoming, beginner-friendly environment for any students interested in personal electric vehicles. </p>
                     
                         <div className="my-6">
-                            <LinkButton to="https://forms.gle/ehRCDDUK7nurXedu5">Apply Now</LinkButton>
+                            <LinkButton to="https://docs.google.com/forms/d/15Gi2L9ly5RnQlfEvdlhNgNd5azuqaPCltsDT_-ipoJw/edit?usp=drive_web">APPLY NOW</LinkButton>
                         </div>
                     </div>
                 </div>

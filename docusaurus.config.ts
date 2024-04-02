@@ -97,6 +97,7 @@ const config: Config = {
         {to: '/contact', label: 'Contact', position: 'left'},
         // UNCOMMENT TO SHOW BLOG
         // {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/join-our-team', className: 'join-our-team', label: 'Join Our Team', position: 'right'},
         {
           href: 'https://imodules.uwaterloo.ca/s/1802/21/form.aspx?sid=1802&gid=2&pgid=1266&cid=3030&bledit=1&dids=296',
           label: 'Donate',
