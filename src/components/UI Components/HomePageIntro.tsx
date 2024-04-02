@@ -3,7 +3,7 @@ import WhatWeDoGraphic from '@site/static/img/what-we-do-graphic.svg'
 import { IoIosCheckmarkCircle } from "react-icons/io";
 const HomePageIntro =() => {
     return (
-        <section className="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800">
+        <section className="relative md:py-24 py-16 bg-gray-50 dark:bg-zinc-900">
             <div className="container">
 
 
