@@ -6,15 +6,13 @@ import Layout from '@theme/Layout';
 import styles from "@site/src/pages/index.module.css";
 import Heading from "@theme/Heading";
 import SquaredButton from '../components/UI Components/SquaredButton';
+import ContactPageForm from '../components/UI Components/ContactPageForm';
 
 function ContactPageHeader() {
 
     return (
         <Layout>
-            <section className="relative md:py-24 py-16">
-
-
-
+            <section className="relative md:pt-24 pt-16">
                 <div className="container">
                     <div className="grid grid-cols-1 pt-16 pb-8 text-center">
                         <h3 className="pt-12 mb-4 md:leading-normal text-4xl leading-normal font-semibold">Contact Us</h3>
@@ -24,7 +22,6 @@ function ContactPageHeader() {
                             more about Electrium?</p>
                         <p className="mt-1 text-slate-400 max-w-xl mx-auto"> Let's chat! </p>
                     </div>
-
 
                     <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[30px]">
                         <div className="text-center px-6 mt-6">
@@ -78,7 +75,7 @@ function ContactPageHeader() {
                         </div>
                     </div>
                 </div>
-
+                <ContactPageForm/>
             </section>
         </Layout>
     );
