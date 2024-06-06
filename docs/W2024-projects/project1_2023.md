@@ -2,33 +2,38 @@
 sidebar_position: 1
 ---
 
-# Electric Bike
+# Bakfiets
 
-![Electric Bike](./img/electric_bike.jpg)
+![Electric Bike](./img/bakfiets.png)
+![Electric Bike Team](./img/bakfiets_team.png)
 
 ### Project Info
 
-| **Term:** | Spring 2023 |
+| **Term:** | Winter 2024 |
 | -------------------- | --------------------------------------------------------------------------|
-| **Team Lead:**       | Vishesh Garg |
+| **Team Lead:**       | Jerry Chen |
 | **Mecahnical Lead:** | Jerry Chen |
-| **Firmware Lead:** | Asmi Kaur Gujral |
-| **Electrical Lead:** | Jenna Kong |
-| **Mechanical Team:** | Kabir Raval, Ena Manjgo, Serena Poonawalla, Suhyma Rahman, Vishrut Munjal |
-| **Firmware Team:** | Kushal Mujral, Rana Balabel, Lama, Jenny Wu |
-| **Electrical Team:** | Benie Mabondo, Punit Shah, Dania Masoud, Angelina Lim |
+| **Firmware Lead:** | Patrick He |
+| **Electrical Lead:** | Samuel Ke |
+| **Mechanical Team:** | Jerry Chen, Kevin Ng, Aidan Thompson, Aiyesha Shibly, Samual Wong, Allen Lu |
+| **Firmware Team:** | Patrick He, Kimberley Hoang, Alisa Wu, Aman Zaveri |
+| **Electrical Team:** | Jacob Wielowieyski, Alex Liu, Samuel Ke, Suhyma Rahman |
 
 
 ### Project Description
 
-Introducing Volter: Where Innovation Meets Adventure
+Bakfiets is a front-loading cargo bike style popular in the Netherlands for carrying groceries or bringing kids to school. Our Bakfiets, “Bak Choy”, is an electrically-assisted bakfiets with a custom-built frame, 48V electrical system, dynamic lighting, and display interface.
 
-At the intersection of innovation and adventure, the Volter electric bicycle emerges as a true embodiment of cutting-edge design and engineering excellence. With a top speed of 42 km/hr, Volter offers a thrilling ride that combines eco-friendly mobility with an exhilarating experience. Powered by a battery boasting a maximum voltage of 42 volts, this electric bicycle is not just a mode of transportation; it's a testament to the fusion of technology and style.
+### What We Do
+- Custom Frame: Tailor-made 4130 chromoly frame designed using SolidWorks Weldments, featuring two 26” wheels, disc brakes, and suspension fork.
+- Welding Jig: The rear triangle is welded using our standard adjustable aluminum extrusion bike jig, while the main frame is welded using a single-use laser cut MDF jig.
+- Steering System: The steering is connected to the front fork via a linkage system using an adjustable-length steel tube with ball joints on either end. Steering linkage was optimized to provide a natural turning rate and to clear other components. A solid linkage was chosen over a cable driven system due to the increased simplicity and reliability.
+- Kickstand: Heavy-duty spring-loaded mild steel kickstand with lowered middle to provide clearance for the steering linkage.
+- 48V Electrical System: The bike features a 48V 12S3P 18650 quick-release battery pack, 500W hub motor, and a 48V/5V power distribution board to power the undermounted LED strip and microcontroller. We also attempted to design our own anti sparks to protect the battery.
+- VESC Motor Controller: The bike uses an open-source FSESC6.7 VESC-based motor controller to run the motor and interface with the microcontroller.
+- Display Interface: The bike features an OLED display powered by an ESP32 S3 Pico, which displays information like speed, battery, and power level. The microcontroller also runs the LED strip via the FastLED library, allowing for a variety of patterns, as well as segmented turn signal indication. 
 
-Covering distances between 15 to 25 kilometers on a single charge, Volter ensures that every journey is not only efficient but also filled with possibilities. Whether you're commuting through urban landscapes or embarking on scenic routes, Volter empowers you to explore with confidence, knowing that its robust design and advanced components are ready for any terrain.
+### Our Goal
 
-Yet, Volter is more than just an electric bicycle; it's a triumph of teamwork and innovation. Behind this remarkable creation lies a team of passionate individuals who have harnessed their skills and creativity to bring Volter to life. Working on this project has not only resulted in an exceptional electric bicycle but has also been a journey of empowerment. Volter's development has played a crucial role in lowering the barrier of entry into design teams and engineering for our dedicated team members.
-
-Volter is a reflection of our commitment to pushing boundaries and redefining possibilities. It's an invitation to join us on a ride that marries speed, style, and sustainability. With Volter, the horizon is just the beginning, and the road ahead is paved with innovation.
-
-Experience the thrill. Embrace the innovation. Ride with Volter.
+**Our goals are to improve our mechanical, electrical, and firmware abilities:**\
+For many of us, it was our first time using SolidWorks weldments, designing electronics enclosures, and creating welding jigs. As well, we learned machining, notching tubing, and woodworking. The power distribution board and anti sparks were some of our first custom PCBs, and members learned how to solder XT30/60 connectors and SMD components. Members learned how to control VESC and program microcontrollers to respond to user inputs.

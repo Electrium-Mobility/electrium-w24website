@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Electric Skateboard
+# George's Skateboard
 
 ![Electric Skateboard](./img/electric_skateboard.jpg)
 
@@ -10,12 +10,21 @@ sidebar_position: 2
 
 | **Term:** | Spring 2023 |
 | -------------------- | --------------------------------------------------------------------------|
-| **Electrical Lead:**       | Sherwin Chiu |
-| **Firmware Lead:** | Cindy Peng |
-| **Mecahnical Lead:** | Sherwin Chiu |
+| **Project Lead:**       | Cindy Peng |
+| **Members:** |  Kabir Raval, Vedha Mereddy, Argo, Nihal Sahu, Dhruv Vora, Jemima Vijayasenan, Kevin Ouyang, Seungmin Hong, Vivek Dhillon, Mark Turezki, Athavan, Lucas DeMello, Nathan Hon |
+
+### Specifications
+| | |
+| -------------------- | --------------------------------------------------------------------------|
+| **Battery:** | 42V/6Ah Lithium-Ion |
+|**Charge Time:** | 3hrs |
+|**Motor:** | Dual 640W 105mm Cloud Hub Motors |
+|**Display:** | Mobile App |
+|**Riding Mode:** | Skateboard |
+|**Load Capacity:** | 220lbs |
+|**Range:** | 20km |
+|**Frame Material:** | Wooden Deck |
 
 ### Project Description
 
-Here's how it works: a simple push of the intuitive handheld remote control unleashes the power beneath your feet. With customizable riding modes and adjustable speed settings, you're in full command of your ride, no matter your skill level.
-
-When it's time to step off the board, the compact and portable design of the VoltSkate electric skateboard makes it easy to carry and store. Take it with you on public transportation or simply tuck it away under your desk - the possibilities are endless.
+George's Skateboard features unique designs such as Totoro and Shari's face as Pikachu on the bottom. The deck is custom-made from a Roarrockit kit. It uses a Flipsky VX1 as a remote controller to control dual hub motors with quick acceleration. The deck is very concave and great for carving.

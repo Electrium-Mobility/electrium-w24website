@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Electric Bike
+# Volter
 
 ![Electric Bike](./img/electric_bike.jpg)
 
@@ -17,6 +17,21 @@ sidebar_position: 1
 | **Mechanical Team:** | Kabir Raval, Ena Manjgo, Serena Poonawalla, Suhyma Rahman, Vishrut Munjal |
 | **Firmware Team:** | Kushal Mujral, Rana Balabel, Lama, Jenny Wu |
 | **Electrical Team:** | Benie Mabondo, Punit Shah, Dania Masoud, Angelina Lim |
+
+### Specifications
+| | |
+| -------------------- | --------------------------------------------------------------------------|
+| **Battery:** | 42V/6Ah Lithium-Ion |
+| **Charge Time:** | 3hrs |
+| **Motor:** | 500W Continuous Hub Motor |
+| **Display:** |  LCD Backlit Speedometer |
+| **Riding Mode:** | Thumb Throttle |
+| **Load Capacity:** | 220lbs |
+| **Range:** | 20km |
+| **Brakes:** | Front Rim Brakes |
+| **Wheel:** | 26-Inch Spoke Wheel |
+| **Gear:** | 6-Speed Derailleur |
+| **Frame Material:** | Chromoly |
 
 
 ### Project Description
