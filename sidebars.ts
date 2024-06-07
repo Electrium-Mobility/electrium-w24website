@@ -20,7 +20,6 @@ const sidebars: SidebarsConfig = {
     'W2024-projects/project1_2023',
     'W2024-projects/project2_2023',
     'W2024-projects/project3_2023',
-    'W2024-projects/project4_2023',
     {
       type: 'category',
       label: '2023 Projects',
