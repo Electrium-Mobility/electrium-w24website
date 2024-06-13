@@ -6,15 +6,13 @@ import Layout from '@theme/Layout';
 import styles from "@site/src/pages/index.module.css";
 import Heading from "@theme/Heading";
 import SquaredButton from '../components/UI Components/SquaredButton';
+import * as Yup from "yup";
 
 function ContactPageHeader() {
 
     return (
         <Layout>
             <section className="relative md:py-24 py-16">
-
-
-
                 <div className="container">
                     <div className="grid grid-cols-1 pt-16 pb-8 text-center">
                         <h3 className="pt-12 mb-4 md:leading-normal text-4xl leading-normal font-semibold">Contact Us</h3>

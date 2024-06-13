@@ -13,11 +13,9 @@ function JoinOurTeam() {
                 <div className="container mt-16">
                     <div className="grid grid-cols-1 text-center">
                         <h3 className="mb-4 md:text-3xl md:leading-normal text-6xl leading-normal font-semibold">Join Our Team</h3>
-
                         <p className="text-slate-400 max-w-xl mx-auto">We are a community of students dedicated to learning and building cool things. Our focus is to create a welcoming, beginner-friendly environment for any students interested in personal electric vehicles. </p>
-                    
                         <div className="my-6">
-                            <LinkButton to="https://docs.google.com/forms/d/15Gi2L9ly5RnQlfEvdlhNgNd5azuqaPCltsDT_-ipoJw/edit?usp=drive_web">APPLY NOW</LinkButton>
+                            <LinkButton to="/apply">APPLY NOW</LinkButton>
                         </div>
                     </div>
                 </div>
