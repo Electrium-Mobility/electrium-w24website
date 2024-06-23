@@ -5,7 +5,7 @@ import Layout from '@theme/Layout';
 import styles from "@site/src/pages/index.module.css";
 import Heading from "@theme/Heading";
 import SquaredButton from '../components/UI Components/SquaredButton';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, FormikProps, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import roleSpecificJson from '../components/constants/role-specific-questions.json';
 
@@ -160,6 +160,24 @@ const roleSpecificQuestions: RoleSpecificQuestion[] = JSON.parse(
     JSON.stringify(roleSpecificJson)
 );
 
+const initialValues = {
+    firstName: "",
+    lastName: "",
+    program: "",
+    term: "",
+    uwaterlooEmail: "",
+    personalEmail: "",
+    discordUsername: "",
+    isReturningMember: "",
+    inPerson: "",
+    interests: "",
+    heardSource: "",
+    roleQuestions: [],
+    electriumProjects: [],
+    friendReferral: "",
+    comments: ""
+};
+
 const ApplicationForm = () => {
     const [roleQuestions, setRoleQuestions] = useState<RoleSpecificQuestion[]>([]);
     const [selectedRole, setSelectedRole] = useState<string>(""); // State to track the selected role
@@ -182,24 +200,6 @@ const ApplicationForm = () => {
             setRoleQuestions(updatedQuestions);
         }
     }, [selectedRole]);
-    
-
-    const initialValues = {
-        firstName: "",
-        lastName: "",
-        program: "",
-        term: "",
-        uwaterlooEmail: "",
-        personalEmail: "",
-        discordUsername: "",
-        isReturningMember: "",
-        inPerson: "",
-        interests: "",
-        heardSource: "",
-        roleQuestions: "",
-        friendReferal: "",
-        comments: ""
-    };
 
     const required = {
         firstName: true,
@@ -214,31 +214,36 @@ const ApplicationForm = () => {
         interests: false,
         heardSource: true,
         roleQuestions: true,
-        friendReferal: false,
+        electriumProjects: true,
+        friendReferral: false,
         comments: false
     }
 
     const handleSubmit = (values) => {
-        console.log(values);
+        values.preventDefault();
+        for (const [key, value] of Object.entries(values)) {
+            console.log(`${key}: ${value}`);
+        }
     };
 
-    // Validation Schema using Yup
-    const validationSchema = Yup.object().shape({
-        firstName: Yup.string().required('First Name is required'),
-        lastName: Yup.string().required('Last Name is required'),
-        program: Yup.string().required('Program is required'),
-        term: Yup.string().required('Term is required'),
-        uwaterlooEmail: Yup.string().email('Invalid email').required('UWaterloo Email is required'),
-        personalEmail: Yup.string().email('Invalid email').required('Personal Email is required'),
-        discordUsername: Yup.string().required('Discord Username is required'),
-        isReturningMember: Yup.string().required('Please select an option'),
-        inPerson: Yup.string().required('Please select an option'),
-        interests: Yup.string().optional(),
-        heardSource: Yup.string().required('Please select an option'),
-        roleQuestions: Yup.string().required('Please select an option'),
-        friendReferal: Yup.string().optional(),
-        comments: Yup.string().optional(),
-    });
+    // // Validation Schema using Yup
+    // const validationSchema = Yup.object().shape({
+    //     firstName: Yup.string().required('First Name is required'),
+    //     lastName: Yup.string().required('Last Name is required'),
+    //     program: Yup.string().required('Program is required'),
+    //     term: Yup.string().required('Term is required'),
+    //     uwaterlooEmail: Yup.string().email('Invalid email').required('UWaterloo Email is required'),
+    //     personalEmail: Yup.string().email('Invalid email').required('Personal Email is required'),
+    //     discordUsername: Yup.string().required('Discord Username is required'),
+    //     isReturningMember: Yup.string().required('Please select an option'),
+    //     inPerson: Yup.string().required('Please select an option'),
+    //     interests: Yup.string().optional(),
+    //     heardSource: Yup.string().required('Please select an option'),
+    //     roleQuestions: Yup.array().of(Yup.string()).required('Please answer the role-specific questions'),
+    //     friendReferral: Yup.string().optional(),
+    //     electriumProjects: Yup.array().of(Yup.string()).required('Please select at least one project'),
+    //     comments: Yup.string().optional(),
+    // });
 
     // Reusable Form Field Component
     const TextField = ({ name, label, caption = <></>, type = "text", placeholder = ""}) => (
@@ -248,6 +253,7 @@ const ApplicationForm = () => {
             </label>
             <label htmlFor={name} className="text-gray-500 text-sm">{caption}</label>
             <Field
+                id={name}
                 name={name}
                 type={type}
                 className="form-input mt-2 text-charcoal-600 border border-charcoal-300 rounded-md px-4 py-3 focus:outline-none focus:ring-green-700 focus:border-green-700"
@@ -265,7 +271,7 @@ const ApplicationForm = () => {
             <div className="p-4 bg-grey border-2 border-gray-300 rounded-md">
                 {options.map(option => (
                     <label key={option} className="flex items-center">
-                        <Field type="radio" name={name} value={option} className="form-radio text-green-600 border-green-600 rounded-md" />
+                        <Field type="radio" id={name} name={name} value={option} className="form-radio text-green-600 border-green-600 rounded-md" />
                         <span className="ml-2">{option}</span>
                     </label>
                 ))}
@@ -279,7 +285,7 @@ const ApplicationForm = () => {
                 {label} {required[name] && <span className="text-red-600">*</span>}
             </label>
             <label htmlFor={name} className="text-gray-500 text-sm">{caption}</label>
-            <Field as="select" name={name} className="form-select mt-2 text-charcoal-600 border border-charcoal-300 rounded-md px-4 py-3 focus:outline-none focus:ring-green-700 focus:border-green-700">
+            <Field as="select" id={name} name={name} className="form-select mt-2 text-charcoal-600 border border-charcoal-300 rounded-md px-4 py-3 focus:outline-none focus:ring-green-700 focus:border-green-700">
                 <option value="">{"-Select option-"}</option>
                 {options.map(option => (
                     <option key={option} value={option}>{option}</option>
@@ -299,6 +305,7 @@ const ApplicationForm = () => {
                     <label key={option} className="block">
                         <Field
                             type="checkbox"
+                            id={name}
                             name={name}
                             value={option}
                             className="form-checkbox text-charcoal-600 border border-charcoal-300 rounded-md focus:outline-none focus:ring-green-700 focus:border-green-700"
@@ -362,10 +369,15 @@ const ApplicationForm = () => {
                                     <h3 className="mb-6 text-2xl leading-normal font-medium">Get in touch!</h3>
                                     <Formik
                                         initialValues={initialValues}
-                                        validationSchema={validationSchema}
-                                        onSubmit={handleSubmit}
+                                        // validationSchema={validationSchema} 
+                                        onSubmit={(values, actions) => {
+                                            setTimeout(() => {
+                                              alert(JSON.stringify(values, null, 2));
+                                              actions.setSubmitting(false);
+                                            }, 1000);
+                                          }}
                                     >
-                                        {() => (
+                                        {(props: FormikProps<any>) => (
                                             <Form>
                                                 <div className="grid lg:grid-cols-12 lg:gap-6">
                                                     <div className="lg:col-span-6">
