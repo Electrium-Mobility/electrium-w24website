@@ -25,15 +25,15 @@ const Responsibilities: React.FC = () => {
   
   return (
     <Layout>
-      <div style={{ fontFamily: "'Nunito', sans-serif", lineHeight: '1.6', margin: '0', padding: '0', backgroundColor: '#ffffff', color: '#333333', position: 'relative', overflowX: 'hidden' }}>
+      <div>
         <div>
           {showImages && (
             <div className="images-container">
-              <img src={skateboard} alt="skateboard" style={{ position: 'absolute', width: '200px', height: '200px', left: '0', transform: 'translateX(-10%)', top: '50px' }} />
-              <img src={onewheel} alt="onewheel" style={{ position: 'absolute', width: '200px', height: '200px', right: '0', transform: 'translateX(10%)', top: '350px' }} />
-              <img src={scooter} alt="scooter" style={{ position: 'absolute', width: '200px', height: '200px', left: '0', transform: 'translateX(-10%)', top: '650px' }} />
-              <img src={skateboard2} alt="skateboard-right" style={{ position: 'absolute', width: '200px', height: '200px', right: '0', transform: 'translateX(10%)', top: '950px' }} />
-              <img src={onewheel2} alt="onewheel-left" style={{ position: 'absolute', width: '200px', height: '200px', left: '0', transform: 'translateX(-10%)', top: '1250px' }} />
+              <img src={skateboard} alt="skateboard" style={{ position: 'absolute', width: '150px', height: 'auto', left: '0', transform: 'translateX(-10%)', top: '50px' }} />
+              <img src={onewheel} alt="onewheel" style={{ position: 'absolute', width: '150px', height: 'auto', right: '0', transform: 'translateX(10%)', top: '350px' }} />
+              <img src={scooter} alt="scooter" style={{ position: 'absolute', width: '150px', height: 'auto', left: '0', transform: 'translateX(-10%)', top: '650px' }} />
+              <img src={skateboard2} alt="skateboard-right" style={{ position: 'absolute', width: '150px', height: 'auto', right: '0', transform: 'translateX(10%)', top: '950px' }} />
+              <img src={onewheel2} alt="onewheel-left" style={{ position: 'absolute', width: '150px', height: 'auto', left: '0', transform: 'translateX(-10%)', top: '1250px' }} />
             </div>
           )}
         </div>
@@ -42,9 +42,12 @@ const Responsibilities: React.FC = () => {
           <p>
             Below are the various roles that the team is recruiting for. As part of your application, we ask that you select one role of interest.
           </p>
+          <p style={{ fontSize: '0.9em', color: '#666666', marginTop: '20px'}}>
+            To keep your application short, you will only be allowed to apply to one role. Note that these roles are not set in stone, and if you join the team, we don't mind allowing members to work on tasks or assignments that are not meant for their role, so don’t worry too much about your selection!
+          </p>
 
           <section style={{ margin: '20px 0' }}>
-            <h2 style={{ fontFamily: "'Nunito', sans-serif", color: '#333333', marginBottom: '0', fontWeight: 600 }}>Micromobility Project Roles</h2>
+            <h2 style={{ fontFamily: "'Nunito', sans-serif", color: '#333333', marginBottom: '10px', fontWeight: 600 }}>Micromobility Project Roles</h2>
             <p>
               These roles are focused around making our electric vehicle projects. By signing up for one of these roles, you will be responsible for attending project meetings and technical workshops.
             </p>
@@ -81,7 +84,7 @@ const Responsibilities: React.FC = () => {
           </section>
 
           <section style={{ margin: '20px 0' }}>
-            <h2 style={{ fontFamily: "'Nunito', sans-serif", color: '#333333', marginBottom: '0', fontWeight: 600 }}>External Roles</h2>
+            <h2 style={{ fontFamily: "'Nunito', sans-serif", color: '#333333', marginBottom: '10px', fontWeight: 600 }}>External Roles</h2>
             <p>
               These roles work on aspects of the team outside of our EV projects, but are still important nonetheless!
             </p>
@@ -94,14 +97,10 @@ const Responsibilities: React.FC = () => {
 
             <div style={{ margin: '10px 0 20px 0' }}>
               <p>
-                <span style={{ fontWeight: 'bold', color: '#53bd4b' }}>Finance</span> - Managing budget, acquiring sponsors, and doing anything related to money. This is a good opportunity to apply business skills learned in school. NOTE: Applications to the Finance Team are selective, due to the sensitive nature of the work handled by the Finance team. Your application will require a resume, portfolio, and a screening process may be required.
+                <span style={{ fontWeight: 'bold', color: '#53bd4b' }}>Finance</span> - Managing budget, acquiring sponsors, and doing anything related to money. This is a good opportunity to apply business skills learned in school. <br/> <br/> NOTE: Applications to the Finance Team are selective, due to the sensitive nature of the work handled by the Finance team. Your application will require a resume, portfolio, and a screening process may be required.
               </p>
             </div>
           </section>
-
-          <p style={{ fontSize: '0.9em', color: '#666666', marginTop: '20px', textAlign: 'center' }}>
-            To keep your application short, you will only be allowed to apply to one role. Note that these roles are not set in stone, and if you join the team, we don't mind allowing members to work on tasks or assignments that are not meant for their role, so don’t worry too much about your selection!
-          </p>
         </div>
       </div>
     </Layout>
