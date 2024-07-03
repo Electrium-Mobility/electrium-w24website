@@ -22,7 +22,9 @@ const config: Config = {
   trailingSlash: false,
   deploymentBranch: 'gh-pages',
   // ...
-
+  customFields: {
+    storeUrl: 'https://shop.electriummobility.com',
+  },
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   //organizationName: 'facebook', // Usually your GitHub org/user name.
@@ -93,6 +95,7 @@ const config: Config = {
           position: 'left',
           label: 'Projects',
         },
+        {to: '/shop', label: 'Shop', position: 'left'},
         {to: '/sponsors', label: 'Sponsors', position: 'left'},
         {to: '/contact', label: 'Contact', position: 'left'},
         // UNCOMMENT TO SHOW BLOG
