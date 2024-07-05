@@ -5,7 +5,8 @@
       "questions": [
         {
           "name": "hopeToLearn",
-          "question": "What do you hope to learn by joining Electrium Mobility as a mechanical team member?"
+          "question": "What do you hope to learn by joining Electrium Mobility as a mechanical team member?",
+          "type": "text"
         },
         {
           "name": "wouldYouRather",
@@ -21,11 +22,13 @@
       "questions": [
         {
           "name": "hopeToLearn",
-          "question": "What do you hope to learn by joining Electrium Mobility as a firmware team member?"
+          "question": "What do you hope to learn by joining Electrium Mobility as a firmware team member?",
+          "type": "text"
         },
         {
           "name": "whyCrossRoad",
-          "question": "Why did the programmer cross the road?"
+          "question": "Why did the programmer cross the road?",
+          "type": "text"
         }
       ]
     },
@@ -35,7 +38,8 @@
       "questions": [
         {
           "name": "hopeToLearn",
-          "question": "What do you hope to learn by joining Electrium Mobility as an electrical team member?"
+          "question": "What do you hope to learn by joining Electrium Mobility as an electrical team member?",
+          "type": "text"
         },
         {
             "name": "fixWiring",
@@ -51,11 +55,13 @@
       "questions": [
         {
             "name": "hopeToLearn",
-            "question": "What do you hope to learn by joining Electrium Mobility as a web development team member?"
+            "question": "What do you hope to learn by joining Electrium Mobility as a web development team member?",
+            "type": "text"
         },
         {
           "name": "worstWebsite",
           "question": "What is the URL of the worst designed website you've ever seen?",
+          "type": "text",
           "caption": "<>Please keep your selection PG.</>"
         }
       ]
@@ -67,11 +73,13 @@
       "questions": [
         {
           "name": "hopeToLearn",
-          "question": "What do you hope to learn by joining Electrium Mobility as a management team member?"
+          "question": "What do you hope to learn by joining Electrium Mobility as a management team member?",
+          "type": "text"
         },
         {
           "name": "worstCourse",
           "question": "What is the worst course you've taken at UW?",
+          "type": "text",
           "caption": "<>There is a correct answer by the way.</>"
         }
       ]
@@ -97,11 +105,13 @@
         {
             "name": "relatedExperience",
             "question": "Highlight of related experience",
+            "type": "text",
             "caption": "Please use point form"
         },
         {
             "name": "relatedSoftSkills",
             "question": "Highlight of related soft skills",
+            "type": "text",
             "caption": "Please use point form"
         },
         {
@@ -112,12 +122,13 @@
         {
             "name": "designPost",
             "question": "Design an \"introduce the members\" IG post for yourself",
-            "caption": "<>Please research on, and follow our design standards. Feel free to blur your face and add watermarks</>",
-            "type": "upload"
+            "type": "text",
+            "caption": "<>Please research on, and follow our design standards. Feel free to blur your face and add watermarks</>"
         },
         {
             "name": "discordEmoji",
             "question": "Which discord emoji has the largest water droplet?",
+            "type": "text",
             "caption": "<>Please answer in format of :emoji_name:<br/>Example: :sweat_smile:<br/>You can find a sample of water droplet on the top right corner of the emoji shown</>",
             "image": "https://lh4.googleusercontent.com/G26m7rZ_QIl8OS6M_yRoNPNHW5gIpyfjWvtq68xwsrSJwddef0J5ctjED240c7zHoykM5cXyR8UiNSxg7uMxnz9h6YCWLpZnuCNXvW0eKDQ-BB0yVHQweizSSMsk4ckXrA=w72"
         }
@@ -138,11 +149,13 @@
         {
             "name": "relatedExperience",
             "question": "Highlight of related experience",
+            "type": "text",
             "caption": "Please use point form"
         },
         {
             "name": "relatedSoftSkills",
             "question": "Highlight of related soft skills",
+            "type": "text",
             "caption": "Please use point form"
         },
         {
@@ -152,7 +165,8 @@
         },
         {
             "name": "sponsorEmail",
-            "question": "Draft an email that you will use to reach out to a sponsor you have selected on behalf of Electrium Mobility"
+            "question": "Draft an email that you will use to reach out to a sponsor you have selected on behalf of Electrium Mobility",
+            "type": "text"
         },
         {
             "name": "otherRole",
