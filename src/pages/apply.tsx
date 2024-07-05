@@ -408,7 +408,7 @@ const ApplicationForm = () => {
                                                     caption={<>This is for us to get to know you, and does not have an impact on your application :)</>}
                                                 />
                                                 <RadioField name="heardSource" label="How did you hear about Electrium Mobility?" options={SELECT_HEARD_SOURCE} />
-                                                <RoleSpecificField name="role" label="What role are you interested in?" caption={<>You can learn more about what the various roles do <Link to="/role-responsibilities" className="text-green-600 font-bold">here</Link>.</>} options={SELECT_ROLES}/>
+                                                <RoleSpecificField name="role" label="What role are you interested in?" caption={<>You can learn more about what the various roles do <Link to="/" className="text-green-600 font-bold">here</Link>.</>} options={SELECT_ROLES}/>
                                                 <TextField name="friendReferral" label="If you're applying with a friend, please put their full name below." type="text"/>
                                                 <CheckboxField
                                                     name="electriumProjects"
