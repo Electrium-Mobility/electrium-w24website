@@ -5,7 +5,7 @@ import Layout from '@theme/Layout';
 import styles from "@site/src/pages/index.module.css";
 import Heading from "@theme/Heading";
 import SquaredButton from '../components/UI Components/SquaredButton';
-import { Formik, FormikProps, Form, Field, ErrorMessage } from 'formik';
+import { Formik, FieldArray, FormikProps, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import roleSpecificJson from '../components/constants/role-specific-questions.json';
 
@@ -145,20 +145,29 @@ const SELECT_PROJECTS = [
 
 const SELECT_TERMS = ["1A", "1B", "2A", "2B", "3A", "3B", "4A", "4B"];
 
+interface Question {
+    name: string;
+    question: string;
+    type?: string;
+    options?: string[];
+}
+
 interface RoleSpecificQuestion {
     id: string;
     role: string;
-    questions: {
-        name: string;
-        question: string;
-        type?: string;
-        options?: string[];
-    }[];
+    questions: Question[];
 }
 
-const roleSpecificQuestions: RoleSpecificQuestion[] = JSON.parse(
-    JSON.stringify(roleSpecificJson)
-);
+const roleSpecificQuestions: RoleSpecificQuestion[] = roleSpecificJson.map(item => ({
+    id: item.id,
+    role: item.role,
+    questions: item.questions.map(q => ({
+        name: q.name,
+        question: q.question,
+        type: q.type,
+        options: q.options
+    }))
+}));
 
 const initialValues = {
     firstName: "",
@@ -172,7 +181,10 @@ const initialValues = {
     inPerson: "",
     interests: "",
     heardSource: "",
-    roleQuestions: [],
+    role: "",
+    roleQuestions: {
+        questions: []
+    },
     electriumProjects: [],
     friendReferral: "",
     comments: ""
@@ -180,26 +192,17 @@ const initialValues = {
 
 const ApplicationForm = () => {
     const [roleQuestions, setRoleQuestions] = useState<RoleSpecificQuestion[]>([]);
-    const [selectedRole, setSelectedRole] = useState<string>(""); // State to track the selected role
+    const [selectedRole, setSelectedRole] = useState(""); // State to track the selected role
 
     useEffect(() => {
-        const roleData = roleSpecificQuestions.find(role => role.role === selectedRole);
-        if (roleData) {
-            const updatedQuestions = roleData.questions.map(question => ({
-                id: roleData.id, // Use roleData's id for each question
-                role: roleData.role,
-                questions: [
-                    {
-                        name: question.name,
-                        question: question.question,
-                        type: question.type || '', // Default to an empty string if type is undefined
-                        options: question.options || [], // Default to an empty array if options are undefined
-                    }
-                ],
-            }));
-            setRoleQuestions(updatedQuestions);
-        }
-    }, [selectedRole]);
+    const roleData = roleSpecificQuestions.find(role => role.role === selectedRole);
+    if (roleData) {
+        setRoleQuestions([roleData]);
+    } else {
+        setRoleQuestions([]); // Clear if no role is selected
+    }
+}, [selectedRole]);
+
 
     const required = {
         firstName: true,
@@ -219,14 +222,21 @@ const ApplicationForm = () => {
         comments: false
     }
 
-    const handleSubmit = (values) => {
-        values.preventDefault();
-        for (const [key, value] of Object.entries(values)) {
-            console.log(`${key}: ${value}`);
-        }
+    const handleSubmit = (values, actions) => {
+        setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            actions.setSubmitting(false);
+        }, 1000);
     };
+    
+    // const handleSubmit = (values) => {
+    //     values.preventDefault();
+    //     for (const [key, value] of Object.entries(values)) {
+    //         console.log(`${key}: ${value}`);
+    //     }
+    // };
 
-    // // Validation Schema using Yup
+    // Validation Schema using Yup
     // const validationSchema = Yup.object().shape({
     //     firstName: Yup.string().required('First Name is required'),
     //     lastName: Yup.string().required('Last Name is required'),
@@ -324,28 +334,27 @@ const ApplicationForm = () => {
                     {label} {required[name] && <span className="text-red-600">*</span>}
                 </label>
                 <label htmlFor={name} className="text-gray-500 text-sm">{caption}</label>
-                <select
-                    id={name}
-                    name={name}
-                    value={selectedRole}
-                    onChange={(e) => setSelectedRole(e.target.value)}
-                    className="form-select mt-2 text-charcoal-600 border border-charcoal-300 rounded-md px-4 py-3 focus:outline-none focus:ring-green-700 focus:border-green-700"
-                >
-                    {roleSpecificQuestions.map((roleQuestions) => (
-                        <option key={roleQuestions.id} value={roleQuestions.role}>
-                            {roleQuestions.role}
-                        </option>
+                <Field as="select" id={name} name={name} onChange={(e) => {setSelectedRole(e.target.value) }} value={selectedRole} className="form-select mt-2 text-charcoal-600 border border-charcoal-300 rounded-md px-4 py-3 focus:outline-none focus:ring-green-700 focus:border-green-700">
+                    <option value="">{"-Select option-"}</option>
+                    {options.map(option => (
+                        <option key={option} value={option}>{option}</option>
                     ))}
-                </select>
+                </Field>
+
             </div>
-            {roleQuestions.map((questionData, index) => (
-                <div key={index} className="grid grid-cols-1 mb-5">
-                    {questionData.questions[0].type === '' && <TextField name={questionData.questions[0].name} label={questionData.questions[0].question}></TextField>}
-                    {questionData.questions[0].type === 'radio' && <RadioField name={questionData.questions[0].name} label={questionData.questions[0].question} options={questionData.questions[0].options}></RadioField>}
-                    {questionData.questions[0].type === 'dropdown' && <DropdownField name={questionData.questions[0].name} label={questionData.questions[0].question} options={questionData.questions[0].options}></DropdownField>}
-                    {questionData.questions[0].type === 'checkbox' && <CheckboxField name={questionData.questions[0].name} label={questionData.questions[0].question} options={questionData.questions[0].options}></CheckboxField>}
-                </div>
-            ))}
+            {roleQuestions.length > 0 && roleQuestions[0].questions.map((question, index) => {
+                console.log("Rendering Question:", question); // Debug log
+                return (
+                    <div key={index} className="grid grid-cols-1 mb-5">
+                        {question.type === 'text' && <TextField name={question.name} label={question.question}></TextField>}
+                        {question.type === 'radio' && <RadioField name={question.name} label={question.question} options={question.options}></RadioField>}
+                        {question.type === 'dropdown' && <DropdownField name={question.name} label={question.question} options={question.options}></DropdownField>}
+                        {question.type === 'checkbox' && <CheckboxField name={question.name} label={question.question} options={question.options}></CheckboxField>}
+                    </div>
+                );
+            })}
+
+
         </div>
     );
 
@@ -377,7 +386,7 @@ const ApplicationForm = () => {
                                             }, 1000);
                                           }}
                                     >
-                                        {(props: FormikProps<any>) => (
+                                        {(values) => (
                                             <Form>
                                                 <div className="grid lg:grid-cols-12 lg:gap-6">
                                                     <div className="lg:col-span-6">
@@ -399,7 +408,7 @@ const ApplicationForm = () => {
                                                     caption={<>This is for us to get to know you, and does not have an impact on your application :)</>}
                                                 />
                                                 <RadioField name="heardSource" label="How did you hear about Electrium Mobility?" options={SELECT_HEARD_SOURCE} />
-                                                <RoleSpecificField name="roleQuestions" label="What role are you interested in?" caption={<>You can learn more about what the various roles do <Link to="/contact" className="text-green-600 font-bold">here</Link>.</>} options={SELECT_ROLES}/>
+                                                <RoleSpecificField name="role" label="What role are you interested in?" caption={<>You can learn more about what the various roles do <Link to="/role-responsibilities" className="text-green-600 font-bold">here</Link>.</>} options={SELECT_ROLES}/>
                                                 <TextField name="friendReferral" label="If you're applying with a friend, please put their full name below." type="text"/>
                                                 <CheckboxField
                                                     name="electriumProjects"
