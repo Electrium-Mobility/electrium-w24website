@@ -12,7 +12,7 @@ import DropdownField from '../components/common/DropdownField';
 import RadioField from '../components/common/RadioField';
 import TextField from '../components/common/TextField';
 import {RoleSpecificSubField} from '../components/common/RoleSpecificField';
-import validationSchema from '../components/common/ValidationSchema';
+import ValidationSchema from '../components/common/ValidationSchema';
 
 const SELECT_PROGRAMS = [
     "Accounting and Financial Management",
@@ -206,6 +206,7 @@ const ApplicationForm = () => {
                         <div className="lg:col-span-6 md:col-span-6 md:mt-0">
                             <div className="ltr:lg:ml-5 rtl:lg:mr-5">
                                 <h3 className="pt-12 text-center md:leading-normal text-4xl leading-normal font-semibold">Apply</h3>
+                                <h3 className="font-semibold text-green-600 text-center"> Note: Currently this page is in development for Summer 2024, please hang on tight!</h3>
                                 <p className="text-center mb-4 md:leading-normal leading-normal">
                                     Hi there! Thank you for your interest in joining Electrium Mobility!
                                     <br />
@@ -218,7 +219,7 @@ const ApplicationForm = () => {
                                     <h3 className="mb-6 text-2xl leading-normal font-medium">Get in touch!</h3>
                                     <Formik
                                         initialValues={initialValues}
-                                        validationSchema={validationSchema} 
+                                        validationSchema={ValidationSchema} 
                                         onSubmit={(values, actions) => {
                                             setTimeout(() => {
                                               alert(JSON.stringify(values, null, 2));
