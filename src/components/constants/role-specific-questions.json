@@ -6,13 +6,15 @@
         {
           "name": "hopeToLearn",
           "question": "What do you hope to learn by joining Electrium Mobility as a mechanical team member?",
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         {
           "name": "wouldYouRather",
           "question": "If you had to pick, would you rather design a flamethrower or a grenade launcher (NOTE: This is not a serious question, and you will not be designing such things officially through the team).",
           "type": "radio",
-          "options": ["Flamethrower", "Grenade Launcher"]
+          "options": ["Flamethrower", "Grenade Launcher"],
+          "required": false
         }
       ]
     },
@@ -23,12 +25,14 @@
         {
           "name": "hopeToLearn",
           "question": "What do you hope to learn by joining Electrium Mobility as a firmware team member?",
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         {
           "name": "whyCrossRoad",
           "question": "Why did the programmer cross the road?",
-          "type": "text"
+          "type": "text",
+          "required": false
         }
       ]
     },
@@ -39,13 +43,15 @@
         {
           "name": "hopeToLearn",
           "question": "What do you hope to learn by joining Electrium Mobility as an electrical team member?",
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         {
             "name": "fixWiring",
             "question": "What's the best way to fix spaghetti wiring in an electronic system?",
             "type": "radio",
-            "options": ["Cable ties.", "Energy chain.", "Eat it. I love spaghetti.", "Go wireless.", "Leave it alone. I can decipher spaghetti wiring in my sleep."]
+            "options": ["Cable ties.", "Energy chain.", "Eat it. I love spaghetti.", "Go wireless.", "Leave it alone. I can decipher spaghetti wiring in my sleep."],
+            "required": false
         }
       ]
     },
@@ -56,13 +62,15 @@
         {
             "name": "hopeToLearn",
             "question": "What do you hope to learn by joining Electrium Mobility as a web development team member?",
-            "type": "text"
+            "type": "text",
+            "required": true
         },
         {
           "name": "worstWebsite",
           "question": "What is the URL of the worst designed website you've ever seen?",
           "type": "text",
-          "caption": "<>Please keep your selection PG.</>"
+          "caption": "Please keep your selection PG.",
+          "required": false
         }
       ]
     },
@@ -74,13 +82,15 @@
         {
           "name": "hopeToLearn",
           "question": "What do you hope to learn by joining Electrium Mobility as a management team member?",
-          "type": "text"
+          "type": "text",
+          "required": true
         },
         {
           "name": "worstCourse",
           "question": "What is the worst course you've taken at UW?",
           "type": "text",
-          "caption": "<>There is a correct answer by the way.</>"
+          "caption": "There is a correct answer by the way.",
+          "required": false
         }
       ]
     },
@@ -92,45 +102,52 @@
             "name": "fieldsInterestedMarketing",
             "question": "What fields are you interested in",
             "type": "radioTable",
-            "caption": "<>1: Most interested in<br/>5: Not interested in</>",
+            "caption": "1: Most interested in | 5: Not interested in",
             "rowOptions": ["Graphic design", "Photography/ videography", "Photo/ video editing", "Communicate with followers", "3D modeling"],	
-            "columnOptions": ["1", "2", "3", "4", "5"]
+            "columnOptions": ["1", "2", "3", "4", "5"],
+            "required": true
         },
         {
             "name": "softwareExp",
             "question": "What software do you have experience with?",
             "type": "checkbox",
-            "options": ["Figma", "Canva", "Photoshop", "Adobe Illustrator", "Other"]
+            "options": ["Figma", "Canva", "Photoshop", "Adobe Illustrator", "Other"],
+            "required": true
         },
         {
             "name": "relatedExperience",
             "question": "Highlight of related experience",
             "type": "text",
-            "caption": "Please use point form"
+            "caption": "Please use point form",
+            "required": false
         },
         {
             "name": "relatedSoftSkills",
             "question": "Highlight of related soft skills",
             "type": "text",
-            "caption": "Please use point form"
+            "caption": "Please use point form",
+            "required": false
         },
         {
             "name": "resume",
             "question": "Resume/ Portfolio/ Past projects",
-            "type": "upload"
+            "type": "upload",
+            "required": false
         },
         {
             "name": "designPost",
             "question": "Design an \"introduce the members\" IG post for yourself",
-            "type": "text",
-            "caption": "<>Please research on, and follow our design standards. Feel free to blur your face and add watermarks</>"
+            "type": "upload",
+            "caption": "Please research on, and follow our design standards. Feel free to blur your face and add watermarks",
+            "required": false
         },
         {
             "name": "discordEmoji",
             "question": "Which discord emoji has the largest water droplet?",
             "type": "text",
-            "caption": "<>Please answer in format of :emoji_name:<br/>Example: :sweat_smile:<br/>You can find a sample of water droplet on the top right corner of the emoji shown</>",
-            "image": "https://lh4.googleusercontent.com/G26m7rZ_QIl8OS6M_yRoNPNHW5gIpyfjWvtq68xwsrSJwddef0J5ctjED240c7zHoykM5cXyR8UiNSxg7uMxnz9h6YCWLpZnuCNXvW0eKDQ-BB0yVHQweizSSMsk4ckXrA=w72"
+            "caption": "Please answer in format of :emoji_name:. Example: :sweat_smile:. You can find a sample of water droplet on the top right corner of the emoji shown",
+            "image": "https://lh4.googleusercontent.com/G26m7rZ_QIl8OS6M_yRoNPNHW5gIpyfjWvtq68xwsrSJwddef0J5ctjED240c7zHoykM5cXyR8UiNSxg7uMxnz9h6YCWLpZnuCNXvW0eKDQ-BB0yVHQweizSSMsk4ckXrA=w72",
+            "required": false
         }
       ]
     },
@@ -142,38 +159,44 @@
             "name": "fieldsInterestedMarketing",
             "question": "What fields are you interested in",
             "type": "radioTable",
-            "caption": "<>1: Most interested in<br/>5: Not interested in</>",
+            "caption": "1: Most interested in | 5: Not interested in",
             "rowOptions": ["Outreach to sponsors", "Present to endowment funds", "Draft endowment fund proposals/ slides", "Set budget/ handle reimbursements", "Plan/ execute fundraisers"],	
-            "columnOptions": ["1", "2", "3", "4", "5"]
+            "columnOptions": ["1", "2", "3", "4", "5"],
+            "required": true
         },
         {
             "name": "relatedExperience",
             "question": "Highlight of related experience",
             "type": "text",
-            "caption": "Please use point form"
+            "caption": "Please use point form",
+            "required": false
         },
         {
             "name": "relatedSoftSkills",
             "question": "Highlight of related soft skills",
             "type": "text",
-            "caption": "Please use point form"
+            "caption": "Please use point form",
+            "required": false
         },
         {
             "name": "resume",
             "question": "Resume",
-            "type": "upload"
+            "type": "upload",
+            "required": true
         },
         {
             "name": "sponsorEmail",
             "question": "Draft an email that you will use to reach out to a sponsor you have selected on behalf of Electrium Mobility",
-            "type": "text"
+            "type": "text",
+            "required": false
         },
         {
             "name": "otherRole",
             "question": "Would you like to apply to another role? If so, which one?",
-            "caption": "<>If you are not accepted for the finance team, you can still join the team under another role.</>",
+            "caption": "If you are not accepted for the finance team, you can still join the team under another role.",
             "type": "radio",
-            "options": ["Mechanical", "Firmware", "Electrical", "Web Development", "Management", "Marketing", "None"]
+            "options": ["Mechanical", "Firmware", "Electrical", "Web Development", "Management", "Marketing", "None"],
+            "required": true
         }
       ]
     }

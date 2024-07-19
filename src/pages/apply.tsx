@@ -7,7 +7,12 @@ import Heading from "@theme/Heading";
 import SquaredButton from '../components/UI Components/SquaredButton';
 import { Formik, FieldArray, FormikProps, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import roleSpecificJson from '../components/constants/role-specific-questions.json';
+import CheckboxField from '../components/common/CheckboxField';
+import DropdownField from '../components/common/DropdownField';
+import RadioField from '../components/common/RadioField';
+import TextField from '../components/common/TextField';
+import {RoleSpecificSubField} from '../components/common/RoleSpecificField';
+import validationSchema from '../components/common/ValidationSchema';
 
 const SELECT_PROGRAMS = [
     "Accounting and Financial Management",
@@ -145,30 +150,6 @@ const SELECT_PROJECTS = [
 
 const SELECT_TERMS = ["1A", "1B", "2A", "2B", "3A", "3B", "4A", "4B"];
 
-interface Question {
-    name: string;
-    question: string;
-    type?: string;
-    options?: string[];
-}
-
-interface RoleSpecificQuestion {
-    id: string;
-    role: string;
-    questions: Question[];
-}
-
-const roleSpecificQuestions: RoleSpecificQuestion[] = roleSpecificJson.map(item => ({
-    id: item.id,
-    role: item.role,
-    questions: item.questions.map(q => ({
-        name: q.name,
-        question: q.question,
-        type: q.type,
-        options: q.options
-    }))
-}));
-
 const initialValues = {
     firstName: "",
     lastName: "",
@@ -181,30 +162,18 @@ const initialValues = {
     inPerson: "",
     interests: "",
     heardSource: "",
-    role: "",
     roleQuestions: {
-        questions: []
+        role: ""
     },
     electriumProjects: [],
     friendReferral: "",
     comments: ""
 };
 
+
 const ApplicationForm = () => {
-    const [roleQuestions, setRoleQuestions] = useState<RoleSpecificQuestion[]>([]);
-    const [selectedRole, setSelectedRole] = useState(""); // State to track the selected role
 
-    useEffect(() => {
-    const roleData = roleSpecificQuestions.find(role => role.role === selectedRole);
-    if (roleData) {
-        setRoleQuestions([roleData]);
-    } else {
-        setRoleQuestions([]); // Clear if no role is selected
-    }
-}, [selectedRole]);
-
-
-    const required = {
+    const REQUIRED = {
         firstName: true,
         lastName: true,
         program: true,
@@ -228,135 +197,6 @@ const ApplicationForm = () => {
             actions.setSubmitting(false);
         }, 1000);
     };
-    
-    // const handleSubmit = (values) => {
-    //     values.preventDefault();
-    //     for (const [key, value] of Object.entries(values)) {
-    //         console.log(`${key}: ${value}`);
-    //     }
-    // };
-
-    // Validation Schema using Yup
-    // const validationSchema = Yup.object().shape({
-    //     firstName: Yup.string().required('First Name is required'),
-    //     lastName: Yup.string().required('Last Name is required'),
-    //     program: Yup.string().required('Program is required'),
-    //     term: Yup.string().required('Term is required'),
-    //     uwaterlooEmail: Yup.string().email('Invalid email').required('UWaterloo Email is required'),
-    //     personalEmail: Yup.string().email('Invalid email').required('Personal Email is required'),
-    //     discordUsername: Yup.string().required('Discord Username is required'),
-    //     isReturningMember: Yup.string().required('Please select an option'),
-    //     inPerson: Yup.string().required('Please select an option'),
-    //     interests: Yup.string().optional(),
-    //     heardSource: Yup.string().required('Please select an option'),
-    //     roleQuestions: Yup.array().of(Yup.string()).required('Please answer the role-specific questions'),
-    //     friendReferral: Yup.string().optional(),
-    //     electriumProjects: Yup.array().of(Yup.string()).required('Please select at least one project'),
-    //     comments: Yup.string().optional(),
-    // });
-
-    // Reusable Form Field Component
-    const TextField = ({ name, label, caption = <></>, type = "text", placeholder = ""}) => (
-        <div className="grid grid-cols-1 mb-5">
-            <label htmlFor={name} className="font-semibold">
-                {label} {required[name] && <span className="text-red-600">*</span>}
-            </label>
-            <label htmlFor={name} className="text-gray-500 text-sm">{caption}</label>
-            <Field
-                id={name}
-                name={name}
-                type={type}
-                className="form-input mt-2 text-charcoal-600 border border-charcoal-300 rounded-md px-4 py-3 focus:outline-none focus:ring-green-700 focus:border-green-700"
-                placeholder={placeholder}
-            />
-        </div>
-    );
-
-    const RadioField = ({ name, label, caption = <></>, options = [], value=""}) => (
-        <div className="grid grid-cols-1 mb-5">
-            <label htmlFor={name} className="font-semibold">
-                {label} {required[name] && <span className="text-red-600">*</span>}
-            </label>
-            <label htmlFor={name} className="text-gray-500 text-sm">{caption}</label>
-            <div className="p-4 bg-grey border-2 border-gray-300 rounded-md">
-                {options.map(option => (
-                    <label key={option} className="flex items-center">
-                        <Field type="radio" id={name} name={name} value={option} className="form-radio text-green-600 border-green-600 rounded-md" />
-                        <span className="ml-2">{option}</span>
-                    </label>
-                ))}
-            </div>
-        </div>
-    );
-
-    const DropdownField = ({ name, label, caption = <></>, options = []}) => (
-        <div className="grid grid-cols-1 mb-5">
-            <label htmlFor={name} className="font-semibold">
-                {label} {required[name] && <span className="text-red-600">*</span>}
-            </label>
-            <label htmlFor={name} className="text-gray-500 text-sm">{caption}</label>
-            <Field as="select" id={name} name={name} className="form-select mt-2 text-charcoal-600 border border-charcoal-300 rounded-md px-4 py-3 focus:outline-none focus:ring-green-700 focus:border-green-700">
-                <option value="">{"-Select option-"}</option>
-                {options.map(option => (
-                    <option key={option} value={option}>{option}</option>
-                ))}
-            </Field>
-        </div>
-    );
-
-    const CheckboxField = ({ name, label, caption = <></>, options = []}) => (
-        <div className="grid grid-cols-1 mb-5">
-            <label htmlFor={name} className="font-semibold">
-                {label} {required[name] && <span className="text-red-600">*</span>}
-            </label>
-            <label htmlFor={name} className="text-gray-500 text-sm">{caption}</label>
-            <div className="p-4 bg-grey border-2 border-gray-300 rounded-md">
-                {options.map(option => (
-                    <label key={option} className="block">
-                        <Field
-                            type="checkbox"
-                            id={name}
-                            name={name}
-                            value={option}
-                            className="form-checkbox text-charcoal-600 border border-charcoal-300 rounded-md focus:outline-none focus:ring-green-700 focus:border-green-700"
-                        />
-                        {option}
-                    </label>
-                ))}
-            </div>
-        </div>
-    );
-
-    const RoleSpecificField = ({name, label, caption = <></>, options = []}) => (
-        <div className="grid grid-cols-1 mb-5">
-            <div className="grid grid-cols-1 mb-5">
-                <label htmlFor={name} className="font-semibold">
-                    {label} {required[name] && <span className="text-red-600">*</span>}
-                </label>
-                <label htmlFor={name} className="text-gray-500 text-sm">{caption}</label>
-                <Field as="select" id={name} name={name} onChange={(e) => {setSelectedRole(e.target.value) }} value={selectedRole} className="form-select mt-2 text-charcoal-600 border border-charcoal-300 rounded-md px-4 py-3 focus:outline-none focus:ring-green-700 focus:border-green-700">
-                    <option value="">{"-Select option-"}</option>
-                    {options.map(option => (
-                        <option key={option} value={option}>{option}</option>
-                    ))}
-                </Field>
-
-            </div>
-            {roleQuestions.length > 0 && roleQuestions[0].questions.map((question, index) => {
-                console.log("Rendering Question:", question); // Debug log
-                return (
-                    <div key={index} className="grid grid-cols-1 mb-5">
-                        {question.type === 'text' && <TextField name={question.name} label={question.question}></TextField>}
-                        {question.type === 'radio' && <RadioField name={question.name} label={question.question} options={question.options}></RadioField>}
-                        {question.type === 'dropdown' && <DropdownField name={question.name} label={question.question} options={question.options}></DropdownField>}
-                        {question.type === 'checkbox' && <CheckboxField name={question.name} label={question.question} options={question.options}></CheckboxField>}
-                    </div>
-                );
-            })}
-
-
-        </div>
-    );
 
     return (
         <Layout>
@@ -378,7 +218,7 @@ const ApplicationForm = () => {
                                     <h3 className="mb-6 text-2xl leading-normal font-medium">Get in touch!</h3>
                                     <Formik
                                         initialValues={initialValues}
-                                        // validationSchema={validationSchema} 
+                                        validationSchema={validationSchema} 
                                         onSubmit={(values, actions) => {
                                             setTimeout(() => {
                                               alert(JSON.stringify(values, null, 2));
@@ -390,33 +230,50 @@ const ApplicationForm = () => {
                                             <Form>
                                                 <div className="grid lg:grid-cols-12 lg:gap-6">
                                                     <div className="lg:col-span-6">
-                                                        <TextField name="firstName" label="First Name"/>
+                                                        <TextField name="firstName" label="First Name" required={REQUIRED.firstName}/>
                                                     </div>
                                                     <div className="lg:col-span-6">
-                                                        <TextField name="lastName" label="Last Name"/>
+                                                        <TextField name="lastName" label="Last Name" required={REQUIRED.lastName}/>
                                                     </div>
                                                 </div>
-                                                <DropdownField name="program" label="What program are you in?" options={SELECT_PROGRAMS} />
-                                                <DropdownField name="term" label="What term will you be in in the Spring 2024 term?" options={SELECT_TERMS} />
-                                                <TextField name="uwaterlooEmail" label="What is your @uwaterloo email? (example s36chiu@uwaterloo.ca)" type="email"/>
-                                                <TextField name="personalEmail" label="What is your personal email? (example, sherwin.chiu89@gmail.com)" type="email"/>
-                                                <TextField name="discordUsername" label="What is your Discord username? (example .sherwin)"/>
-                                                <RadioField name="isReturningMember" label="Are you a returning member?" options={["Yes", "No"]} />
-                                                <RadioField name="inPerson" label="Will you be in-person at Waterloo in Spring 2024?" options={["Yes", "No"]} />
+                                                <DropdownField name="program" label="What program are you in?" options={SELECT_PROGRAMS} required={REQUIRED.program} />
+                                                <DropdownField name="term" label="What term will you be in in the Spring 2024 term?" options={SELECT_TERMS} required={REQUIRED.term}/>
+                                                <TextField name="uwaterlooEmail" label="What is your @uwaterloo email? (example s36chiu@uwaterloo.ca)" type="email" required={REQUIRED.uwaterlooEmail}/>
+                                                <TextField name="personalEmail" label="What is your personal email? (example, sherwin.chiu89@gmail.com)" type="email" required={REQUIRED.personalEmail}/>
+                                                <TextField name="discordUsername" label="What is your Discord username? (example .sherwin)" required={REQUIRED.discordUsername}/>
+                                                <RadioField name="isReturningMember" label="Are you a returning member?" options={["Yes", "No"]} required={REQUIRED.isReturningMember}/>
+                                                <RadioField name="inPerson" label="Will you be in-person at Waterloo in Spring 2024?" options={["Yes", "No"]} required={REQUIRED.inPerson}/>
                                                 <TextField name="interests"
                                                     label="What are your interests and hobbies? Tell us something interesting about yourself!"
                                                     caption={<>This is for us to get to know you, and does not have an impact on your application :)</>}
+                                                    required={REQUIRED.interests}
                                                 />
-                                                <RadioField name="heardSource" label="How did you hear about Electrium Mobility?" options={SELECT_HEARD_SOURCE} />
-                                                <RoleSpecificField name="role" label="What role are you interested in?" caption={<>You can learn more about what the various roles do <Link to="/" className="text-green-600 font-bold">here</Link>.</>} options={SELECT_ROLES}/>
-                                                <TextField name="friendReferral" label="If you're applying with a friend, please put their full name below." type="text"/>
+                                                <RadioField name="heardSource" label="How did you hear about Electrium Mobility?" options={SELECT_HEARD_SOURCE} required={REQUIRED.heardSource}/>
+                                                <Field
+                                                    name="roleQuestions"
+                                                    render={({ field, form }) => (
+                                                        <RoleSpecificSubField
+                                                            field={field}
+                                                            form={form}
+                                                            subName="role"
+                                                            label="What role are you interested in?"
+                                                            caption={(
+                                                                <>You can learn more about what the various roles do <Link to="/" className="text-green-600 font-bold">here</Link>.</>
+                                                            )}
+                                                            options={SELECT_ROLES}
+                                                            required={REQUIRED.roleQuestions}
+                                                        />
+                                                    )}
+                                                />
+                                                <TextField name="friendReferral" label="If you're applying with a friend, please put their full name below." type="text" required={REQUIRED.friendReferral}/>
                                                 <CheckboxField
                                                     name="electriumProjects"
-                                                    label="Please selection which project(s) you're interested in. We will complete them during the Spring 2024 term."
+                                                    label="Please select which project(s) you're interested in. We will complete them during the Spring 2024 term."
                                                     caption={<>Feel free to add your own project idea under "Other".</>}
                                                     options={SELECT_PROJECTS}
+                                                    required={REQUIRED.electriumProjects}
                                                 ></CheckboxField>
-                                                <TextField name="comments" label="Any additional comments or questions?"/>
+                                                <TextField name="comments" label="Any additional comments or questions?" required={REQUIRED.comments}/>
                                                 <button type="submit" className="btn p-2 w-48 inline-block align-middle bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md w-full">Submit</button>
                                             </Form>
                                         )}
