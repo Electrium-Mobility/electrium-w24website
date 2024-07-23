@@ -191,11 +191,18 @@ const ApplicationForm = () => {
         comments: false
     }
 
-    const handleSubmit = (values, actions) => {
-        setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            actions.setSubmitting(false);
-        }, 1000);
+    const handleSubmit = async (values) => {
+        for (const [key, value] of Object.entries(values)) {
+            console.log(`${key}: ${value}`);
+        }
+        await fetch('https://script.google.com/macros/s/AKfycbxpWTNmA5IpMETBAL1TB2sW5pQUB4OCUMtZLD-7-BvHoXhxrLb1jruCVKr86C3PbXC8/exec', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            body: JSON.stringify(values)
+        });
     };
 
     return (
@@ -220,6 +227,7 @@ const ApplicationForm = () => {
                                         initialValues={initialValues}
                                         validationSchema={validationSchema} 
                                         onSubmit={(values, actions) => {
+                                            handleSubmit(values);
                                             setTimeout(() => {
                                               alert(JSON.stringify(values, null, 2));
                                               actions.setSubmitting(false);
