@@ -191,18 +191,23 @@ const ApplicationForm = () => {
         comments: false
     }
 
-    const handleSubmit = async (values) => {
-        for (const [key, value] of Object.entries(values)) {
-            console.log(`${key}: ${value}`);
+    const handleSubmit = async (values, actions) => {
+        try {
+            const response = await fetch('YOUR_GOOGLE_SCRIPT_WEB_APP_URL', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(values),
+            });
+            const result = await response.json();
+            actions.setStatus({ success: true, message: 'Form submitted successfully!' });
+            console.log('Success:', result);
+        } catch (error) {
+            actions.setStatus({ success: false, message: 'Error submitting form' });
+            console.error('Error:', error);
         }
-        await fetch('https://script.google.com/macros/s/AKfycbxpWTNmA5IpMETBAL1TB2sW5pQUB4OCUMtZLD-7-BvHoXhxrLb1jruCVKr86C3PbXC8/exec', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
-            },
-            body: JSON.stringify(values)
-        });
+        actions.setSubmitting(false);
     };
 
     return (
@@ -227,11 +232,7 @@ const ApplicationForm = () => {
                                         initialValues={initialValues}
                                         validationSchema={validationSchema} 
                                         onSubmit={(values, actions) => {
-                                            handleSubmit(values);
-                                            setTimeout(() => {
-                                              alert(JSON.stringify(values, null, 2));
-                                              actions.setSubmitting(false);
-                                            }, 1000);
+                                            handleSubmit(values, actions);
                                           }}
                                     >
                                         {(values) => (

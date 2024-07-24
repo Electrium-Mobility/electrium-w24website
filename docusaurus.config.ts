@@ -20,7 +20,7 @@ const config: Config = {
   projectName: 'electrium-w24website',
   organizationName: 'electrium-mobility',
   trailingSlash: false,
-  deploymentBranch: 'gh-pages',
+  deploymentBranch: 'form_backend',
   // ...
 
   // GitHub pages deployment config.
