@@ -193,16 +193,21 @@ const ApplicationForm = () => {
 
     const handleSubmit = async (values, actions) => {
         try {
-            const response = await fetch('https://script.google.com/macros/s/AKfycbxnyP7GrS-5jRVehz4LggTIDcr8LMFsUfONUOoUZTXzdLXfmz3wC61auioxDg0gB6z5/exec', {
+            fetch('https://script.google.com/macros/s/AKfycby8u3XmDFS9KAMAoivUurPtvcYikRxYVoKwyleWeP6Q7jz6Gj4G3Cw-467nR-oPWdnv/exec', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(values),
+            })
+            .then(response => response.json())
+            .then(data => {
+            console.log('Success:', data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
             });
-            const result = await response.json();
             actions.setStatus({ success: true, message: 'Form submitted successfully!' });
-            console.log('Success:', result);
         } catch (error) {
             actions.setStatus({ success: false, message: 'Error submitting form' });
             console.error('Error:', error);
