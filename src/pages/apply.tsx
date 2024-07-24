@@ -12,7 +12,7 @@ import DropdownField from '../components/common/DropdownField';
 import RadioField from '../components/common/RadioField';
 import TextField from '../components/common/TextField';
 import {RoleSpecificSubField} from '../components/common/RoleSpecificField';
-import ValidationSchema from '../components/common/ValidationSchema';
+import ValidationSchema from '../components/common/validationSchema';
 
 const SELECT_PROGRAMS = [
     "Accounting and Financial Management",
