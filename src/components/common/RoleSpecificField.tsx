@@ -11,7 +11,7 @@ import UploadField from './UploadField';
 import RadioTableField from './RadioTableField';
 
 import roleSpecificJson from '../constants/role-specific-questions.json';
-import getValidationSchema from '../common/ValidationSchema';
+import getValidationSchema from './ValidationSchema';
 
 interface Question {
   name: string;

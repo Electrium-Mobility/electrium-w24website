@@ -27,7 +27,7 @@ const UploadField: FunctionComponent<IUploadField> = ({
 }) => {
   return (
     <div className="grid grid-cols-1 mb-5">
-      <label htmlFor={name} className="font-semibold mb-5">
+      <label htmlFor={name} className="font-semibold">
         {label} {required && <span className="text-red-600">*</span>}
       </label>
       <label htmlFor={name} className="text-gray-500 text-sm">{caption}</label>

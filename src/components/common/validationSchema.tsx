@@ -59,9 +59,9 @@ const roleSchemas = {
     }),
 };
 
-const getValidationSchema = (role) => {
+const ValidationSchema = (role) => {
     const roleSchema = roleSchemas[role] || Yup.object().shape({});
     return baseSchema.concat(roleSchema);
 };
 
-export default getValidationSchema;
+export default ValidationSchema;
