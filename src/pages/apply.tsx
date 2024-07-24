@@ -193,7 +193,7 @@ const ApplicationForm = () => {
 
     const handleSubmit = async (values, actions) => {
         try {
-            fetch('https://script.google.com/macros/s/AKfycby8u3XmDFS9KAMAoivUurPtvcYikRxYVoKwyleWeP6Q7jz6Gj4G3Cw-467nR-oPWdnv/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbxIYsNVagKQNzKW4gE-a_2iuxWyTjZ8pw_xvybLkZyvmXMZFvcEe77xo-C98wmmvtwU/exec', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
