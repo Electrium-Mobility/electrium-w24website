@@ -193,7 +193,7 @@ const ApplicationForm = () => {
 
     const handleSubmit = async (values, actions) => {
         try {
-            const response = await fetch('YOUR_GOOGLE_SCRIPT_WEB_APP_URL', {
+            const response = await fetch('https://script.google.com/macros/s/AKfycbxnyP7GrS-5jRVehz4LggTIDcr8LMFsUfONUOoUZTXzdLXfmz3wC61auioxDg0gB6z5/exec', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
