@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from "@docusaurus/Link";
+import { useHistory } from '@docusaurus/router';
 import clsx from "clsx";
 import Layout from '@theme/Layout';
 import styles from "@site/src/pages/index.module.css";
@@ -172,6 +173,7 @@ const initialValues = {
 
 
 const ApplicationForm = () => {
+    const history = useHistory();
 
     const REQUIRED = {
         firstName: true,
@@ -213,6 +215,7 @@ const ApplicationForm = () => {
             console.error('Error:', error);
         }
         actions.setSubmitting(false);
+        history.push('/thankyou');
     };
 
     return (
