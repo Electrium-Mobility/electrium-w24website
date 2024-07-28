@@ -72,8 +72,8 @@ const Thankyou: React.FC = () => {
                         </div>
                     )}
                 </div>
-                <div className="max-w-xl mx-auto p-8 bg-white mt-16">
-                    <h2 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600">
+                <div className="max-w-xl mx-auto p-12 bg-white mt-16 min-h-screen flex flex-col justify-center">
+                    <h2 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600 mb-6">
                         Thank you for applying!
                     </h2>
                     <p className="text-slate-400">
