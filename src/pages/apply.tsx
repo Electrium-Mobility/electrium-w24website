@@ -13,7 +13,7 @@ import DropdownField from '../components/common/DropdownField';
 import RadioField from '../components/common/RadioField';
 import TextField from '../components/common/TextField';
 import {RoleSpecificSubField} from '../components/common/RoleSpecificField';
-import ValidationSchema from '../components/common/ValidationSchema';
+import ValidationSchema from '../components/common/validationSchema';
 
 const SELECT_PROGRAMS = [
     "Accounting and Financial Management",
@@ -193,12 +193,29 @@ const ApplicationForm = () => {
         comments: false
     }
 
-    const handleSubmit = (values, actions) => {
-        setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            actions.setSubmitting(false);
-            history.push('/thankyou');
-        }, 1000);
+    const handleSubmit = async (values, actions) => {
+        try {
+            fetch('https://script.google.com/macros/s/AKfycbwIzWVdp5Cs3EuRLzCdj8AR3leh972t_868P-0n2zokQJWQTu-q91YywfEnMiF0Q1VL/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'text/plain',
+                },
+                body: JSON.stringify(values),
+            })
+            .then(response => response.json())
+            .then(data => {
+            // console.log('Success:', data);
+            })
+            .catch(error => {
+                // console.error('Error:', error);
+            });
+            actions.setStatus({ success: true, message: 'Form submitted successfully!' });
+        } catch (error) {
+            actions.setStatus({ success: false, message: 'Error submitting form' });
+            // console.error('Error:', error);
+        }
+        actions.setSubmitting(false);
+        history.push('/thankyou');
     };
 
     return (
@@ -224,11 +241,7 @@ const ApplicationForm = () => {
                                         initialValues={initialValues}
                                         validationSchema={ValidationSchema} 
                                         onSubmit={(values, actions) => {
-                                            setTimeout(() => {
-                                              alert(JSON.stringify(values, null, 2));
-                                              actions.setSubmitting(false);
-                                              history.push('/thankyou');
-                                            }, 1000);
+                                            handleSubmit(values, actions);
                                           }}
                                     >
                                         {(values) => (
