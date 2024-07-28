@@ -181,7 +181,7 @@ const ApplicationForm = () => {
         program: true,
         term: true,
         uwaterlooEmail: true,
-        personalEmail: false,
+        personalEmail: true,
         discordUsername: true,
         isReturningMember: true,
         inPerson: true,
@@ -255,12 +255,12 @@ const ApplicationForm = () => {
                                                     </div>
                                                 </div>
                                                 <DropdownField name="program" label="What program are you in?" options={SELECT_PROGRAMS} required={REQUIRED.program} />
-                                                <DropdownField name="term" label="What term will you be in in the Spring 2024 term?" options={SELECT_TERMS} required={REQUIRED.term}/>
+                                                <DropdownField name="term" label="What term will you be in in the Fall 2024 term?" options={SELECT_TERMS} required={REQUIRED.term}/>
                                                 <TextField name="uwaterlooEmail" label="What is your @uwaterloo email? (example s36chiu@uwaterloo.ca)" type="email" required={REQUIRED.uwaterlooEmail}/>
                                                 <TextField name="personalEmail" label="What is your personal email? (example, sherwin.chiu89@gmail.com)" type="email" required={REQUIRED.personalEmail}/>
                                                 <TextField name="discordUsername" label="What is your Discord username? (example .sherwin)" required={REQUIRED.discordUsername}/>
                                                 <RadioField name="isReturningMember" label="Are you a returning member?" options={["Yes", "No"]} required={REQUIRED.isReturningMember}/>
-                                                <RadioField name="inPerson" label="Will you be in-person at Waterloo in Spring 2024?" options={["Yes", "No"]} required={REQUIRED.inPerson}/>
+                                                <RadioField name="inPerson" label="Will you be in-person at Waterloo in Fall 2024?" options={["Yes", "No"]} required={REQUIRED.inPerson}/>
                                                 <TextField name="interests"
                                                     label="What are your interests and hobbies? Tell us something interesting about yourself!"
                                                     caption={<>This is for us to get to know you, and does not have an impact on your application :)</>}
@@ -286,7 +286,7 @@ const ApplicationForm = () => {
                                                 <TextField name="friendReferral" label="If you're applying with a friend, please put their full name below." type="text" required={REQUIRED.friendReferral}/>
                                                 <CheckboxField
                                                     name="electriumProjects"
-                                                    label="Please select which project(s) you're interested in. We will complete them during the Spring 2024 term."
+                                                    label="Please select which project(s) you're interested in. We will complete them during the Fall 2024 term."
                                                     caption={<>Feel free to add your own project idea under "Other".</>}
                                                     options={SELECT_PROJECTS}
                                                     required={REQUIRED.electriumProjects}
