@@ -204,15 +204,15 @@ const ApplicationForm = () => {
             })
             .then(response => response.json())
             .then(data => {
-            console.log('Success:', data);
+            // console.log('Success:', data);
             })
             .catch(error => {
-                console.error('Error:', error);
+                // console.error('Error:', error);
             });
             actions.setStatus({ success: true, message: 'Form submitted successfully!' });
         } catch (error) {
             actions.setStatus({ success: false, message: 'Error submitting form' });
-            console.error('Error:', error);
+            // console.error('Error:', error);
         }
         actions.setSubmitting(false);
         history.push('/thankyou');
