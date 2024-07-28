@@ -18,6 +18,7 @@ interface Question {
   question: string;
   type?: string;
   options?: string[];
+  required?: boolean;
 }
 
 interface RoleSpecificQuestion {
@@ -87,19 +88,22 @@ const RoleSpecificField = ({ name, subName, label, caption, options, required, .
     validate: validateImage, // validate file type, size, etc.
     validationSchema: getValidationSchema(selectedRole), // Add this line
   });
+  //console.log('required:', required);
+  //console.log('subName:', subName);
+  //console.log('required?.[subName]:', required?.[subName]);
 
   return (
     <Form>
       <div className="grid grid-cols-1 mb-5">
         <div className="grid grid-cols-1 mb-5">
           <label htmlFor={subName} className="font-semibold">
-            {label} {required?.[subName] && <span className="text-red-600">*</span>}
+            {label} {required && <span className="text-red-600">*</span>}
           </label>
           <label htmlFor={subName} className="text-gray-500 text-sm">{caption}</label>
           <Field
-            as="select"
-            name={name}
-            onChange={handleRoleChange}
+              as="select"
+              name={name}
+              onChange={handleRoleChange}
             value={selectedRole}
             className="form-select mt-2 text-charcoal-600 border border-charcoal-300 rounded-md px-4 py-3 focus:outline-none focus:ring-green-700 focus:border-green-700"
           >
