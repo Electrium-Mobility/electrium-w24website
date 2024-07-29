@@ -72,7 +72,7 @@ const Thankyou: React.FC = () => {
                         </div>
                     )}
                 </div>
-                <div className="max-w-xl mx-auto p-12 bg-white mt-16 min-h-screen flex flex-col justify-center">
+                <div className="max-w-xl mx-auto p-12 mt-16 min-h-screen flex flex-col justify-center">
                     <h2 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600 mb-6">
                         Thank you for applying!
                     </h2>
