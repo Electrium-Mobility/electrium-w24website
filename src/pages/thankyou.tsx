@@ -5,6 +5,7 @@ import onewheel from '../../static/img/roles-responsibilty/onewheel.png';
 import scooter from '../../static/img/roles-responsibilty/scooter.png';
 import skateboard2 from '../../static/img/roles-responsibilty/skateboard2.png';
 import onewheel2 from '../../static/img/roles-responsibilty/onewheel2.png';
+import {FaDiscord} from "react-icons/fa";
 
 const Thankyou: React.FC = () => {
     const [showImages, setShowImages] = useState(false);
@@ -72,7 +73,8 @@ const Thankyou: React.FC = () => {
                         </div>
                     )}
                 </div>
-                <div className="max-w-xl mx-auto p-12 mt-16 min-h-screen flex flex-col justify-center">
+                <div
+                    className="max-w-xl mx-auto p-12  min-h-[calc(100vh-64px)] flex flex-col justify-center items-center text-center">
                     <h2 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600 mb-6">
                         Thank you for applying!
                     </h2>
@@ -80,6 +82,22 @@ const Thankyou: React.FC = () => {
                         After reviewing everyone's applications, we will be reaching out via email to confirm your
                         submission :)
                     </p>
+
+                    <div className="text-center px-6 mt-6">
+                        <div
+                            className="w-20 h-20 bg-green-600/5 text-green-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
+                            <FaDiscord/>
+                        </div>
+
+                        <div className="content mt-7">
+
+                            <div className="mt-5">
+                                <a href="https://discord.gg/jggFVza4XR" target="_blank"
+                                   className="btn btn-link text-green-600 hover:text-green-600 after:bg-green-600 duration-500 ease-in-out">Join
+                                    our discord server</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </Layout>
