@@ -94,7 +94,7 @@ const Thankyou: React.FC = () => {
                             <div className="mt-5">
                                 <a href="https://discord.gg/jggFVza4XR" target="_blank"
                                    className="btn btn-link text-green-600 hover:text-green-600 after:bg-green-600 duration-500 ease-in-out">Join
-                                    our discord server</a>
+                                    our Discord Server!</a>
                             </div>
                         </div>
                     </div>
