@@ -276,7 +276,7 @@ const ApplicationForm = () => {
                                                             subName="role"
                                                             label="What role are you interested in?"
                                                             caption={(
-                                                                <>You can learn more about what the various roles do <Link to="/" className="text-green-600 font-bold">here</Link>.</>
+                                                                <>You can learn more about what the various roles do <Link to="/responsibilities" target="_blank" className="text-green-600 font-bold">here</Link>.</>
                                                             )}
                                                             options={SELECT_ROLES}
                                                             required={REQUIRED.roleQuestions}
