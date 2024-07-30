@@ -159,11 +159,14 @@ const SELECT_PROJECTS = [
 
 const SELECT_TERMS = ["1A", "1B", "2A", "2B", "3A", "3B", "4A", "4B"];
 
+const SELECT_STREAMS = ["Stream 4", "Stream 8", "Others"];
+
 const initialValues = {
     firstName: "",
     lastName: "",
     program: "",
     term: "",
+    stream: "",
     uwaterlooEmail: "",
     personalEmail: "",
     discordUsername: "",
@@ -203,6 +206,7 @@ const ApplicationForm = () => {
         lastName: true,
         program: true,
         term: true,
+        stream: true,
         uwaterlooEmail: true,
         personalEmail: true,
         discordUsername: true,
@@ -218,7 +222,7 @@ const ApplicationForm = () => {
 
     const handleSubmit = async (values, actions) => {
         try {
-            fetch('https://script.google.com/macros/s/AKfycbwIzWVdp5Cs3EuRLzCdj8AR3leh972t_868P-0n2zokQJWQTu-q91YywfEnMiF0Q1VL/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbyT1EwSE6jKrRecTtN2u8kYolnOAJS9_kLs9yDndVguc4vVvbon3l01iBvOjijOezFB/exec', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'text/plain',
@@ -320,8 +324,7 @@ const ApplicationForm = () => {
                         <div className="lg:col-span-6 md:col-span-6 md:mt-0">
                             <div className="ltr:lg:ml-5 rtl:lg:mr-5">
                                 <h3 className="pt-12 text-center md:leading-normal text-4xl leading-normal font-semibold">Apply</h3>
-                                <h3 className="font-semibold text-green-600 text-center"> Note: Currently this page is
-                                    in development for Summer 2024, please hang on tight!</h3>
+                                <h3 className="font-semibold text-green-600 text-center"> Fall 2024 Application is Open!</h3>
                                 <p className="text-center mb-4 md:leading-normal leading-normal">
                                     Hi there! Thank you for your interest in joining Electrium Mobility!
                                     <br/>
@@ -358,6 +361,8 @@ const ApplicationForm = () => {
                                                 <DropdownField name="term"
                                                                label="What term will you be in in the Fall 2024 term?"
                                                                options={SELECT_TERMS} required={REQUIRED.term}/>
+                                                <DropdownField name="stream" label="What stream are you in?"
+                                                               options={SELECT_STREAMS} required={REQUIRED.stream}/>
                                                 <TextField name="uwaterlooEmail"
                                                            label="What is your @uwaterloo email? (example s36chiu@uwaterloo.ca)"
                                                            type="email" required={REQUIRED.uwaterlooEmail}/>
