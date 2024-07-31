@@ -14,8 +14,8 @@ import HomePageIntro from "@site/src/components/UI Components/HomePageIntro";
 import GetInvolved from "@site/src/components/UI Components/GetInvolved";
 function HomepageHeader() {
     return (
-            <section className="relative table w-full py-36 lg:py-44">
-                <div className="container">
+            <section className="relative w-full py-36 lg:py-44 flex justify-center items-center">
+                <div className="container mx-auto">
                     <div className="grid md:grid-cols-12 grid-cols-1 items-center mt-10 gap-[30px]">
                         <div className="md:col-span-7">
                             <div className="ltr:md:mr-6 rtl:md:ml-6">
