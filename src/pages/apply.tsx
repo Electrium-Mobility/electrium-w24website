@@ -143,17 +143,18 @@ const SELECT_ROLES = [
     "Management",
     "Marketing",
     "Finance",
-    "Leads",
+    "Lead",
 ];
 
 const SELECT_PROJECTS = [
     "Electric Bike (8-month)",
     "Electric Scooter",
     "Electric Skateboard",
-    "OneWheel",
+    "Balance Board",
     "Electric Motorcycle",
     "Electric Go-Kart",
     "Electric Couch",
+    "Custom Electronics",
     "Other",
 ];
 
