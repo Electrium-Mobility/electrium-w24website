@@ -119,6 +119,7 @@ const SELECT_PROGRAMS = [
     "Speech Communication",
     "Statistics",
     "Sustainability and Financial Management",
+    "Systems Design Engineering",
     "Theatre and Performance",
     "Theological Studies",
     "Therapeutic Recreation",
