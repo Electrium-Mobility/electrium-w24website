@@ -129,19 +129,6 @@
             "required": false
         },
         {
-            "name": "resume",
-            "question": "Resume/ Portfolio/ Past projects",
-            "type": "upload",
-            "required": false
-        },
-        {
-            "name": "designPost",
-            "question": "Design an \"introduce the members\" IG post for yourself",
-            "type": "upload",
-            "caption": "Please research on, and follow our design standards. Feel free to blur your face and add watermarks",
-            "required": false
-        },
-        {
             "name": "discordEmoji",
             "question": "Which discord emoji has the largest water droplet?",
             "type": "text",
@@ -177,12 +164,6 @@
             "type": "text",
             "caption": "Please use point form",
             "required": false
-        },
-        {
-            "name": "resume",
-            "question": "Resume",
-            "type": "upload",
-            "required": true
         },
         {
             "name": "sponsorEmail",
