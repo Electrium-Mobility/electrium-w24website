@@ -185,7 +185,7 @@ const initialValues = {
     comments: ""
 };
 
-/*
+
 const ApplicationForm = () => {
     const [showImages, setShowImages] = useState(false);
 
@@ -438,7 +438,8 @@ const ApplicationForm = () => {
 };
 
 export default ApplicationForm;
-*/
+
+/*
 const ApplicationClosed: React.FC = () => {
     const [showImages, setShowImages] = useState(false);
 
@@ -541,3 +542,4 @@ const ApplicationClosed: React.FC = () => {
 };
 
 export default ApplicationClosed;
+*/
