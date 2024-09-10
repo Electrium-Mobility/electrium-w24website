@@ -21,6 +21,7 @@ import skateboard2 from '../../static/img/roles-responsibilty/skateboard2.png';
 import onewheel2 from '../../static/img/roles-responsibilty/onewheel2.png';
 import {FaDiscord} from "react-icons/fa";
 
+/*
 const SELECT_PROGRAMS = [
     "Accounting and Financial Management",
     "Actuarial Science",
@@ -438,8 +439,8 @@ const ApplicationForm = () => {
 };
 
 export default ApplicationForm;
+*/
 
-/*
 const ApplicationClosed: React.FC = () => {
     const [showImages, setShowImages] = useState(false);
 
@@ -542,4 +543,3 @@ const ApplicationClosed: React.FC = () => {
 };
 
 export default ApplicationClosed;
-*/
