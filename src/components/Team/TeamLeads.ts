@@ -1,16 +1,16 @@
 import Sherwin_C from "/static/img/team_headshots/Sherwin_C.png";
 import Damir_G from "/static/img/team_headshots/Damir_G.png";
 import Samantha_C from "/static/img/team_headshots/Samantha_C.png";
-import Vishesh_G from "/static/img/team_headshots/Vishesh_G.png";
-import Enoch_T from "/static/img/team_headshots/Enoch_T.png";
-import Mae_Lyn from "/static/img/team_headshots/Mae-Lyn.png";
-import Meghan_D from "/static/img/team_headshots/Meghan_D.png";
 import Jerry_C from "/static/img/team_headshots/Jerry_C.png";
-import Anna_L from "/static/img/team_headshots/Anna_L.png";
-import George_L from "/static/img/team_headshots/George_L.png";
-import Charis_H from "/static/img/team_headshots/Charis_H.png";
-import Abeiku_D from "/static/img/team_headshots/Abeiku_D.png";
 import Jerry_Z from "/static/img/team_headshots/Jerry_Z.png";
+import Patrick_H from "/static/img/team_headshots/Patrick_H.png";
+import Patrick_Y from "/static/img/team_headshots/Patrick_Y.png";
+import Mahi_J from "/static/img/team_headshots/Mahi_J.png";
+import Omer_S from "/static/img/team_headshots/Omer_S.png";
+import Ling_Wei_T from "/static/img/team_headshots/Ling_Wei_T.png";
+import Ethan_G from "/static/img/team_headshots/Ethan_G.png";
+import Henon_H from "/static/img/team_headshots/Henon_H.png";
+import Alexander_H from "/static/img/team_headshots/Alexander_H.png";
 
 export const teamLeads = [
   {
@@ -25,57 +25,59 @@ export const teamLeads = [
   },
   {
     name: "Samantha Chong",
-    position: "Mechanical Team Lead",
+    position: "CF Skateboard Project Lead",
     headshot: Samantha_C,
   },
-  {
-    name: "Vishesh Garg",
-    position: "Team Lead",
-    headshot: Vishesh_G,
-  },
-  {
-    name: "Enoch Tin",
-    position: "Marketing Finance Lead",
-    headshot: Enoch_T,
-  },
-  {
-    name: "Mae-Lyn",
-    position: "Skateboard Project Lead",
-    headshot: Mae_Lyn,
-  },
-  {
-    name: "Meghan Dang",
-    position: "Lowkey Team Lead",
-    headshot: Meghan_D,
-  },
+
   {
     name: "Jerry Chen",
-    position: "Bakfiets Project Lead",
+    position: "Mechanical Team Lead",
     headshot: Jerry_C,
-  },
-  {
-    name: "Anna Levonyan",
-    position: "Motorcycle Project Lead",
-    headshot: Anna_L,
-  },
-  {
-    name: "George Li",
-    position: "QuickMefs Lead",
-    headshot: George_L,
-  },
-  {
-    name: "Charis Ho",
-    position: "OneWheel Team Lead",
-    headshot: Charis_H,
-  },
-  {
-    name: "Abeiku Darkwa",
-    position: "Scooter Project Lead",
-    headshot: Abeiku_D,
   },
   {
     name: "Jerry Z",
     position: "Web Dev Lead",
     headshot: Jerry_Z,
   },
+  {
+    name: "Patrick He",
+    position: "Electric Couch CoLead",
+    headshot: Patrick_H,
+  },
+  {
+    name: "Patrick Yuan",
+    position: "Electric Couch CoLead",
+    headshot: Patrick_Y,
+  },
+  {
+    name: "Mahi Joshi",
+    position: "F24 Skateboard Project Lead",
+    headshot: Mahi_J,
+  },
+  {
+    name: "Omer Syed",
+    position: "F24 Scooter Project Lead",
+    headshot: Omer_S,
+  },
+  {
+    name: "Ling-Wei Tang",
+    position: "GoKart Project CoLead",
+    headshot: Ling_Wei_T,
+  },
+  {
+    name: "Ethan Guan",
+    position: "GoKart Project CoLead",
+    headshot: Ethan_G,
+  },
+  {
+    name: "Henon Hailu",
+    position: "F24 Bike Project Lead",
+    headshot: Henon_H,
+  },
+  {
+    name: "Alexander Hamersma",
+    position: "Firmware Team Lead",
+    headshot: Alexander_H,
+  },
+  
 ];
