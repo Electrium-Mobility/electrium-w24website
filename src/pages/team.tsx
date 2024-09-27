@@ -62,7 +62,7 @@ function Team() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-0 gap-[30px]">
             {coops.map((lead, index) => (
-              <Coop headshot={lead.headshot} name={lead.name} />
+              <Coop headshot={lead.headshot} name={lead.name} position={lead.position} />
             ))}
           </div>
 
