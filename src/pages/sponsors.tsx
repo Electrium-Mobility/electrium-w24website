@@ -1,31 +1,32 @@
-import React from "react";
-// import tailwindConfig from "@site/tailwind.config";
+import React from 'react';
+import tailwindConfig from '@site/tailwind.config';
 // import styles from "./index.module.css";
-import LinkButton from "../components/UI Components/LinkButton";
-import Layout from "@theme/Layout";
-import Link from "@docusaurus/Link";
+import LinkButton from '../components/UI Components/LinkButton';
+import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
 
-import weef from "/static/img/sponsors/weef_logo.png";
-import engsoc from "/static/img/sponsors/engsoc_logo.png";
-import Altium from "/static/img/sponsors/Altium_Logo.png";
-import AltiumDark from "/static/img/sponsors/Altium_Logo_light.png";
-import mef from "/static/img/sponsors/mef_logo.png";
-import wusa from "/static/img/sponsors/WUSA_logo.png";
-import wusaDark from "/static/img/sponsors/WUSA_logo_light.png";
+import weef from '/static/img/sponsors/weef_logo.png';
+import engsoc from '/static/img/sponsors/engsoc_logo.png';
+import Altium from '/static/img/sponsors/Altium_Logo.png';
+import AltiumDark from '/static/img/sponsors/Altium_Logo_light.png';
+import mef from '/static/img/sponsors/mef_logo.png';
+import wusa from '/static/img/sponsors/WUSA_logo.png';
+import wusaDark from '/static/img/sponsors/WUSA_logo_light.png';
 
-import panago from "/static/img/sponsors/panago_logo.png";
-import panagoDark from "/static/img/sponsors/panago_logo_light.png";
-import imprint from "/static/img/sponsors/4imprint-logo-light.jpg";
-import imprintDark from "/static/img/sponsors/4imprint-logo.png";
-import enova from "/static/img/sponsors/Enova_Logo.jpg";
-import fsa from "/static/img/sponsors/fsa_logo-black.png";
-import fsaDark from "/static/img/sponsors/fsa_logo-white.png";
+import panago from '/static/img/sponsors/panago_logo.png';
+import panagoDark from '/static/img/sponsors/panago_logo_light.png';
+import imprint from '/static/img/sponsors/4imprint-logo-light.jpg';
+import imprintDark from '/static/img/sponsors/4imprint-logo.png';
+import enova from '/static/img/sponsors/Enova_Logo.jpg';
+import fsa from '/static/img/sponsors/fsa_logo-black.png';
+import fsaDark from '/static/img/sponsors/fsa_logo-white.png';
 
-import domino from "/static/img/sponsors/dominos_logo.png";
-import wcfu from "/static/img/sponsors/WFCU_logo.png";
-import wcfuDark from "/static/img/sponsors/WFCU_logo_light.png";
+import domino from '/static/img/sponsors/dominos_logo.png';
+import wcfu from '/static/img/sponsors/WFCU_logo.png';
+import wcfuDark from '/static/img/sponsors/WFCU_logo_light.png';
 
-import Sponsor from "../components/Sponsors/sponsor";
+import Sponsor from '../components/Sponsors/sponsor';
+import SponsorCarousel from '../components/Sponsors/SponsorCarousel';
 
 export default function Sponsors() {
   //surely there's a better way to do this :")
@@ -86,23 +87,23 @@ export default function Sponsors() {
   return (
     <Layout>
       <div>
-        <section className="relative md:py-24 py-16  bg-gray-50 dark:bg-slate-800">
-          <div className="container mt-16">
-            <div className="grid grid-cols-1 text-center">
-              <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
+        <section className='relative md:py-24 py-16  bg-gray-50 dark:bg-slate-800'>
+          <div className='container mt-16'>
+            <div className='grid grid-cols-1 text-center'>
+              <h3 className='mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold'>
                 Sponsor Sustainable Innovation
               </h3>
 
-              <p className="text-slate-400 max-w-xl mx-auto">
+              <p className='text-slate-400 max-w-xl mx-auto'>
                 Sponsors help promote sustainable innovation and bring our
                 projects to life. <br /> Support us in our journey towards
                 eco-friendly transportation and contact us to find out more
                 about becoming a sponsor!
               </p>
-              <div className="mt-6">
+              <div className='mt-6'>
                 <Link
-                  to="/contact"
-                  className="btn bg-green-600 hover:bg-transparent border-green-600 text-white rounded-md ltr:mr-2 rtl:ml-2 mt-2 p-4"
+                  to='/contact'
+                  className='btn bg-green-600 hover:bg-transparent border-green-600 text-white rounded-md ltr:mr-2 rtl:ml-2 mt-2 p-4'
                 >
                   Become a Sponsor
                 </Link>
@@ -111,41 +112,26 @@ export default function Sponsors() {
           </div>
         </section>
       </div>
-
-      <div className="flex flex-column">
+      <div className='w-screen overflow-hidden'>
         <div>
-          <h4 className="text-center mt-6 mb-4 md:text-4xl md:leading-normal text-3xl leading-normal font-semibold">
+          <h4 className='text-center mt-6 mb-4 md:text-4xl md:leading-normal text-3xl leading-normal font-semibold'>
             Platinum
           </h4>
-          <div className="flex flex-row flex-wrap justify-center items-center">
-            {sponsors.platinum.map((sponsor, index) => (
-              <Sponsor
-                key={index}
-                imgUrl={sponsor.imgUrl}
-                darkImgUrl={sponsor.darkImg}
-                tier="platinum"
-              />
-            ))}
+          <div className='flex flex-row flex-wrap'>
+            <SponsorCarousel sponsors={sponsors.platinum} tier='platinum' />
           </div>
 
           <br />
-          <h4 className="text-center mb-4 md:text-4xl md:leading-normal text-3xl leading-normal font-semibold">
+          <h4 className='text-center mb-4 md:text-4xl md:leading-normal text-3xl leading-normal font-semibold'>
             Gold
           </h4>
-          <div className="flex flex-row flex-wrap justify-center items-center">
-            {sponsors.gold.map((sponsor, index) => (
-              <Sponsor
-                key={index}
-                imgUrl={sponsor.imgUrl}
-                darkImgUrl={sponsor.darkImg}
-                tier="gold"
-              />
-            ))}
+          <div className='flex flex-row flex-wrap justify-center items-center'>
+            <SponsorCarousel sponsors={sponsors.gold} tier='gold' />
           </div>
 
           <br />
           <div>
-            <h4 className="text-center mb-4 md:text-4xl md:leading-normal text-3xl leading-normal font-semibold">
+            <h4 className='text-center mb-4 md:text-4xl md:leading-normal text-3xl leading-normal font-semibold'>
               Silver
             </h4>
             {sponsors.silver.map((sponsor, index) => (
@@ -153,14 +139,14 @@ export default function Sponsors() {
                 key={index}
                 imgUrl={sponsor.imgUrl}
                 darkImgUrl={sponsor.darkImg}
-                tier="silver"
+                tier='silver'
               />
             ))}
           </div>
 
           <br />
           <div>
-            <h4 className="text-center mb-4 md:text-4xl md:leading-normal text-3xl leading-normal font-semibold">
+            <h4 className='text-center mb-4 md:text-4xl md:leading-normal text-3xl leading-normal font-semibold'>
               Bronze
             </h4>
             {sponsors.bronze.map((sponsor, index) => (
@@ -168,7 +154,7 @@ export default function Sponsors() {
                 key={index}
                 imgUrl={sponsor.imgUrl}
                 darkImgUrl={sponsor.darkImg}
-                tier="bronze"
+                tier='bronze'
               />
             ))}
           </div>
