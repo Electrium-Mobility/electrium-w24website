@@ -516,26 +516,6 @@ const ApplicationClosed: React.FC = () => {
                         Applications for the Fall 2024 term are now closed.
                     </p>
 
-                    <div className="text-center px-6 mt-6">
-                        <div className="w-20 h-20 bg-green-600/5 text-green-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
-                            <FaDiscord/>
-                        </div>
-
-                        <div className="content mt-7">
-
-                            <div className="mt-5">
-                                <p className="text-slate-400">
-                                    If you want to join our team, please contact Sherwin in our {' '}
-                                    <a href="https://discord.gg/jggFVza4XR" 
-                                       target="_blank"
-                                       className="text-green-600 hover:text-green-600 duration-500 ease-in-out">
-                                        Discord server
-                                    </a>!
-                                </p>
-                            </div>
-                            
-                        </div>
-                    </div>
                 </div>
             </div>
         </Layout>
