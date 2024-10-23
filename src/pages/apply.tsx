@@ -40,7 +40,6 @@ const SELECT_PROGRAMS = [
     "Biotechnology/Chartered Professional Accountancy",
     "Chemical Engineering",
     "Chemistry",
-
     "Civil Engineering",
     "Classical Studies",
     "Climate and Environmental Change",
