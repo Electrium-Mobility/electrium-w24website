@@ -40,6 +40,7 @@ const SELECT_PROGRAMS = [
     "Biotechnology/Chartered Professional Accountancy",
     "Chemical Engineering",
     "Chemistry",
+
     "Civil Engineering",
     "Classical Studies",
     "Climate and Environmental Change",
@@ -514,6 +515,7 @@ const ApplicationClosed: React.FC = () => {
                     </h2>
                     <p className="text-slate-400">
                         Applications for the Fall 2024 term are now closed.
+                        Our applications will open December for winter 2025 term!
                     </p>
 
                 </div>
