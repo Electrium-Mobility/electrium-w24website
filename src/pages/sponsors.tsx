@@ -120,7 +120,6 @@ export default function Sponsors() {
           <div className='flex flex-row flex-wrap'>
             <SponsorCarousel sponsors={sponsors.platinum} tier='platinum' />
           </div>
-
           <br />
           <h4 className='text-center mb-4 md:text-4xl md:leading-normal text-3xl leading-normal font-semibold'>
             Gold
