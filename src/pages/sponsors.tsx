@@ -126,7 +126,14 @@ export default function Sponsors() {
             Gold
           </h4>
           <div className='flex flex-row flex-wrap justify-center items-center'>
-            <SponsorCarousel sponsors={sponsors.gold} tier='gold' />
+            {sponsors.gold.map((sponsor, index) => (
+              <Sponsor
+                key={index}
+                imgUrl={sponsor.imgUrl}
+                darkImgUrl={sponsor.darkImg}
+                tier='gold'
+              />
+            ))}
           </div>
 
           <br />
