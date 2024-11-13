@@ -20,8 +20,9 @@ import scooter from '../../static/img/roles-responsibilty/scooter.png';
 import skateboard2 from '../../static/img/roles-responsibilty/skateboard2.png';
 import onewheel2 from '../../static/img/roles-responsibilty/onewheel2.png';
 import {FaDiscord} from "react-icons/fa";
+import NumberDropdownField from '../components/common/NumberDropdownField';
 
-/*
+
 const SELECT_PROGRAMS = [
     "Accounting and Financial Management",
     "Actuarial Science",
@@ -165,6 +166,8 @@ const SELECT_TERMS = ["1A", "1B", "2A", "2B", "3A", "3B", "4A", "4B"];
 
 const SELECT_STREAMS = ["Stream 4", "Stream 8", "Others"];
 
+const RANK_NUMBERS = [1,2,3,4,5,6,7,8,9]; // This list should contain the # of the items in SELECT_PROJECTS
+//const list2: number[] = Array.from({ length: list1.length }, (_, index) => index + 1);
 const initialValues = {
     firstName: "",
     lastName: "",
@@ -413,13 +416,21 @@ const ApplicationForm = () => {
                                                 <TextField name="friendReferral"
                                                            label="If you're applying with a friend, please put their full name below."
                                                            type="text" required={REQUIRED.friendReferral}/>
-                                                <CheckboxField
+                                                {/* <CheckboxField
                                                     name="electriumProjects"
                                                     label="Please select which project(s) you're interested in. We will complete them during the Fall 2024 term."
                                                     caption={<>Feel free to add your own project idea under "Other".</>}
                                                     options={SELECT_PROJECTS}
                                                     required={REQUIRED.electriumProjects}
-                                                ></CheckboxField>
+                                                ></CheckboxField> */}
+                                                <NumberDropdownField
+                                                    name="electriumProjects"
+                                                    label="Please rank the projects you're interested in. (1 is most interested and 9 is least interested)"
+                                                    caption={<>Feel free to add your own project idea under "Other".</>}
+                                                    options={SELECT_PROJECTS}
+                                                    rankings = {RANK_NUMBERS}
+                                                    required={REQUIRED.electriumProjects}
+                                                ></NumberDropdownField>
                                                 <TextField name="comments" label="Any additional comments or questions?"
                                                            required={REQUIRED.comments}/>
                                                 <button type="submit"
@@ -439,88 +450,88 @@ const ApplicationForm = () => {
 };
 
 export default ApplicationForm;
-*/
 
-const ApplicationClosed: React.FC = () => {
-    const [showImages, setShowImages] = useState(false);
 
-    useEffect(() => {
-        const handleResize = () => {
-            setShowImages(window.innerWidth >= 1034);
-        };
+// const ApplicationClosed: React.FC = () => {
+//     const [showImages, setShowImages] = useState(false);
 
-        handleResize();
+//     useEffect(() => {
+//         const handleResize = () => {
+//             setShowImages(window.innerWidth >= 1034);
+//         };
 
-        window.addEventListener('resize', handleResize);
+//         handleResize();
 
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+//         window.addEventListener('resize', handleResize);
 
-    return (
-        <Layout>
-            <div>
-                <div>
-                    {showImages && (
-                        <div className="images-container">
-                            <img src={skateboard} alt="skateboard" style={{
-                                position: 'absolute',
-                                width: '150px',
-                                height: 'auto',
-                                left: '0',
-                                transform: 'translateX(-10%)',
-                                top: '50px'
-                            }}/>
-                            <img src={onewheel} alt="onewheel" style={{
-                                position: 'absolute',
-                                width: '150px',
-                                height: 'auto',
-                                right: '0',
-                                transform: 'translateX(10%)',
-                                top: '350px'
-                            }}/>
-                            <img src={scooter} alt="scooter" style={{
-                                position: 'absolute',
-                                width: '150px',
-                                height: 'auto',
-                                left: '0',
-                                transform: 'translateX(-10%)',
-                                top: '650px'
-                            }}/>
-                            <img src={skateboard2} alt="skateboard-right" style={{
-                                position: 'absolute',
-                                width: '150px',
-                                height: 'auto',
-                                right: '0',
-                                transform: 'translateX(10%)',
-                                top: '950px'
-                            }}/>
-                            <img src={onewheel2} alt="onewheel-left" style={{
-                                position: 'absolute',
-                                width: '150px',
-                                height: 'auto',
-                                left: '0',
-                                transform: 'translateX(-10%)',
-                                top: '1250px'
-                            }}/>
-                        </div>
-                    )}
-                </div>
-                <div
-                    className="max-w-xl mx-auto p-12  min-h-[calc(100vh-64px)] flex flex-col justify-center items-center text-center">
-                    <h2 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600 mb-6">
-                        Applications are now closed.
-                    </h2>
-                    <p className="text-slate-400">
-                        Applications for the Fall 2024 term are now closed.
-                        Our applications will open December for winter 2025 term!
-                    </p>
+//         return () => {
+//             window.removeEventListener('resize', handleResize);
+//         };
+//     }, []);
 
-                </div>
-            </div>
-        </Layout>
-    );
-};
+//     return (
+//         <Layout>
+//             <div>
+//                 <div>
+//                     {showImages && (
+//                         <div className="images-container">
+//                             <img src={skateboard} alt="skateboard" style={{
+//                                 position: 'absolute',
+//                                 width: '150px',
+//                                 height: 'auto',
+//                                 left: '0',
+//                                 transform: 'translateX(-10%)',
+//                                 top: '50px'
+//                             }}/>
+//                             <img src={onewheel} alt="onewheel" style={{
+//                                 position: 'absolute',
+//                                 width: '150px',
+//                                 height: 'auto',
+//                                 right: '0',
+//                                 transform: 'translateX(10%)',
+//                                 top: '350px'
+//                             }}/>
+//                             <img src={scooter} alt="scooter" style={{
+//                                 position: 'absolute',
+//                                 width: '150px',
+//                                 height: 'auto',
+//                                 left: '0',
+//                                 transform: 'translateX(-10%)',
+//                                 top: '650px'
+//                             }}/>
+//                             <img src={skateboard2} alt="skateboard-right" style={{
+//                                 position: 'absolute',
+//                                 width: '150px',
+//                                 height: 'auto',
+//                                 right: '0',
+//                                 transform: 'translateX(10%)',
+//                                 top: '950px'
+//                             }}/>
+//                             <img src={onewheel2} alt="onewheel-left" style={{
+//                                 position: 'absolute',
+//                                 width: '150px',
+//                                 height: 'auto',
+//                                 left: '0',
+//                                 transform: 'translateX(-10%)',
+//                                 top: '1250px'
+//                             }}/>
+//                         </div>
+//                     )}
+//                 </div>
+//                 <div
+//                     className="max-w-xl mx-auto p-12  min-h-[calc(100vh-64px)] flex flex-col justify-center items-center text-center">
+//                     <h2 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600 mb-6">
+//                         Applications are now closed.
+//                     </h2>
+//                     <p className="text-slate-400">
+//                         Applications for the Fall 2024 term are now closed.
+//                         Our applications will open December for winter 2025 term!
+//                     </p>
 
-export default ApplicationClosed;
+//                 </div>
+//             </div>
+//         </Layout>
+//     );
+// };
+
+// export default ApplicationClosed;
