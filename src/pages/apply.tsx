@@ -185,6 +185,10 @@ const initialValues = {
         role: ""
     },
     electriumProjects: [],
+    electriumProject1: "",
+    electriumProject2: "",
+    electriumProject3: "",
+    electriumProject4: "",
     friendReferral: "",
     comments: ""
 };
@@ -222,14 +226,19 @@ const ApplicationForm = () => {
         interests: false,
         heardSource: true,
         roleQuestions: true,
-        electriumProjects: true,
+        // electriumProjects: true,
         friendReferral: false,
         comments: false
     }
 
     const handleSubmit = async (values, actions) => {
+        for (let i = 0; i < SELECT_PROJECTS.length; i++) { //manage each state of the dropdown individually
+            let ranking = values[(`electriumProject${i}`)]; 
+            values['electriumProjects'][Number(ranking) - 1] = SELECT_PROJECTS[i];
+          }
+        console.log(values);
         try {
-            fetch('https://script.google.com/macros/s/AKfycbyT1EwSE6jKrRecTtN2u8kYolnOAJS9_kLs9yDndVguc4vVvbon3l01iBvOjijOezFB/exec', {
+            fetch('https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbw9pKDnWe437aIaL94Jb1WkNLon1FuFoPOdIDhTYnidCfVrlR1adz5cZaqA-S0yyppWyw/exec', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'text/plain',
@@ -238,15 +247,15 @@ const ApplicationForm = () => {
             })
             .then(response => response.json())
             .then(data => {
-            // console.log('Success:', data);
+            console.log('Success:', data);
             })
             .catch(error => {
-                // console.error('Error:', error);
+                console.error('Error:', error);
             });
             actions.setStatus({ success: true, message: 'Form submitted successfully!' });
         } catch (error) {
             actions.setStatus({ success: false, message: 'Error submitting form' });
-            // console.error('Error:', error);
+            console.error('Error:', error);
         }
         actions.setSubmitting(false);
         history.push('/thankyou');
@@ -429,7 +438,7 @@ const ApplicationForm = () => {
                                                     caption={<>Feel free to add your own project idea under "Other".</>}
                                                     options={SELECT_PROJECTS}
                                                     rankings = {RANK_NUMBERS}
-                                                    required={REQUIRED.electriumProjects}
+                                                    // required={REQUIRED.electriumProjects}
                                                 ></NumberDropdownField>
                                                 <TextField name="comments" label="Any additional comments or questions?"
                                                            required={REQUIRED.comments}/>
