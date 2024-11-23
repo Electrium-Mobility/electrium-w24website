@@ -185,10 +185,15 @@ const initialValues = {
         role: ""
     },
     electriumProjects: [],
-    electriumProject1: "",
-    electriumProject2: "",
-    electriumProject3: "",
-    electriumProject4: "",
+    // electriumProject0: "",
+    // electriumProject1: "",
+    // electriumProject2: "",
+    // electriumProject3: "",
+    // electriumProject4: "",
+    // electriumProject5: "",
+    // electriumProject6: "",
+    // electriumProject7: "",
+    // electriumProject8: "",
     friendReferral: "",
     comments: ""
 };
@@ -226,15 +231,17 @@ const ApplicationForm = () => {
         interests: false,
         heardSource: true,
         roleQuestions: true,
-        // electriumProjects: true,
+        electriumProjects: true,
         friendReferral: false,
         comments: false
     }
 
     const handleSubmit = async (values, actions) => {
+        let finalArray = new Array(SELECT_PROJECTS.length);
         for (let i = 0; i < SELECT_PROJECTS.length; i++) { //manage each state of the dropdown individually
-            let ranking = values[(`electriumProject${i}`)]; 
-            values['electriumProjects'][Number(ranking) - 1] = SELECT_PROJECTS[i];
+            let ranking = values['electriumProjects'][i]; 
+            finalArray[ranking-1] = SELECT_PROJECTS[i];
+            values['electriumProjects'] = finalArray;
           }
         console.log(values);
         try {
@@ -362,7 +369,10 @@ const ApplicationForm = () => {
                                     >
                                         {(values) => (
                                             <Form>
-                                                <div className="grid lg:grid-cols-12 lg:gap-6">
+                                                {
+                                                 <DropdownField name="program" label="What program are you in?"
+                                                 options={SELECT_PROGRAMS} required={REQUIRED.program}/>
+                                                /* <div className="grid lg:grid-cols-12 lg:gap-6">
                                                     <div className="lg:col-span-6">
                                                         <TextField name="firstName" label="First Name"
                                                                    required={REQUIRED.firstName}/>
@@ -424,7 +434,7 @@ const ApplicationForm = () => {
                                                 />
                                                 <TextField name="friendReferral"
                                                            label="If you're applying with a friend, please put their full name below."
-                                                           type="text" required={REQUIRED.friendReferral}/>
+                                                           type="text" required={REQUIRED.friendReferral}/> */}
                                                 {/* <CheckboxField
                                                     name="electriumProjects"
                                                     label="Please select which project(s) you're interested in. We will complete them during the Fall 2024 term."
@@ -438,10 +448,10 @@ const ApplicationForm = () => {
                                                     caption={<>Feel free to add your own project idea under "Other".</>}
                                                     options={SELECT_PROJECTS}
                                                     rankings = {RANK_NUMBERS}
-                                                    // required={REQUIRED.electriumProjects}
+                                                    required={REQUIRED.electriumProjects}
                                                 ></NumberDropdownField>
-                                                <TextField name="comments" label="Any additional comments or questions?"
-                                                           required={REQUIRED.comments}/>
+                                                {/* <TextField name="comments" label="Any additional comments or questions?"
+                                                           required={REQUIRED.comments}/> */}
                                                 <button type="submit"
                                                         className="btn p-2 w-48 inline-block align-middle bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md w-full">Submit
                                                 </button>
