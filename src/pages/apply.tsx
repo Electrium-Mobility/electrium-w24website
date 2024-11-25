@@ -241,8 +241,9 @@ const ApplicationForm = () => {
         for (let i = 0; i < SELECT_PROJECTS.length; i++) { //manage each state of the dropdown individually
             let ranking = values['electriumProjects'][i]; 
             finalArray[ranking-1] = SELECT_PROJECTS[i];
-            values['electriumProjects'] = finalArray;
+            
           }
+        values['electriumProjects'] = finalArray;
         console.log(values);
         try {
             fetch('https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbw9pKDnWe437aIaL94Jb1WkNLon1FuFoPOdIDhTYnidCfVrlR1adz5cZaqA-S0yyppWyw/exec', {
@@ -369,93 +370,83 @@ const ApplicationForm = () => {
                                     >
                                         {(values) => (
                                             <Form>
-                                                {
-                                                 <DropdownField name="program" label="What program are you in?"
-                                                 options={SELECT_PROGRAMS} required={REQUIRED.program}/>
-                                                /* <div className="grid lg:grid-cols-12 lg:gap-6">
-                                                    <div className="lg:col-span-6">
-                                                        <TextField name="firstName" label="First Name"
-                                                                   required={REQUIRED.firstName}/>
-                                                    </div>
-                                                    <div className="lg:col-span-6">
-                                                        <TextField name="lastName" label="Last Name"
-                                                                   required={REQUIRED.lastName}/>
-                                                    </div>
+                                            <div className="grid lg:grid-cols-12 lg:gap-6">
+                                                <div className="lg:col-span-6">
+                                                    <TextField name="firstName" label="First Name"
+                                                               required={REQUIRED.firstName}/>
                                                 </div>
-                                                <DropdownField name="program" label="What program are you in?"
-                                                               options={SELECT_PROGRAMS} required={REQUIRED.program}/>
-                                                <DropdownField name="term"
-                                                               label="What term will you be in in the Fall 2024 term?"
-                                                               options={SELECT_TERMS} required={REQUIRED.term}/>
-                                                <DropdownField name="stream" label="What stream are you in?"
-                                                               options={SELECT_STREAMS} required={REQUIRED.stream}/>
-                                                <TextField name="uwaterlooEmail"
-                                                           label="What is your @uwaterloo email? (example s36chiu@uwaterloo.ca)"
-                                                           type="email" required={REQUIRED.uwaterlooEmail}/>
-                                                <TextField name="personalEmail"
-                                                           label="What is your personal email? (example, sherwin.chiu89@gmail.com)"
-                                                           type="email" required={REQUIRED.personalEmail}/>
-                                                <TextField name="discordUsername"
-                                                           label="What is your Discord username? (example .sherwin)"
-                                                           required={REQUIRED.discordUsername}/>
-                                                <RadioField name="isReturningMember" label="Are you a returning member?"
-                                                            options={["Yes", "No"]}
-                                                            required={REQUIRED.isReturningMember}/>
-                                                <RadioField name="inPerson"
-                                                            label="Will you be in-person at Waterloo in Fall 2024?"
-                                                            options={["Yes", "No"]} required={REQUIRED.inPerson}/>
-                                                <TextField name="interests"
-                                                           label="What are your interests and hobbies? Tell us something interesting about yourself!"
-                                                           caption={<>This is for us to get to know you, and does not
-                                                               have an impact on your application :)</>}
-                                                           required={REQUIRED.interests}
-                                                />
-                                                <RadioField name="heardSource"
-                                                            label="How did you hear about Electrium Mobility?"
-                                                            options={SELECT_HEARD_SOURCE}
-                                                            required={REQUIRED.heardSource}/>
-                                                <Field
-                                                    name="roleQuestions"
-                                                    render={({field, form}) => (
-                                                        <RoleSpecificSubField
-                                                            field={field}
-                                                            form={form}
-                                                            subName="role"
-                                                            label="What role are you interested in?"
-                                                            caption={(
-                                                                <>You can learn more about what the various roles
-                                                                    do <Link to="/responsibilities" target="_blank"
-                                                                             className="text-green-600 font-bold">here</Link>.</>
-                                                            )}
-                                                            options={SELECT_ROLES}
-                                                            required={REQUIRED.roleQuestions}
-                                                        />
-                                                    )}
-                                                />
-                                                <TextField name="friendReferral"
-                                                           label="If you're applying with a friend, please put their full name below."
-                                                           type="text" required={REQUIRED.friendReferral}/> */}
-                                                {/* <CheckboxField
-                                                    name="electriumProjects"
-                                                    label="Please select which project(s) you're interested in. We will complete them during the Fall 2024 term."
-                                                    caption={<>Feel free to add your own project idea under "Other".</>}
-                                                    options={SELECT_PROJECTS}
-                                                    required={REQUIRED.electriumProjects}
-                                                ></CheckboxField> */}
-                                                <NumberDropdownField
-                                                    name="electriumProjects"
-                                                    label="Please rank the projects you're interested in. (1 is most interested and 9 is least interested)"
-                                                    caption={<>Feel free to add your own project idea under "Other".</>}
-                                                    options={SELECT_PROJECTS}
-                                                    rankings = {RANK_NUMBERS}
-                                                    required={REQUIRED.electriumProjects}
-                                                ></NumberDropdownField>
-                                                {/* <TextField name="comments" label="Any additional comments or questions?"
-                                                           required={REQUIRED.comments}/> */}
-                                                <button type="submit"
-                                                        className="btn p-2 w-48 inline-block align-middle bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md w-full">Submit
-                                                </button>
-                                            </Form>
+                                                <div className="lg:col-span-6">
+                                                    <TextField name="lastName" label="Last Name"
+                                                               required={REQUIRED.lastName}/>
+                                                </div>
+                                            </div>
+                                            <DropdownField name="program" label="What program are you in?"
+                                                           options={SELECT_PROGRAMS} required={REQUIRED.program}/>
+                                            <DropdownField name="term"
+                                                           label="What term will you be in in the Fall 2024 term?"
+                                                           options={SELECT_TERMS} required={REQUIRED.term}/>
+                                            <DropdownField name="stream" label="What stream are you in?"
+                                                           options={SELECT_STREAMS} required={REQUIRED.stream}/>
+                                            <TextField name="uwaterlooEmail"
+                                                       label="What is your @uwaterloo email? (example s36chiu@uwaterloo.ca)"
+                                                       type="email" required={REQUIRED.uwaterlooEmail}/>
+                                            <TextField name="personalEmail"
+                                                       label="What is your personal email? (example, sherwin.chiu89@gmail.com)"
+                                                       type="email" required={REQUIRED.personalEmail}/>
+                                            <TextField name="discordUsername"
+                                                       label="What is your Discord username? (example .sherwin)"
+                                                       required={REQUIRED.discordUsername}/>
+                                            <RadioField name="isReturningMember" label="Are you a returning member?"
+                                                        options={["Yes", "No"]}
+                                                        required={REQUIRED.isReturningMember}/>
+                                            <RadioField name="inPerson"
+                                                        label="Will you be in-person at Waterloo in Fall 2024?"
+                                                        options={["Yes", "No"]} required={REQUIRED.inPerson}/>
+                                            <TextField name="interests"
+                                                       label="What are your interests and hobbies? Tell us something interesting about yourself!"
+                                                       caption={<>This is for us to get to know you, and does not
+                                                           have an impact on your application :)</>}
+                                                       required={REQUIRED.interests}
+                                            />
+                                            <RadioField name="heardSource"
+                                                        label="How did you hear about Electrium Mobility?"
+                                                        options={SELECT_HEARD_SOURCE}
+                                                        required={REQUIRED.heardSource}/>
+                                            <Field
+                                                name="roleQuestions"
+                                                render={({field, form}) => (
+                                                    <RoleSpecificSubField
+                                                        field={field}
+                                                        form={form}
+                                                        subName="role"
+                                                        label="What role are you interested in?"
+                                                        caption={(
+                                                            <>You can learn more about what the various roles
+                                                                do <Link to="/responsibilities" target="_blank"
+                                                                         className="text-green-600 font-bold">here</Link>.</>
+                                                        )}
+                                                        options={SELECT_ROLES}
+                                                        required={REQUIRED.roleQuestions}
+                                                    />
+                                                )}
+                                            />
+                                            <TextField name="friendReferral"
+                                                       label="If you're applying with a friend, please put their full name below."
+                                                       type="text" required={REQUIRED.friendReferral}/>
+                                            <NumberDropdownField
+                                            name="electriumProjects"
+                                            label="Please rank the projects you're interested in. (1 is most interested and 9 is least interested)"
+                                            caption={<>Feel free to add your own project idea under "Other".</>}
+                                            options={SELECT_PROJECTS}
+                                            rankings = {RANK_NUMBERS}
+                                            required={REQUIRED.electriumProjects}
+                                            ></NumberDropdownField>
+                                            <TextField name="comments" label="Any additional comments or questions?"
+                                                       required={REQUIRED.comments}/>
+                                            <button type="submit"
+                                                    className="btn p-2 w-48 inline-block align-middle bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md w-full">Submit
+                                            </button>
+                                        </Form>
                                         )}
                                     </Formik>
                                 </div>
