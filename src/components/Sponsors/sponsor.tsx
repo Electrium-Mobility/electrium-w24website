@@ -26,6 +26,7 @@ export default function Sponsor({ imgUrl, darkImgUrl, tier }) {
               alt="Sponsor Dark"
               width={width}
             />
+            
           </div>
         </div>
       </div>
