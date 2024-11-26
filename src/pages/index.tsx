@@ -14,8 +14,8 @@ import HomePageIntro from "@site/src/components/UI Components/HomePageIntro";
 import GetInvolved from "@site/src/components/UI Components/GetInvolved";
 function HomepageHeader() {
     return (
-            <section className="relative w-full py-36 lg:py-44 flex justify-center items-center">
-                <div className="container mx-auto">
+            <section className="relative w-full py-36 lg:py-44 flex justify-center items-center overflow-x:hidden">
+                <div className="container w-full">
                     <div className="grid md:grid-cols-12 grid-cols-1 items-center mt-10 gap-[30px]">
                         <div className="md:col-span-7">
                             <div className="ltr:md:mr-6 rtl:md:ml-6">
@@ -25,12 +25,12 @@ function HomepageHeader() {
                                     based at the University of Waterloo. Our goal is to create sustainable and affordable
                                     transportation in the form of Personal Electric Vehicles.</p>
 
-                                <div className="mt-6">
+                                <div className="align-items:center flex flex-row">
                                     <Link to="/join-our-team"
                                        className="btn bg-green-600 hover:bg-transparent border-green-600 hover:border-green-600 text-white rounded-md ltr:mr-2 rtl:ml-2 mt-2 p-4"> Join
                                         Our Team </Link>
                                     <Link to="/sponsors"
-                                       className="btn bg-transparent hover:bg-green-600 border-green-600 text-green-600 hover:text-white rounded-md p-4"> Become
+                                       className="btn bg-transparent hover:bg-green-600 border-green-600 text-green-600 hover:text-white rounded-md ltr:mr-2 rtl:ml-2 mt-2 p-4"> Become
                                         A Sponsor</Link>
                                 </div>
                             </div>

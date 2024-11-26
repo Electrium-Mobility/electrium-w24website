@@ -118,15 +118,16 @@ export default function Sponsors() {
             Platinum
           </h4>
           <div className="flex flex-row flex-wrap justify-center items-center">
-            {sponsors.platinum.map((sponsor, index) => (
-              <Sponsor
-                key={index}
-                imgUrl={sponsor.imgUrl}
-                darkImgUrl={sponsor.darkImg}
-                tier="platinum"
-              />
-            ))}
+              {sponsors.platinum.map((sponsor, index) => (
+                <Sponsor
+                  key={index}
+                  imgUrl={sponsor.imgUrl}
+                  darkImgUrl={sponsor.darkImg}
+                  tier="platinum"
+                />
+              ))}
           </div>
+          
 
           <br />
           <h4 className="text-center mb-4 md:text-4xl md:leading-normal text-3xl leading-normal font-semibold">

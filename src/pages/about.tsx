@@ -1,6 +1,6 @@
 
 import Layout from '@theme/Layout';
-import {useState} from 'react';
+import React from 'react';
 import FAQ from '../components/About/FAQ';
 
 import { FaMoneyBill, FaTree, FaWind, FaBook } from 'react-icons/fa';
