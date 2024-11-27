@@ -151,14 +151,14 @@ const SELECT_ROLES = [
 ];
 
 const SELECT_PROJECTS = [
-    "Electric Bike (8-month)",
-    "Electric Scooter",
-    "Electric Skateboard",
-    "Balance Board",
-    "Electric Motorcycle",
-    "Electric Go-Kart",
-    "Electric Couch",
-    "Custom Electronics",
+    "Electric Longtail Conversion Kit",
+    "Onewheel",
+    "Electric Road Bike",
+    "Gokart",
+    "Electric Sofa",
+    "Custom ESC",
+    "Custom Remote Control",
+    "Battery Management System",
     "Other",
 ];
 
@@ -166,8 +166,8 @@ const SELECT_TERMS = ["1A", "1B", "2A", "2B", "3A", "3B", "4A", "4B"];
 
 const SELECT_STREAMS = ["Stream 4", "Stream 8", "Others"];
 
-const RANK_NUMBERS = [1,2,3,4,5,6,7,8,9]; // This list should contain the # of the items in SELECT_PROJECTS
-//const list2: number[] = Array.from({ length: list1.length }, (_, index) => index + 1);
+
+const RANK_NUMBERS: number[] = Array.from({ length: SELECT_PROJECTS.length }, (_, index) => index + 1);
 const initialValues = {
     firstName: "",
     lastName: "",
@@ -185,15 +185,6 @@ const initialValues = {
         role: ""
     },
     electriumProjects: [],
-    // electriumProject0: "",
-    // electriumProject1: "",
-    // electriumProject2: "",
-    // electriumProject3: "",
-    // electriumProject4: "",
-    // electriumProject5: "",
-    // electriumProject6: "",
-    // electriumProject7: "",
-    // electriumProject8: "",
     friendReferral: "",
     comments: ""
 };
@@ -246,7 +237,7 @@ const ApplicationForm = () => {
         values['electriumProjects'] = finalArray;
         console.log(values);
         try {
-            fetch('https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbw9pKDnWe437aIaL94Jb1WkNLon1FuFoPOdIDhTYnidCfVrlR1adz5cZaqA-S0yyppWyw/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbyhn6s3Jsfno135EE4LeJ3lU6Ouv3tTrQnGtNcGycC4vzD0j36QNJD189h5ilohaLfA/exec', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'text/plain',
@@ -348,7 +339,7 @@ const ApplicationForm = () => {
                         <div className="lg:col-span-6 md:col-span-6 md:mt-0">
                             <div className="ltr:lg:ml-5 rtl:lg:mr-5">
                                 <h3 className="pt-12 text-center md:leading-normal text-4xl leading-normal font-semibold">Apply</h3>
-                                <h3 className="font-semibold text-green-600 text-center"> Fall 2024 Application is Open!</h3>
+                                <h3 className="font-semibold text-green-600 text-center"> Winter 2025 Application is Open!</h3>
                                 <p className="text-center mb-4 md:leading-normal leading-normal">
                                     Hi there! Thank you for your interest in joining Electrium Mobility!
                                     <br/>
@@ -383,7 +374,7 @@ const ApplicationForm = () => {
                                             <DropdownField name="program" label="What program are you in?"
                                                            options={SELECT_PROGRAMS} required={REQUIRED.program}/>
                                             <DropdownField name="term"
-                                                           label="What term will you be in in the Fall 2024 term?"
+                                                           label="What term will you be in in the Winter 2025 term?"
                                                            options={SELECT_TERMS} required={REQUIRED.term}/>
                                             <DropdownField name="stream" label="What stream are you in?"
                                                            options={SELECT_STREAMS} required={REQUIRED.stream}/>
@@ -400,7 +391,7 @@ const ApplicationForm = () => {
                                                         options={["Yes", "No"]}
                                                         required={REQUIRED.isReturningMember}/>
                                             <RadioField name="inPerson"
-                                                        label="Will you be in-person at Waterloo in Fall 2024?"
+                                                        label="Will you be in-person at Waterloo in Winter 2025?"
                                                         options={["Yes", "No"]} required={REQUIRED.inPerson}/>
                                             <TextField name="interests"
                                                        label="What are your interests and hobbies? Tell us something interesting about yourself!"

@@ -2,21 +2,20 @@ import * as Yup from 'yup';
 
 // Base validation schema for common fields
 const baseSchema = Yup.object().shape({
-    // firstName: Yup.string().required('First Name is required'),
-    // lastName: Yup.string().required('Last Name is required'),
+    firstName: Yup.string().required('First Name is required'),
+    lastName: Yup.string().required('Last Name is required'),
     program: Yup.string().required('Program is required'),
-    // term: Yup.string().required('Term is required'),
-    // uwaterlooEmail: Yup.string().email('Invalid email').required('UWaterloo Email is required'),
-    // personalEmail: Yup.string().email('Invalid email').required('Personal Email is required'),
-    // discordUsername: Yup.string().required('Discord Username is required'),
-    // isReturningMember: Yup.string().required('Please select an option'),
-    // inPerson: Yup.string().required('Please select an option'),
-    // interests: Yup.string(),
-    // heardSource: Yup.string().required('Please select an option'),
-    // friendReferral: Yup.string(),
-    // electriumProjects: Yup.array().of(Yup.string()).min(8, 'Please select at least one project').required('Please select at least one project'),
+    term: Yup.string().required('Term is required'),
+    uwaterlooEmail: Yup.string().email('Invalid email').required('UWaterloo Email is required'),
+    personalEmail: Yup.string().email('Invalid email').required('Personal Email is required'),
+    discordUsername: Yup.string().required('Discord Username is required'),
+    isReturningMember: Yup.string().required('Please select an option'),
+    inPerson: Yup.string().required('Please select an option'),
+    interests: Yup.string(),
+    heardSource: Yup.string().required('Please select an option'),
+    friendReferral: Yup.string(),
     electriumProjects: Yup.array().of(Yup.string()).min(9, 'Please rank all projects').required('Please rank all projects'), // The number has to be cha
-    // comments: Yup.string(),
+    comments: Yup.string(),
 });
 
 // Hard-coded role-specific validation schemas

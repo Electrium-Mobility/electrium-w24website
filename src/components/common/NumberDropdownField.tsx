@@ -29,10 +29,7 @@ const NumberDropdownField: React.FC<CheckboxFieldProps> = ({
     const {setValue} = helpers;
     const [selectedOptions, setSelectedOptions] = useState(new Array(options.length).fill(""))//use a setstate hook to create a state for clicked selections
     useEffect(() => {
-    console.log(selectedOptions); // This will log the updated state after changes
     setValue(removeEmptyStrings(selectedOptions));
-    console.log(meta.touched);
-    console.log(meta.error);
     }, [selectedOptions]);
 
     const handleSelectedOptions = (selectedOption, index) => {
