@@ -14,7 +14,7 @@ const baseSchema = Yup.object().shape({
     interests: Yup.string(),
     heardSource: Yup.string().required('Please select an option'),
     friendReferral: Yup.string(),
-    electriumProjects: Yup.array().of(Yup.string()).min(1, 'Please select at least one project').required('Please select at least one project'),
+    electriumProjects: Yup.array().of(Yup.string()).min(9, 'Please rank all projects').required('Please rank all projects'), // The number has to be cha
     comments: Yup.string(),
 });
 
@@ -63,5 +63,6 @@ const ValidationSchema = (role) => {
     const roleSchema = roleSchemas[role] || Yup.object().shape({});
     return baseSchema.concat(roleSchema);
 };
+
 
 export default ValidationSchema;
