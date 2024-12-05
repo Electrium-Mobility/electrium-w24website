@@ -15,6 +15,15 @@
           "type": "radio",
           "options": ["Flamethrower", "Grenade Launcher"],
           "required": false
+        },
+        {
+          "name": "skillEvaluationMechanical",
+          "question": "We want to know about your technical skills!",
+          "type": "radioTable",
+          "caption": "1: No experience | 5: Proficient",
+          "rowOptions": ["Solidworks", "Machining"],	
+          "columnOptions": ["1", "2", "3", "4", "5"],
+          "required": true
         }
       ]
     },
@@ -33,6 +42,15 @@
           "question": "Why did the programmer cross the road?",
           "type": "text",
           "required": false
+        },
+        {
+          "name": "skillEvaluationMechanical",
+          "question": "We want to know about your technical skills!",
+          "type": "radioTable",
+          "caption": "1: No experience | 5: Proficient",
+          "rowOptions": ["VESC", "Arduino IDE"],	
+          "columnOptions": ["1", "2", "3", "4", "5"],
+          "required": true
         }
       ]
     },
@@ -52,6 +70,15 @@
             "type": "radio",
             "options": ["Cable ties.", "Energy chain.", "Eat it. I love spaghetti.", "Go wireless.", "Leave it alone. I can decipher spaghetti wiring in my sleep."],
             "required": false
+        },
+        {
+          "name": "skillEvaluationMechanical",
+          "question": "We want to know about your technical skills!",
+          "type": "radioTable",
+          "caption": "1: No experience | 5: Proficient",
+          "rowOptions": ["KiCAD", "Soldering"],	
+          "columnOptions": ["1", "2", "3", "4", "5"],
+          "required": true
         }
       ]
     },
@@ -71,7 +98,16 @@
           "type": "text",
           "caption": "Please keep your selection PG.",
           "required": false
-        }
+        },
+        {
+          "name": "skillEvaluationWebDev",
+          "question": "We want to know about your technical skills!",
+          "type": "radioTable",
+          "caption": "1: No experience | 5: Proficient",
+          "rowOptions": ["TypeScript", "React.js", "Next.js", "SQL/NoSQL Database", "General Programming skills"],	
+          "columnOptions": ["1", "2", "3", "4", "5"],
+          "required": true
+      }
       ]
     },
   

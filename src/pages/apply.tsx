@@ -151,14 +151,15 @@ const SELECT_ROLES = [
 ];
 
 const SELECT_PROJECTS = [
-    "Electric Longtail Conversion Kit",
-    "Onewheel",
-    "Electric Road Bike",
-    "Gokart",
+    "Electric Go-Kart",
     "Electric Sofa",
+    "Electric Cf-Skateboard",
+    "Electric Road Bike",
     "Custom ESC",
     "Custom Remote Control",
     "Battery Management System",
+    "Electric Longtail Conversion Kit",
+    "Onewheel",
     "Other",
 ];
 
@@ -186,7 +187,8 @@ const initialValues = {
     },
     electriumProjects: [],
     friendReferral: "",
-    comments: ""
+    comments: "",
+    commitment: ""
 };
 
 
@@ -209,22 +211,23 @@ const ApplicationForm = () => {
     const history = useHistory();
 
     const REQUIRED = {
-        firstName: true,
-        lastName: true,
-        program: true,
-        term: true,
-        stream: true,
-        uwaterlooEmail: true,
-        personalEmail: true,
-        discordUsername: true,
-        isReturningMember: true,
-        inPerson: true,
-        interests: false,
-        heardSource: true,
+        // firstName: true,
+        // lastName: true,
+        // program: true,
+        // term: true,
+        // stream: true,
+        // uwaterlooEmail: true,
+        // personalEmail: true,
+        // discordUsername: true,
+        // isReturningMember: true,
+        // inPerson: true,
+        // interests: false,
+        // heardSource: true,
         roleQuestions: true,
-        electriumProjects: true,
-        friendReferral: false,
-        comments: false
+        // electriumProjects: true,
+        // friendReferral: false,
+        // comments: false,
+        commitment: true,
     }
 
     const handleSubmit = async (values, actions) => {
@@ -237,8 +240,9 @@ const ApplicationForm = () => {
         values['electriumProjects'] = finalArray;
         console.log(values);
         try {
-            fetch('https://script.google.com/macros/s/AKfycbyhn6s3Jsfno135EE4LeJ3lU6Ouv3tTrQnGtNcGycC4vzD0j36QNJD189h5ilohaLfA/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbw9pKDnWe437aIaL94Jb1WkNLon1FuFoPOdIDhTYnidCfVrlR1adz5cZaqA-S0yyppWyw/exec', {
                 method: 'POST',
+                
                 headers: {
                     'Content-Type': 'text/plain',
                 },
@@ -361,7 +365,7 @@ const ApplicationForm = () => {
                                     >
                                         {(values) => (
                                             <Form>
-                                            <div className="grid lg:grid-cols-12 lg:gap-6">
+                                            {/* <div className="grid lg:grid-cols-12 lg:gap-6">
                                                 <div className="lg:col-span-6">
                                                     <TextField name="firstName" label="First Name"
                                                                required={REQUIRED.firstName}/>
@@ -402,7 +406,7 @@ const ApplicationForm = () => {
                                             <RadioField name="heardSource"
                                                         label="How did you hear about Electrium Mobility?"
                                                         options={SELECT_HEARD_SOURCE}
-                                                        required={REQUIRED.heardSource}/>
+                                                        required={REQUIRED.heardSource}/> */}
                                             <Field
                                                 name="roleQuestions"
                                                 render={({field, form}) => (
@@ -421,7 +425,7 @@ const ApplicationForm = () => {
                                                     />
                                                 )}
                                             />
-                                            <TextField name="friendReferral"
+                                            {/* <TextField name="friendReferral"
                                                        label="If you're applying with a friend, please put their full name below."
                                                        type="text" required={REQUIRED.friendReferral}/>
                                             <NumberDropdownField
@@ -433,7 +437,9 @@ const ApplicationForm = () => {
                                             required={REQUIRED.electriumProjects}
                                             ></NumberDropdownField>
                                             <TextField name="comments" label="Any additional comments or questions?"
-                                                       required={REQUIRED.comments}/>
+                                                       required={REQUIRED.comments}/>*/}
+                                            <TextField name="commitment" label="Lastly, how many hours per week can you dedicate to contributing to our group (enter a number)?"
+                                                       required={REQUIRED.commitment}/>  
                                             <button type="submit"
                                                     className="btn p-2 w-48 inline-block align-middle bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700 text-white rounded-md w-full">Submit
                                             </button>
