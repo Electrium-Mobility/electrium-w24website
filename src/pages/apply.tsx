@@ -241,7 +241,7 @@ const ApplicationForm = () => {
         values['electriumProjects'] = finalArray;
         console.log(values);
         try {
-            fetch('https://script.google.com/macros/s/AKfycbw9pKDnWe437aIaL94Jb1WkNLon1FuFoPOdIDhTYnidCfVrlR1adz5cZaqA-S0yyppWyw/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbzZl_sPLtGq1VmPCGFfYpT9Wxq7LmFN6ZS93Fw3PbY1Jh8qgo9pA-PgZJKe4efjsi7g/exec', {
                 method: 'POST',
                 
                 headers: {
