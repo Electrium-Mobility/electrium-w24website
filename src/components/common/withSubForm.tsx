@@ -5,7 +5,7 @@ const onSubmit = () => {};
 
 export const withSubForm =
   (Component, /*validationSchema*/) =>
-  ({ field, form, ...rest }) => {
+  ({setValidation, field, form, ...rest }) => {
     const initialValues = field.value;
 
     return (
@@ -15,6 +15,7 @@ export const withSubForm =
         onSubmit={onSubmit}
         children={(props) => (
           <Component
+            setValidation = {setValidation}
             {...props}
             {...rest}
             setFieldValue={form.setFieldValue}

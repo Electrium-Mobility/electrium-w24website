@@ -37,24 +37,27 @@ const RadioTableField: React.FC<RadioTableFieldProps> = ({
             </tr>
           </thead>
           <tbody>
-            {rowOptions.map((row) => (
-              <tr key={row}>
-                <td>{row}</td>
-                {columnOptions.map((column) => (
-                  <td key={`${row}-${column}`}>
-                    <label className="flex items-center">
-                      <Field
-                        type="radio"
-                        name={`${name}-${row}`}  // Ensure unique name for each skill
-                        value={column}  // Column option as value
-                        className="form-radio text-green-600 border-green-600 rounded-md"
-                      />
-                      <span className="ml-2"></span>
-                    </label>
-                  </td>
-                ))}
-              </tr>
-            ))}
+            {rowOptions.map((row) => {
+              const rowValue = String(`${name}-${row}`);
+              return(
+                <tr key={row}>
+                  <td>{row}</td>
+                  {columnOptions.map((column) => (
+                    <td key={`${row}-${column}`}>
+                      <label className="flex items-center">
+                        <Field
+                          type="radio"
+                          // name={String(`${name}-${row}`)}  // Ensure unique name for each skill
+                          name={`['${name}-${row}']`}
+                          value={column}  // Column option as value
+                          className="form-radio text-green-600 border-green-600 rounded-md"
+                        />
+                        <span className="ml-2"></span>
+                      </label>
+                    </td>
+                  ))}
+                </tr> );
+              })}
           </tbody>
         </table>
       </div>
