@@ -5,25 +5,24 @@ const baseRoleQuestionsSchema = Yup.object({
     role: Yup.string()
         .required('Role selection is required')
         .notOneOf([''], 'Role selection cannot be empty'),
-    // hopeToLearn: Yup.string().required('This field is required'),
 });
 
 // Base validation schema for common fields
 const baseSchema = Yup.object().shape({
-    // firstName: Yup.string().required('First Name is required'),
-    // lastName: Yup.string().required('Last Name is required'),
-    // program: Yup.string().required('Program is required'),
-    // term: Yup.string().required('Term is required'),
-    // uwaterlooEmail: Yup.string().email('Invalid email').required('UWaterloo Email is required'),
-    // personalEmail: Yup.string().email('Invalid email').required('Personal Email is required'),
-    // discordUsername: Yup.string().required('Discord Username is required'),
-    // isReturningMember: Yup.string().required('Please select an option'),
-    // inPerson: Yup.string().required('Please select an option'),
-    // interests: Yup.string(),
-    // heardSource: Yup.string().required('Please select an option'),
-    // friendReferral: Yup.string(),
-    // electriumProjects: Yup.array().of(Yup.string()).min(9, 'Please rank all projects').required('Please rank all projects'), // The number has to be cha
-    // comments: Yup.string(),
+    firstName: Yup.string().required('First Name is required'),
+    lastName: Yup.string().required('Last Name is required'),
+    program: Yup.string().required('Program is required'),
+    term: Yup.string().required('Term is required'),
+    uwaterlooEmail: Yup.string().email('Invalid email').required('UWaterloo Email is required'),
+    personalEmail: Yup.string().email('Invalid email').required('Personal Email is required'),
+    discordUsername: Yup.string().required('Discord Username is required'),
+    isReturningMember: Yup.string().required('Please select an option'),
+    inPerson: Yup.string().required('Please select an option'),
+    interests: Yup.string(),
+    heardSource: Yup.string().required('Please select an option'),
+    friendReferral: Yup.string(),
+    electriumProjects: Yup.array().of(Yup.string()).min(9, 'Please rank all projects').required('Please rank all projects'), // The number has to be cha
+    comments: Yup.string(),
     commitment: Yup.string().required('Please enter a number'),
     roleQuestions: baseRoleQuestionsSchema,
 });
@@ -81,13 +80,8 @@ const roleSchemas = {
     }),
 };
 
-// const getValidationSchema = (role) => {
-//     const roleSchema = roleSchemas[role] || Yup.object().shape({});
-//     return baseSchema.concat(roleSchema);
-// };
 
 const getValidationSchema = (role) => {
-    // const roleSpecificSchema = roleSchemas[role] || Yup.object({});
     let roleSpecificSchema =  Yup.object({});
     let extendedRoleQuestionsSchema =  baseRoleQuestionsSchema;
 
