@@ -194,6 +194,7 @@ const initialValues = {
 
 const ApplicationForm = () => {
     const [showImages, setShowImages] = useState(false);
+    const [validation, setValidation] = useState(ValidationSchema(""));
 
     useEffect(() => {
         const handleResize = () => {
@@ -211,22 +212,22 @@ const ApplicationForm = () => {
     const history = useHistory();
 
     const REQUIRED = {
-        // firstName: true,
-        // lastName: true,
-        // program: true,
-        // term: true,
-        // stream: true,
-        // uwaterlooEmail: true,
-        // personalEmail: true,
-        // discordUsername: true,
-        // isReturningMember: true,
-        // inPerson: true,
-        // interests: false,
-        // heardSource: true,
+        firstName: true,
+        lastName: true,
+        program: true,
+        term: true,
+        stream: true,
+        uwaterlooEmail: true,
+        personalEmail: true,
+        discordUsername: true,
+        isReturningMember: true,
+        inPerson: true,
+        interests: false,
+        heardSource: true,
         roleQuestions: true,
-        // electriumProjects: true,
-        // friendReferral: false,
-        // comments: false,
+        electriumProjects: true,
+        friendReferral: false,
+        comments: false,
         commitment: true,
     }
 
@@ -358,14 +359,14 @@ const ApplicationForm = () => {
                                     <h3 className="mb-6 text-2xl leading-normal font-medium">Get in touch!</h3>
                                     <Formik
                                         initialValues={initialValues}
-                                        validationSchema={ValidationSchema}
+                                        validationSchema={validation}
                                         onSubmit={(values, actions) => {
                                             handleSubmit(values, actions);
                                         }}
                                     >
                                         {(values) => (
                                             <Form>
-                                            {/* <div className="grid lg:grid-cols-12 lg:gap-6">
+                                            <div className="grid lg:grid-cols-12 lg:gap-6">
                                                 <div className="lg:col-span-6">
                                                     <TextField name="firstName" label="First Name"
                                                                required={REQUIRED.firstName}/>
@@ -406,11 +407,12 @@ const ApplicationForm = () => {
                                             <RadioField name="heardSource"
                                                         label="How did you hear about Electrium Mobility?"
                                                         options={SELECT_HEARD_SOURCE}
-                                                        required={REQUIRED.heardSource}/> */}
+                                                        required={REQUIRED.heardSource}/>
                                             <Field
                                                 name="roleQuestions"
                                                 render={({field, form}) => (
                                                     <RoleSpecificSubField
+                                                        setValidation = {setValidation}
                                                         field={field}
                                                         form={form}
                                                         subName="role"
@@ -425,7 +427,7 @@ const ApplicationForm = () => {
                                                     />
                                                 )}
                                             />
-                                            {/* <TextField name="friendReferral"
+                                            <TextField name="friendReferral"
                                                        label="If you're applying with a friend, please put their full name below."
                                                        type="text" required={REQUIRED.friendReferral}/>
                                             <NumberDropdownField
@@ -437,7 +439,7 @@ const ApplicationForm = () => {
                                             required={REQUIRED.electriumProjects}
                                             ></NumberDropdownField>
                                             <TextField name="comments" label="Any additional comments or questions?"
-                                                       required={REQUIRED.comments}/>*/}
+                                                       required={REQUIRED.comments}/>
                                             <TextField name="commitment" label="Lastly, how many hours per week can you dedicate to contributing to our group (enter a number)?"
                                                        required={REQUIRED.commitment}/>  
                                             <button type="submit"

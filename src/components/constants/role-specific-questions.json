@@ -44,7 +44,7 @@
           "required": false
         },
         {
-          "name": "skillEvaluationMechanical",
+          "name": "skillEvaluationFirmware",
           "question": "We want to know about your technical skills!",
           "type": "radioTable",
           "caption": "1: No experience | 5: Proficient",
