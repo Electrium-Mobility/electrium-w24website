@@ -43,7 +43,7 @@ const roleSpecificQuestions: RoleSpecificQuestion[] = roleSpecificJson.map(item 
   }))
 }));
 
-const RoleSpecificField = ({ name, subName, label, caption, options, required, ...props }) => {
+const RoleSpecificField = ({setValidation, name, subName, label, caption, options, required, ...props }) => {
   const [roleQuestions, setRoleQuestions] = useState<RoleSpecificQuestion[]>([]);
   const [selectedRole, setSelectedRole] = useState("");
   const { setFieldValue, setFormikState } = useFormikContext();
@@ -55,10 +55,13 @@ const RoleSpecificField = ({ name, subName, label, caption, options, required, .
     if (roleData) {
       setRoleQuestions([roleData]);
       const newValidationSchema = getValidationSchema(selectedRole);
+      console.log(selectedRole)
       setFormikState(prevState => ({
         ...prevState,
         validationSchema: newValidationSchema,
       }));
+      setValidation(newValidationSchema);
+      console.log(newValidationSchema);
     } else {
       setRoleQuestions([]); // Clear if no role is selected
       const newValidationSchema = getValidationSchema("");
@@ -86,7 +89,7 @@ const RoleSpecificField = ({ name, subName, label, caption, options, required, .
     initialValues: {}, // formik hook would include entire partner config
     onSubmit: (values) => console.log(values), // make request to service(s)
     validate: validateImage, // validate file type, size, etc.
-    validationSchema: getValidationSchema(selectedRole), // Add this line
+    // validationSchema: getValidationSchema(selectedRole), // Add this line
   });
   //console.log('required:', required);
   //console.log('subName:', subName);

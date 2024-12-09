@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 function LinkButton({ to, children }) {
   const handleClick = () => {
-    console.log("hi");
   };
 
   return (
