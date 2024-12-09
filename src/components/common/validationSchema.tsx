@@ -21,7 +21,7 @@ const baseSchema = Yup.object().shape({
     interests: Yup.string(),
     heardSource: Yup.string().required('Please select an option'),
     friendReferral: Yup.string(),
-    electriumProjects: Yup.array().of(Yup.string()).min(9, 'Please rank all projects').required('Please rank all projects'), // The number has to be cha
+    electriumProjects: Yup.array().of(Yup.string()).min(10, 'Please rank all projects').required('Please rank all projects'), // The number has to be cha
     comments: Yup.string(),
     commitment: Yup.string().required('Please enter a number'),
     roleQuestions: baseRoleQuestionsSchema,

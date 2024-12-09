@@ -239,7 +239,6 @@ const ApplicationForm = () => {
             
           }
         values['electriumProjects'] = finalArray;
-        console.log(values);
         try {
             fetch('https://script.google.com/macros/s/AKfycbzZl_sPLtGq1VmPCGFfYpT9Wxq7LmFN6ZS93Fw3PbY1Jh8qgo9pA-PgZJKe4efjsi7g/exec', {
                 method: 'POST',
@@ -251,10 +250,10 @@ const ApplicationForm = () => {
             })
             .then(response => response.json())
             .then(data => {
-            console.log('Success:', data);
+            // console.log('Success:', data);
             })
             .catch(error => {
-                console.error('Error:', error);
+                // console.error('Error:', error);
             });
             actions.setStatus({ success: true, message: 'Form submitted successfully!' });
         } catch (error) {
