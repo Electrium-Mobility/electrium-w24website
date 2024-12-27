@@ -232,6 +232,7 @@ const ApplicationForm = () => {
     }
 
     const handleSubmit = async (values, actions) => {
+        console.log(values);
         let finalArray = new Array(SELECT_PROJECTS.length);
         for (let i = 0; i < SELECT_PROJECTS.length; i++) { //manage each state of the dropdown individually
             let ranking = values['electriumProjects'][i]; 

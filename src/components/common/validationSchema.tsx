@@ -44,8 +44,8 @@ const roleSchemas = {
     Electrical: Yup.object().shape({
         hopeToLearn: Yup.string().required('This field is required'),
         fixWiring: Yup.string(),
-        'skillEvaluationElectrical-KiCAD': Yup.string().required('This field is required'),
-        'skillEvaluationElectrical-Soldering': Yup.string().required('This field is required')
+        // 'skillEvaluationElectrical-KiCAD': Yup.string().required('This field is required'),
+        // 'skillEvaluationElectrical-Soldering': Yup.string().required('This field is required')
     }),
     'Web Development': Yup.object().shape({
         hopeToLearn: Yup.string().required('This field is required'),
@@ -62,21 +62,30 @@ const roleSchemas = {
         worstCourse: Yup.string(),
     }),
     Marketing: Yup.object().shape({
-        fieldsInterestedMarketing: Yup.array().of(Yup.string().required('This field is required')).required('This field is required'),
         softwareExp: Yup.array().of(Yup.string().required('This field is required')).required('This field is required'),
         relatedExperience: Yup.string(),
         relatedSoftSkills: Yup.string(),
         resume: Yup.mixed(),
         designPost: Yup.string(),
         discordEmoji: Yup.string(),
+        'fieldsInterestedMarketing-Graphic design' : Yup.string().required('This field is required'),
+        'fieldsInterestedMarketing-Photography/ videography' : Yup.string().required('This field is required'),
+        'fieldsInterestedMarketing-Photo/ video editing' : Yup.string().required('This field is required'),
+        'fieldsInterestedMarketing-Communicate with followers' : Yup.string().required('This field is required'),
+        'fieldsInterestedMarketing-3D modeling' : Yup.string().required('This field is required'),
     }),
     Finance: Yup.object().shape({
-        fieldsInterestedMarketing: Yup.array().of(Yup.string().required('This field is required')).required('This field is required'),
         relatedExperience: Yup.string(),
         relatedSoftSkills: Yup.string(),
-        resume: Yup.mixed().required('This field is required'),
+        resume: Yup.mixed(),
         sponsorEmail: Yup.string(),
         otherRole: Yup.string().required('This field is required'),
+        'fieldsInterestedFinance-Outreach to sponsors' : Yup.string().required('This field is required'),
+        'fieldsInterestedFinance-Present to endowment funds' : Yup.string().required('This field is required'),
+        'fieldsInterestedFinance-Draft endowment fund proposals/ slides' : Yup.string().required('This field is required'),
+        'fieldsInterestedFinance-Set budget/ handle reimbursements' : Yup.string().required('This field is required'),
+        'fieldsInterestedFinance-Plan/ execute fundraisers' : Yup.string().required('This field is required'),
+        
     }),
 };
 

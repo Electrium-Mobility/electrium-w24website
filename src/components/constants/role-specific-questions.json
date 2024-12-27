@@ -72,7 +72,7 @@
             "required": false
         },
         {
-          "name": "skillEvaluationMechanical",
+          "name": "skillEvaluationElectrical",
           "question": "We want to know about your technical skills!",
           "type": "radioTable",
           "caption": "1: No experience | 5: Proficient",
@@ -179,7 +179,7 @@
       "role": "Finance",
       "questions": [
         {
-            "name": "fieldsInterestedMarketing",
+            "name": "fieldsInterestedFinance",
             "question": "What fields are you interested in",
             "type": "radioTable",
             "caption": "1: Most interested in | 5: Not interested in",
