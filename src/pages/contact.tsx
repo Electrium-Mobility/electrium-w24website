@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaDiscord, FaInstagram } from 'react-icons/fa';
+import { FaEnvelope, FaDiscord, FaInstagram, FaGithub } from 'react-icons/fa';
 import Link from "@docusaurus/Link";
 import clsx from "clsx";
 import Layout from '@theme/Layout';
@@ -24,7 +24,7 @@ function ContactPageHeader() {
                     </div>
 
 
-                    <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[30px]">
+                    <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-[30px]">
                         <div className="text-center px-6 mt-6">
                             <div
                                 className="w-20 h-20 bg-green-600/5 text-green-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
@@ -53,7 +53,7 @@ function ContactPageHeader() {
                                 <div className="mt-5">
                                     <a href="https://discord.gg/jggFVza4XR" target="_blank"
                                        className="btn btn-link text-green-600 hover:text-green-600 after:bg-green-600 duration-500 ease-in-out">Join
-                                        our discord server</a>
+                                        our Discord server</a>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,25 @@ function ContactPageHeader() {
                                 <div className="mt-5">
                                     <a href="https://www.instagram.com/electriummobility/" target="_blank"
                                        className="btn btn-link text-green-600 hover:text-green-600 after:bg-green-600 duration-500 ease-in-out">Message
-                                        us on instagram</a>
+                                        us on Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="text-center px-6 mt-6">
+                            <div
+                                className="w-20 h-20 bg-green-600/5 text-green-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
+                                <FaGithub />
+                            </div>
+
+                            <div className="content mt-7">
+                                <h5 className="title h5 text-xl font-medium">GitHub</h5>
+
+                                <div className="mt-5">
+                                    <a href="https://github.com/Electrium-Mobility" target="_blank"
+                                       className="btn btn-link text-green-600 hover:text-green-600 after:bg-green-600 duration-500 ease-in-out">
+                                        Check out our GitHub
+                                    </a>
                                 </div>
                             </div>
                         </div>
