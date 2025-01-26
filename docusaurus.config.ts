@@ -173,6 +173,10 @@ const config: Config = {
               to: 'https://www.instagram.com/electriummobility/',
             },
             {
+              label: 'GitHub',
+              to: 'https://github.com/Electrium-Mobility',
+            },
+            {
               label: 'Discord',
               to: 'https://discord.com/invite/jggFVza4XR',
             },
