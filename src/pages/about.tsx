@@ -38,7 +38,7 @@ function About() {
                                 </div>
         
                                 <div className="content mt-7">
-                                    <a href="page-services.html" className="title h5 text-lg font-medium hover:text-green-600">Sustainability</a>
+                                    <a href="" className="title h5 text-lg font-medium hover:text-green-600">Sustainability</a>
                                     <p className="text-slate-400 mt-3">We aim to raise awareness and create sustainable vehicle technologies, empowering students to make greener transportation choices.</p>
                                 </div>
                             </div>
