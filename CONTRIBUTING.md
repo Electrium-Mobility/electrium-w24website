@@ -9,7 +9,7 @@ This document outlines the development process for Electrium Mobility's website.
 ## Quick Guide
 
 **I want to contribute!**
-1. Fork the repository
+1. Fork the repository / Clone the repository using ```git clone https://github.com/Electrium-Mobility/electrium-w24website.git```
 2. Create a feature branch (`issue-number-description`)
 3. Make your changes in your forked repository's branch
 4. Submit a PR using our template
