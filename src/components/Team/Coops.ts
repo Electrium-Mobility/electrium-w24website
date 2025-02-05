@@ -1,28 +1,28 @@
-import Omer_S from "/static/img/team_headshots/Omer_S.png";
-import Alessandra from "/static/img/Coops/Alessandra.png";
-import Simra_K from "/static/img/Coops/Simra_K.png";
-import Tom_W from "/static/img/Coops/Tom_W.png";
+import Harman from "/static/img/Coops/harmanshienh.jpg";
+import Matthew from "/static/img/Coops/matthewembaye.jpg";
+import Justin from "/static/img/Coops/justinzhang.jpg";
+import Kayla from "/static/img/Coops/kaylali.jpg";
 
 export const coops = [
     {
-        name: "Omer Syed",
-        headshot: Omer_S,
+        name: "Justin Zhang",
+        headshot: Justin,
         position: 'Mechanical Engineering Co-op',
     },
     {
-        name: "Alessandra",
-        headshot: Alessandra,
-        position: 'Mechanical Engineering Co-op',
+        name: "Matthew Embaye",
+        headshot: Matthew,
+        position: 'Electrical Engineering Co-op',
     },
     {
-        name: "Simra Khan",
-        headshot: Simra_K,
-        position: 'Firmware Engineering Co-op',
+        name: "Harman Shienh",
+        headshot: Harman,
+        position: 'Mechanical Engineering Co-op',
     },
 
     {
-        name: "Tom Wang",
-        headshot: Tom_W,
+        name: "Kayla Li",
+        headshot: Kayla,
         position: 'Web Dev Co-op',
     },
 ];
