@@ -1,83 +1,45 @@
-import Sherwin_C from "/static/img/team_headshots/Sherwin_C.png";
-import Damir_G from "/static/img/team_headshots/Damir_G.png";
-import Samantha_C from "/static/img/team_headshots/Samantha_C.png";
-import Jerry_C from "/static/img/team_headshots/Jerry_C.png";
-import Jerry_Z from "/static/img/team_headshots/Jerry_Z.png";
-import Patrick_H from "/static/img/team_headshots/Patrick_H.png";
-import Patrick_Y from "/static/img/team_headshots/Patrick_Y.png";
-import Mahi_J from "/static/img/team_headshots/Mahi_J.png";
-import Omer_S from "/static/img/team_headshots/Omer_S.png";
-import Ling_Wei_T from "/static/img/team_headshots/Ling_Wei_T.png";
-import Ethan_G from "/static/img/team_headshots/Ethan_G.png";
-import Henon_H from "/static/img/team_headshots/Henon_H.png";
-import Alexander_H from "/static/img/team_headshots/Alexander_H.png";
+import Henon_H from "/static/img/TeamLeads/Henon_H.png";
+import Josh_S from "/static/img/TeamLeads/joshstadnyk.jpg";
+import Justin_Z from "/static/img/Coops/justinzhang.jpg";
+import Matthew_E from "/static/img/Coops/matthewembaye.jpg";
+import Omer_S from "/static/img/TeamLeads/Omer_S.png";
+import Patrick_H from "/static/img/TeamLeads/Patrick_H.png";
+import Zachary_B from "/static/img/TeamLeads/zacharybarandino.jpg";
 
 export const teamLeads = [
   {
-    name: "Sherwin Chiu",
-    position: "Team Lead",
-    headshot: Sherwin_C,
+    name: "Matthew Embaye",
+    position: "Custom Remote Control Lead",
+    headshot: Matthew_E,
   },
   {
-    name: "Damir Gazizullin",
-    position: "Electrical Team Lead",
-    headshot: Damir_G,
+    name: "Zachary Barandino",
+    position: "OneWheel Lead",
+    headshot: Zachary_B,
   },
   {
-    name: "Samantha Chong",
-    position: "CF Skateboard Project Lead",
-    headshot: Samantha_C,
-  },
-
-  {
-    name: "Jerry Chen",
-    position: "Mechanical Team Lead",
-    headshot: Jerry_C,
+    name: "Justin Zhang",
+    position: "Electric Longtail Conversion Kit Lead",
+    headshot: Justin_Z,
   },
   {
-    name: "Jerry Z",
-    position: "Web Dev Lead",
-    headshot: Jerry_Z,
-  },
-  {
-    name: "Patrick He",
-    position: "Electric Couch CoLead",
-    headshot: Patrick_H,
-  },
-  {
-    name: "Patrick Yuan",
-    position: "Electric Couch CoLead",
-    headshot: Patrick_Y,
-  },
-  {
-    name: "Mahi Joshi",
-    position: "F24 Skateboard Project Lead",
-    headshot: Mahi_J,
+    name: "Josh Stadnyk",
+    position: "Mechanical Lead",
+    headshot: Josh_S,
   },
   {
     name: "Omer Syed",
-    position: "F24 Scooter Project Lead",
+    position: "F24 Scooter Lead",
     headshot: Omer_S,
   },
   {
-    name: "Ling-Wei Tang",
-    position: "GoKart Project CoLead",
-    headshot: Ling_Wei_T,
-  },
-  {
-    name: "Ethan Guan",
-    position: "GoKart Project CoLead",
-    headshot: Ethan_G,
-  },
-  {
     name: "Henon Hailu",
-    position: "F24 Bike Project Lead",
+    position: "F24 Road Bike Lead",
     headshot: Henon_H,
   },
   {
-    name: "Alexander Hamersma",
-    position: "Firmware Team Lead",
-    headshot: Alexander_H,
+    name: "Patrick He",
+    position: "F24 Electric Couch Lead",
+    headshot: Patrick_H,
   },
-  
 ];

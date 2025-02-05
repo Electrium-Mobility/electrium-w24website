@@ -23,6 +23,6 @@ export const coops = [
     {
         name: "Kayla Li",
         headshot: Kayla,
-        position: 'Web Dev Co-op',
+        position: 'Web Development Co-op',
     },
 ];

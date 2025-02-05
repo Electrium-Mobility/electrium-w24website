@@ -74,7 +74,7 @@ function Team() {
               <div className="relative inline-block mx-auto overflow-hidden">
                 <img
                   src={
-                    require("/static/img/team_headshots/groupPic.JPG").default
+                    require("/static/img/TeamLeads/groupPic.JPG").default
                   }
                   className=" w-2/3 h-auto rounded-xl"
                 />
