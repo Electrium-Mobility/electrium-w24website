@@ -131,16 +131,16 @@ const config: Config = {
           title: 'Recent Projects',
           items: [
             {
-              label: 'Electric Bike',
-              to: '/docs/W2024-projects/project1_2023',
+              label: 'OneWheel (Ongoing)',
+              to: '/docs/onewheel',
             },
             {
-              label: 'Electric Skateboard',
-              to: '/docs/W2024-projects/project2_2023',
+              label: 'Electric Skateboard (2024)',
+              to: '/docs/2024-projects/electric-skateboard',
             },
             {
-              label: 'OneWheel',
-              to: '/docs/W2024-projects/project3_2023',
+              label: 'VoltSkate (2023)',
+              to: '/docs/2023-projects/voltskate',
             },
           ],
         },

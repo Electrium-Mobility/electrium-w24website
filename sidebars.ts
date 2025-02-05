@@ -17,17 +17,26 @@ const sidebars: SidebarsConfig = {
   // But you can create a sidebar manually
   
   projectSidebar: [
-    'W2024-projects/project1_2023',
-    'W2024-projects/project2_2023',
-    'W2024-projects/project3_2023',
+    {
+      type: 'category',
+      label: 'Ongoing Projects',
+      items: [
+        'ongoing/onewheel'
+      ],
+    },
+    {
+      type: 'category',
+      label: '2024 Projects',
+      items: [
+        'projects/electric-skateboard-2024'
+      ],
+    },
     {
       type: 'category',
       label: '2023 Projects',
       collapsed: true,
       items: [
-        'projects/project1_2023',
-        'projects/project2_2023',
-        'projects/project3_2023'
+        'projects/voltskate-2023'
       ],
     },
     //UNCOMMENT TO SEE TUTORIALS + TIPS

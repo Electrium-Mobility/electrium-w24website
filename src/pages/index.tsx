@@ -1,15 +1,10 @@
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
 
-import styles from './index.module.css';
 import React from "react";
 import BikeLogo from '@site/static/img/bike-graphic-2.svg';
 
-import ContactPageHeader from "@site/src/pages/contact";
 import HomePageIntro from "@site/src/components/UI Components/HomePageIntro";
 import GetInvolved from "@site/src/components/UI Components/GetInvolved";
 function HomepageHeader() {
@@ -49,8 +44,6 @@ function HomepageHeader() {
 
     );
 }
-
-
 
 
 export default function Home(): JSX.Element {
