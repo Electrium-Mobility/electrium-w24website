@@ -69,12 +69,28 @@ function Team() {
           <div className="container">
             <div className="grid grid-cols-1 pb-16 pt-16 text-center">
               <h3 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600">
-                Our Team!
+                Winter 2025 Kickoff!
               </h3>
               <div className="relative inline-block mx-auto overflow-hidden">
                 <img
                   src={
-                    require("/static/img/team_headshots/groupPic.JPG").default
+                    require("/static/img/kickoff/kickoff-w25.jpg").default
+                  }
+                  className=" w-2/3 h-auto rounded-xl"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="container">
+            <div className="grid grid-cols-1 pb-16 pt-16 text-center">
+              <h3 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600">
+                Fall 2024 Kickoff!
+              </h3>
+              <div className="relative inline-block mx-auto overflow-hidden">
+                <img
+                  src={
+                    require("/static/img/kickoff/kickoff-f24.jpg").default
                   }
                   className=" w-2/3 h-auto rounded-xl"
                 />

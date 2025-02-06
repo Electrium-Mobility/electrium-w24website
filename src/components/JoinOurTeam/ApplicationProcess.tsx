@@ -49,7 +49,7 @@ function ApplicationProcess() {
                     <div className="lg:col-span-6 md:col-span-7">
                         <div id="myTabContent" className="px-8 py-16 shadow dark:shadow-gray-800 rounded-md">
                             <div className="" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <img src={require("/static/img/kickoff/kickoff.jpg").default} />
+                                <img src={require("/static/img/kickoff/kickoff-f24.jpg").default} />
                             </div>
                         </div>
                     </div>
