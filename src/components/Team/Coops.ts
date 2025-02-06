@@ -17,7 +17,7 @@ export const coops = [
     {
         name: "Harman Shienh",
         headshot: Harman,
-        position: 'Mechanical Engineering Co-op',
+        position: 'Firmware Engineering Co-op',
     },
 
     {
