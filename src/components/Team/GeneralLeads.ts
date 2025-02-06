@@ -6,7 +6,6 @@ import Omer_S from "/static/img/TeamLeads/Omer_S.png";
 import Samantha_C from "/static/img/TeamLeads/Samantha_C.png";
 import Tom_W from "/static/img/TeamLeads/Tom_W.png";
 import Winston_L from "/static/img/TeamLeads/WinstonCopy.png";
-import Kayla_L from "/static/img/Coops/kaylali.jpg";
 
 export const generalLeads = [
    
@@ -39,11 +38,6 @@ export const generalLeads = [
     name: "Winston Lu",
     position: "Firmware Lead",
     headshot: Winston_L,
-  },
-  {
-    name: "Kayla Li",
-    position: "Web Development Lead",
-    headshot: Kayla_L,
   },
   {
     name: "Tom Wang",

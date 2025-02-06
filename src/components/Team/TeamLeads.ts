@@ -5,6 +5,7 @@ import Matthew_E from "/static/img/Coops/matthewembaye.jpg";
 import Omer_S from "/static/img/TeamLeads/Omer_S.png";
 import Patrick_H from "/static/img/TeamLeads/Patrick_H.png";
 import Zachary_B from "/static/img/TeamLeads/zacharybarandino.jpg";
+import Kayla_L from "/static/img/Coops/kaylali.jpg";
 
 export const teamLeads = [
   {
@@ -18,13 +19,18 @@ export const teamLeads = [
     headshot: Zachary_B,
   },
   {
+    name: "Kayla Li",
+    position: "Web Development Lead",
+    headshot: Kayla_L,
+  },
+  {
     name: "Justin Zhang",
     position: "Electric Longtail Conversion Kit Lead",
     headshot: Justin_Z,
   },
   {
     name: "Josh Stadnyk",
-    position: "Mechanical Lead",
+    position: "Go-Kart Lead",
     headshot: Josh_S,
   },
   {
