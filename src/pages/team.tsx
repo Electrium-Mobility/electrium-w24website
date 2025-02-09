@@ -40,7 +40,7 @@ function Team() {
 
           <div className="grid grid-cols-1 pt-16 pb-8 text-center">
             <h3 className="mb-1 mt-6 md:text-3xl md:leading-normal text-2xl leading-normal font-normal">
-              Team Leads
+              Project Leads
             </h3>
           </div>
 
