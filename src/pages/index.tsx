@@ -41,12 +41,8 @@ function HomepageHeader() {
                         </div>
 
                     </div>
-
                 </div>
-
             </section>
-
-
     );
 }
 
