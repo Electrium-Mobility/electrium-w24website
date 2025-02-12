@@ -20,6 +20,10 @@ const sidebars: SidebarsConfig = {
     'W2025-projects/bakfiets_2025',
     'W2025-projects/electric_skateboard_2025',
     'W2025-projects/onewheel_2025',
+    'W2025-projects/electric_longtail_conversion_kit_2025',
+    'W2025-projects/gokart_2025',
+    'W2025-projects/custom_remote_control_2025',
+
     {
       type: 'category',
       label: '2023 Projects',

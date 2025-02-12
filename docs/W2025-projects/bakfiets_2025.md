@@ -1,7 +1,7 @@
 ---
 id: bakfiets_2025
 sidebar_position: 1
-title: "Bakfiets 2025"
+title: "Bakfiets"
 ---
 
 # Bakfiets
