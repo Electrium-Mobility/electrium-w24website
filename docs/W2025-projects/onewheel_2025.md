@@ -12,6 +12,7 @@ title: "Onewheel"
 
 | **Term:** | Winter 2025 |
 | -------------------- | --------------------------------------------------------------------------|
+| **Peoject Lead:**       | Zachary Barandino |
 | **Electrical Team:**       | Liam Ung, Andre Ke, Daniel Roufail |
 | **Firmware Lead:** | Allan, Nathan Li, Nur Iscan, Weiran Sun |
 | **Mecahnical Lead:** | Alice Lee, Spencer Dionisio, Omer Syed, Eric Mak, Zach Gilbert |

@@ -7,7 +7,7 @@ title: "Electric Longtail Conversion Kit"
 
 | **Term:** | Winter 2025 |
 | -------------------- | --------------------------------------------------------------------------|
-| **Project Lead:**       | Justin, Harman |
+| **Project Lead:**       | Justin Zhang, Harman Shienh |
 | **Mechanical Team:** | Christian Tetreau, Leek Lee, Athavan Mohanakumar, Mathilda LaBrash-White, Nabil Azab |
 | **Electrical/Firmware Team:** |  Leek Lee, Kevin Lee |
 
