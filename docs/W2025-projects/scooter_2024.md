@@ -1,6 +1,6 @@
 ---
 id: scooter_2024
-sidebar_position: 7
+sidebar_position: 8
 title: "F24 Scooter"
 ---
 

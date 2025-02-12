@@ -1,6 +1,6 @@
 ---
 id: electric_couch_2024
-sidebar_position: 9
+sidebar_position: 10
 title: "F24 Electric Couch (Speed Sofa)"
 ---
 

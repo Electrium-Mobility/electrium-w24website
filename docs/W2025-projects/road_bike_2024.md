@@ -1,6 +1,6 @@
 ---
 id: road_bike_2024
-sidebar_position: 8
+sidebar_position: 9
 title: "F24 Road Bike"
 ---
 
