@@ -4,6 +4,12 @@ sidebar_position: 9
 title: "F24 Road Bike"
 ---
 
+# Road Bike
+
+![Electric Bike](./img/f24bike.jpg)
+![Electric Bike Team](./img/f24bike.png)
+
+
 ### Project Info
 
 | **Term:** | Winter 2025 |

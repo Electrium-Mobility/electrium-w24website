@@ -4,6 +4,10 @@ sidebar_position: 8
 title: "F24 Scooter"
 ---
 
+# Scooter
+
+![Electric Bike](./img/Scooter.png)
+
 ### Project Info
 
 | **Term:** | Winter 2025 |
