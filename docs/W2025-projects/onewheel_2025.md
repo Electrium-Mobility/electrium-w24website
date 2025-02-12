@@ -1,5 +1,7 @@
 ---
+id: onewheel_2025
 sidebar_position: 3
+title: "Onewheel"
 ---
 
 # OneWheel
