@@ -24,7 +24,32 @@ title: "Gokart"
 We are building Electriums first electric Go-Kart! This project is unique because we are working with two independent electric motors. This allows our team to tackle an array of complexities both mechanically and electronically to expand our knowledge in these respective fields. Currently, the team is making swift progress in getting the car to a driving state, and we hope to hit the road by the end of the term!
  
 
-### Key Features
-- Mechanical Systems: Almost everything so far has been designed and manufactured by the team. The chassis is complete, along with the wheel hubs. The current mechanical tasks include brake and pedal mounts, steering wheel, chair, and battery box. We are currently seeking inspiration in what color the car should be so if you have an idea come swing by one of our meetings.
-- Electrical Systems: Each motor runs on 2000W and 48V so we need a lot of power! This term, the electrical team is planning on buying a BMS and working on implementing it with the motors and electronic speed controllers (ESC). Two buck converters (48V → 12V and 12V → 5V) are going to be made for voltage control. This is a great opportunity to get some hands-on experience manufacturing hardware if you are trying to learn!
-- Firmware Systems: The firmware team has been working with ESP32 microcontrollers mainly for connecting the OLED display on the steering wheel to information from the BMS.
+
+### 🔧 Key Features
+
+#### ⚙️ Mechanical Systems
+- Almost everything has been **designed and manufactured** by the team.  
+- **Current Progress:**  
+  - ✅ **Chassis complete**  
+  - ✅ **Wheel hubs completed**  
+  - 🚧 **Ongoing tasks:** brake & pedal mounts, steering wheel, chair, battery box  
+- 🎨 Seeking **ideas for the car color**—come to our meetings to share your suggestions!  
+
+---
+
+#### ⚡ Electrical Systems
+- **Motors:** Each motor runs on **2000W and 48V**—requiring a lot of power!  
+- **Current Work:**  
+  - 🛠️ **BMS purchase & implementation** with motors and **electronic speed controllers (ESC)**  
+  - 🔄 **Voltage control:** Two **buck converters** (48V → 12V & 12V → 5V) for power management  
+- 🏭 A **great hands-on opportunity** for team members interested in **manufacturing hardware**!
+
+---
+
+#### 🖥️ Firmware Systems
+- The **firmware team** is working with **ESP32 microcontrollers**.  
+- **Main focus:**  
+  - 📟 **Connecting an OLED display** on the **steering wheel**  
+  - 🔄 Displaying **real-time battery & motor data from the BMS**  
+
+---
