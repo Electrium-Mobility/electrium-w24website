@@ -19,7 +19,7 @@ title: "Custom Remote Control"
 ### Project Description
 The Remote Control project is a custom, adaptable, and upgraded controller designed to work with all current and future Electrium Mobility projects. Tailored for seamless communication and enhanced functionality, the W25 Custom RC is one of Electrium Mobility’s most versatile and valuable projects. Featuring a custom PCB with Bluetooth, OLED display, and haptic feedback, with the receiver also including CAN support for VESC communication, the Custom RC is highly comprehensive in both its design and features. 
 
-### 🔧 What We Do
+###  What We Do
 
 #### 🛠️ Custom Circuit Board
 - Designed with **KiCad**, the **PCB** is built from the ground up.  
