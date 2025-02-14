@@ -12,7 +12,7 @@ sidebar_position: 2
 | -------------------- | --------------------------------------------------------------------------|
 | **Electrical Lead:**       | Sherwin Chiu |
 | **Firmware Lead:** | Cindy Peng |
-| **Mecahnical Lead:** | Sherwin Chiu |
+| **Mechanical Lead:** | Sherwin Chiu |
 
 ### Project Description
 

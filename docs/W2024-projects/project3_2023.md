@@ -12,7 +12,7 @@ sidebar_position: 3
 | -------------------- | --------------------------------------------------------------------------|
 | **Electrical Lead:**       | Jun Song |
 | **Firmware Lead:** | Jun Song |
-| **Mecahnical Lead:** | Jun Song |
+| **Mechanical Lead:** | Jun Song |
 
 ### Project Description
 
