@@ -14,7 +14,7 @@ title: "Bakfiets"
 | **Term:** | Winter 2025 |
 | -------------------- | --------------------------------------------------------------------------|
 | **Team Lead:**       | Jerry Chen |
-| **Mecahnical Lead:** | Jerry Chen |
+| **Mechanical Lead:** | Jerry Chen |
 | **Firmware Lead:** | Patrick He |
 | **Electrical Lead:** | Samuel Ke |
 | **Mechanical Team:** | Jerry Chen, Kevin Ng, Aidan Thompson, Aiyesha Shibly, Samual Wong, Allen Lu |
