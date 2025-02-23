@@ -3,6 +3,10 @@ id: custom_remote_control_2025
 sidebar_position: 6
 title: "Custom Remote Control"
 ---
+# Custom Remote Control
+
+![Custom Remote Control](./img/crc_image.png)
+
 
 ### Project Info
 
@@ -12,7 +16,7 @@ title: "Custom Remote Control"
 | **Firmware Lead:** | Harman Shienh |
 | **Electrical Lead:** | Matthew Embaye |
 | **Mechanical Team:** | Justin Zhang, Christopher Noce, Ole Ashadele |
-| **Firmware Team:** | Harman Shienh, Shamanthi Rajagopal, Andrew Jia, Max Ghislain, Ayan Hazarika, Vincent Qu, Abdul (Hakeem) Farooqi |
+| **Firmware Team:** | Harman Shienh, Shamanthi Rajagopal, Andrew Jia, Max Ghislain, Ayan Hazarika, Vincent Qu, Abdul (Hakeem) Farooqi, Caleb Mengistu |
 | **Electrical Team:** | Matthew Embaye, Jun Kim, Nelson Mei, Katie Yu, Nina Zhang, David Xu |
 
 
