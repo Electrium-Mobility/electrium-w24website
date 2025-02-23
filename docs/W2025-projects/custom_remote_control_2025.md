@@ -16,7 +16,7 @@ title: "Custom Remote Control"
 | **Firmware Lead:** | Harman Shienh |
 | **Electrical Lead:** | Matthew Embaye |
 | **Mechanical Team:** | Justin Zhang, Christopher Noce, Ole Ashadele |
-| **Firmware Team:** | Harman Shienh, Shamanthi Rajagopal, Andrew Jia, Max Ghislain, Ayan Hazarika, Vincent Qu, Abdul (Hakeem) Farooqi, Caleb Mengistu |
+| **Firmware Team:** | Harman Shienh, Andrew Jia, Max Ghislain, Ayan Hazarika, Vincent Qu, Abdul (Hakeem) Farooqi, Caleb Mengistu, Sehaj Dhupia |
 | **Electrical Team:** | Matthew Embaye, Jun Kim, Nelson Mei, Katie Yu, Nina Zhang, David Xu |
 
 
@@ -36,7 +36,7 @@ The Remote Control project is a custom, adaptable, and upgraded controller desig
   - 🟢 **Battery health**  
   - 🟢 **Current speed**  
   - 🟢 **Adjustable settings**  
-- **Advanced features**: Power-saving modes, customizable control options, **CANBUS for VESC** integration.
+- **Advanced features**: Power-saving modes, Customizable control options, **CANBUS for VESC** integration.
 
 #### 🏗️ Prototyping & Testing
 - Built prototypes and pushed **firmware updates** for fine-tuning.  
