@@ -36,7 +36,7 @@ The Remote Control project is a custom, adaptable, and upgraded controller desig
   - 🟢 **Battery health**  
   - 🟢 **Current speed**  
   - 🟢 **Adjustable settings**  
-- **Advanced features**: Power-saving modes, customizable control options, **CANBUS for VESC** integration.
+- **Advanced features**: Power-saving modes, Customizable control options, **CANBUS for VESC** integration.
 
 #### 🏗️ Prototyping & Testing
 - Built prototypes and pushed **firmware updates** for fine-tuning.  
