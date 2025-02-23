@@ -3,13 +3,19 @@ id: electric_longtail_conversion_kit_2025
 sidebar_position: 4
 title: "Electric Longtail Conversion Kit"
 ---
+# Electric Longtail Conversion Kit
+
+![Electric Longtail Conversion Kit](./img/longtail_image.jpg)
+
+
 ### Project Info
 
 | **Term:** | Winter 2025 |
 | -------------------- | --------------------------------------------------------------------------|
 | **Project Lead:**       | Justin Zhang, Harman Shienh |
 | **Mechanical Team:** | Christian Tetreau, Leek Lee, Athavan Mohanakumar, Mathilda LaBrash-White, Nabil Azab |
-| **Electrical/Firmware Team:** |  Leek Lee, Kevin Lee |
+| **Electrical/Firmware Team:** | Leek Lee |
+| **App Development Team:** | Gavin Pinto, Tanish Srikakolapu, Aiden Suh, Frank Chen, Vedant Grover, Haotai Wang |
 
 
 ### Project Goal

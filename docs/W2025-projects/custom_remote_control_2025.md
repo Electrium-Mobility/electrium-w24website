@@ -16,7 +16,7 @@ title: "Custom Remote Control"
 | **Firmware Lead:** | Harman Shienh |
 | **Electrical Lead:** | Matthew Embaye |
 | **Mechanical Team:** | Justin Zhang, Christopher Noce, Ole Ashadele |
-| **Firmware Team:** | Harman Shienh, Shamanthi Rajagopal, Andrew Jia, Max Ghislain, Ayan Hazarika, Vincent Qu, Abdul (Hakeem) Farooqi, Caleb Mengistu |
+| **Firmware Team:** | Harman Shienh, Andrew Jia, Max Ghislain, Ayan Hazarika, Vincent Qu, Abdul (Hakeem) Farooqi, Caleb Mengistu, Sehaj Dhupia |
 | **Electrical Team:** | Matthew Embaye, Jun Kim, Nelson Mei, Katie Yu, Nina Zhang, David Xu |
 
 
