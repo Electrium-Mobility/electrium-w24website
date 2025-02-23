@@ -25,7 +25,7 @@ We are building Electriums first electric Go-Kart! This project is unique becaus
  
 
 
-### 🔧 Key Features
+### Key Features
 
 #### ⚙️ Mechanical Systems
 - Almost everything has been **designed and manufactured** by the team.  

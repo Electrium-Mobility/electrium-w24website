@@ -3,6 +3,10 @@ id: custom_remote_control_2025
 sidebar_position: 6
 title: "Custom Remote Control"
 ---
+# Custom Remote Control
+
+![Custom Remote Control](./img/crc_image.png)
+
 
 ### Project Info
 
@@ -12,14 +16,14 @@ title: "Custom Remote Control"
 | **Firmware Lead:** | Harman Shienh |
 | **Electrical Lead:** | Matthew Embaye |
 | **Mechanical Team:** | Justin Zhang, Christopher Noce, Ole Ashadele |
-| **Firmware Team:** | Harman Shienh, Shamanthi Rajagopal, Andrew Jia, Max Ghislain, Ayan Hazarika, Vincent Qu, Abdul (Hakeem) Farooqi |
+| **Firmware Team:** | Harman Shienh, Shamanthi Rajagopal, Andrew Jia, Max Ghislain, Ayan Hazarika, Vincent Qu, Abdul (Hakeem) Farooqi, Caleb Mengistu |
 | **Electrical Team:** | Matthew Embaye, Jun Kim, Nelson Mei, Katie Yu, Nina Zhang, David Xu |
 
 
 ### Project Description
 The Remote Control project is a custom, adaptable, and upgraded controller designed to work with all current and future Electrium Mobility projects. Tailored for seamless communication and enhanced functionality, the W25 Custom RC is one of Electrium Mobility’s most versatile and valuable projects. Featuring a custom PCB with Bluetooth, OLED display, and haptic feedback, with the receiver also including CAN support for VESC communication, the Custom RC is highly comprehensive in both its design and features. 
 
-### 🔧 What We Do
+###  What We Do
 
 #### 🛠️ Custom Circuit Board
 - Designed with **KiCad**, the **PCB** is built from the ground up.  
