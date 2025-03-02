@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from "@docusaurus/Link";
 import { useHistory } from '@docusaurus/router';
-import clsx from "clsx";
 import Layout from '@theme/Layout';
-import styles from "@site/src/pages/index.module.css";
-import Heading from "@theme/Heading";
-import SquaredButton from '../components/UI Components/SquaredButton';
-import { Formik, FieldArray, FormikProps, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import CheckboxField from '../components/common/CheckboxField';
 import DropdownField from '../components/common/DropdownField';
@@ -19,7 +15,6 @@ import onewheel from '../../static/img/roles-responsibilty/onewheel.png';
 import scooter from '../../static/img/roles-responsibilty/scooter.png';
 import skateboard2 from '../../static/img/roles-responsibilty/skateboard2.png';
 import onewheel2 from '../../static/img/roles-responsibilty/onewheel2.png';
-import {FaDiscord} from "react-icons/fa";
 import NumberDropdownField from '../components/common/NumberDropdownField';
 
 
