@@ -5,7 +5,9 @@ title: "Custom Remote Control"
 ---
 # Custom Remote Control
 
+![Custom Remote Control](./img/crc_image_first.png)
 ![Custom Remote Control](./img/crc_image.png)
+
 
 
 ### Project Info
