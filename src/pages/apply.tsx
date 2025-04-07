@@ -374,7 +374,7 @@ const ApplicationForm = () => {
                                             <DropdownField name="program" label="What program are you in?"
                                                            options={SELECT_PROGRAMS} required={REQUIRED.program}/>
                                             <DropdownField name="term"
-                                                           label="What term will you be in in the Winter 2025 term?"
+                                                           label="What term will you be in in the Spring 2025 term?"
                                                            options={SELECT_TERMS} required={REQUIRED.term}/>
                                             <DropdownField name="stream" label="What stream are you in?"
                                                            options={SELECT_STREAMS} required={REQUIRED.stream}/>
@@ -391,7 +391,7 @@ const ApplicationForm = () => {
                                                         options={["Yes", "No"]}
                                                         required={REQUIRED.isReturningMember}/>
                                             <RadioField name="inPerson"
-                                                        label="Will you be in-person at Waterloo in Winter 2025?"
+                                                        label="Will you be in-person at Waterloo in Spring 2025?"
                                                         options={["Yes", "No"]} required={REQUIRED.inPerson}/>
                                             <TextField name="interests"
                                                        label="What are your interests and hobbies? Tell us something interesting about yourself!"
@@ -454,88 +454,3 @@ const ApplicationForm = () => {
 };
 
 export default ApplicationForm;
-
-
-// const ApplicationClosed: React.FC = () => {
-//     const [showImages, setShowImages] = useState(false);
-
-//     useEffect(() => {
-//         const handleResize = () => {
-//             setShowImages(window.innerWidth >= 1034);
-//         };
-
-//         handleResize();
-
-//         window.addEventListener('resize', handleResize);
-
-//         return () => {
-//             window.removeEventListener('resize', handleResize);
-//         };
-//     }, []);
-
-//     return (
-//         <Layout>
-//             <div>
-//                 <div>
-//                     {showImages && (
-//                         <div className="images-container">
-//                             <img src={skateboard} alt="skateboard" style={{
-//                                 position: 'absolute',
-//                                 width: '150px',
-//                                 height: 'auto',
-//                                 left: '0',
-//                                 transform: 'translateX(-10%)',
-//                                 top: '50px'
-//                             }}/>
-//                             <img src={onewheel} alt="onewheel" style={{
-//                                 position: 'absolute',
-//                                 width: '150px',
-//                                 height: 'auto',
-//                                 right: '0',
-//                                 transform: 'translateX(10%)',
-//                                 top: '350px'
-//                             }}/>
-//                             <img src={scooter} alt="scooter" style={{
-//                                 position: 'absolute',
-//                                 width: '150px',
-//                                 height: 'auto',
-//                                 left: '0',
-//                                 transform: 'translateX(-10%)',
-//                                 top: '650px'
-//                             }}/>
-//                             <img src={skateboard2} alt="skateboard-right" style={{
-//                                 position: 'absolute',
-//                                 width: '150px',
-//                                 height: 'auto',
-//                                 right: '0',
-//                                 transform: 'translateX(10%)',
-//                                 top: '950px'
-//                             }}/>
-//                             <img src={onewheel2} alt="onewheel-left" style={{
-//                                 position: 'absolute',
-//                                 width: '150px',
-//                                 height: 'auto',
-//                                 left: '0',
-//                                 transform: 'translateX(-10%)',
-//                                 top: '1250px'
-//                             }}/>
-//                         </div>
-//                     )}
-//                 </div>
-//                 <div
-//                     className="max-w-xl mx-auto p-12  min-h-[calc(100vh-64px)] flex flex-col justify-center items-center text-center">
-//                     <h2 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600 mb-6">
-//                         Applications are now closed.
-//                     </h2>
-//                     <p className="text-slate-400">
-//                         Applications for the Fall 2024 term are now closed.
-//                         Our applications will open December for winter 2025 term!
-//                     </p>
-
-//                 </div>
-//             </div>
-//         </Layout>
-//     );
-// };
-
-// export default ApplicationClosed;
