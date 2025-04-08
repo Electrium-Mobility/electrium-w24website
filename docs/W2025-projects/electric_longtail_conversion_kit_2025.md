@@ -5,6 +5,7 @@ title: "Electric Longtail Conversion Kit"
 ---
 # Electric Longtail Conversion Kit
 
+![Electric Longtail Conversion Kit](./img/longtail_bike.png)
 ![Electric Longtail Conversion Kit](./img/longtail_image.jpg)
 
 
