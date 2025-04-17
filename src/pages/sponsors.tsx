@@ -12,6 +12,7 @@ import AltiumDark from '/static/img/sponsors/Altium_Logo_light.png';
 import mef from '/static/img/sponsors/mef_logo.png';
 import wusa from '/static/img/sponsors/WUSA_logo.png';
 import wusaDark from '/static/img/sponsors/WUSA_logo_light.png';
+import hakko from '/static/img/sponsors/hakko_logo.png'
 
 import panago from '/static/img/sponsors/panago_logo.png';
 import panagoDark from '/static/img/sponsors/panago_logo_light.png';
@@ -52,6 +53,10 @@ export default function Sponsors() {
         imgUrl: mef,
         darkImg: mef,
       },
+      {
+        imgUrl: hakko,
+        darkImg: hakko,
+      }
     ],
     gold: [
       {

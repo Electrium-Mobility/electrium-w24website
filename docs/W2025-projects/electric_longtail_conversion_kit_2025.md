@@ -6,7 +6,10 @@ title: "Electric Longtail Conversion Kit"
 # Electric Longtail Conversion Kit
 
 ![Electric Longtail Conversion Kit](./img/longtail_bike.png)
+![Electric Longtail Conversion Kit](./img/longtail_image2.png)
+![Electric Longtail Conversion Kit](./img/longtail_image3.png)
 ![Electric Longtail Conversion Kit](./img/longtail_image.jpg)
+
 
 
 ### Project Info
