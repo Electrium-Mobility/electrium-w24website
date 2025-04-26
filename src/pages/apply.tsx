@@ -146,6 +146,7 @@ const SELECT_ROLES = [
 ];
 
 const SELECT_PROJECTS = [
+    "Crowdsourced PEV Charging Map",
     "Bike Control Panel",
     "Electric Go-Kart",
     "Electric Cf-Skateboard",
