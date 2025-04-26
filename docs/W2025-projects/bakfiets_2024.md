@@ -11,7 +11,7 @@ title: "Bakfiets"
 
 ### Project Info
 
-| **Term:** | Winter 2024 |
+| **Term:** | Winter 2025 |
 | -------------------- | --------------------------------------------------------------------------|
 | **Team Lead:**       | Jerry Chen |
 | **Mechanical Lead:** | Jerry Chen |
