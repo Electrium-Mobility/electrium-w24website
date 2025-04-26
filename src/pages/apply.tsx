@@ -146,15 +146,10 @@ const SELECT_ROLES = [
 ];
 
 const SELECT_PROJECTS = [
+    "Bike Control Panel",
     "Electric Go-Kart",
-    "Electric Sofa",
     "Electric Cf-Skateboard",
     "Electric Road Bike",
-    "Custom ESC",
-    "Custom Remote Control",
-    "Battery Management System",
-    "Electric Longtail Conversion Kit",
-    "Onewheel",
     "Other",
 ];
 
