@@ -60,13 +60,10 @@ const ApplicationForm = () => {
         setError(null);
 
         try {
-            // Create a FormData object from the form
             const formData = new FormData(event.target);
 
-            // Convert FormData to JSON object
             const formValues = {};
             formData.forEach((value, key) => {
-                // Handle radio table fields by putting them in correct structure
                 if (key.includes('-')) {
                     const [category, skill] = key.split('-');
                     if (!formValues[category]) {
@@ -79,32 +76,43 @@ const ApplicationForm = () => {
             });
 
             // Process project rankings
-            const projectRankings = [];
             SELECT_PROJECTS.forEach((project, index) => {
                 const rank = formData.get(`project_rank_${index}`);
                 if (rank) {
-                    projectRankings[parseInt(rank) - 1] = project;
+                    formValues[`ProjectRank: ${project}`] = rank;
                 }
             });
 
-            // Add project rankings to form values
-            formValues.electriumProjects = projectRankings.filter(p => p); // Remove empty slots
+            // Create a sorted electriumProjects array
+            const rankedProjects = [];
+            Object.keys(formValues)
+                .filter(key => key.startsWith('ProjectRank:'))
+                .sort((a, b) => Number(formValues[a]) - Number(formValues[b]))
+                .forEach(key => {
+                    rankedProjects.push(key.replace('ProjectRank: ', ''));
+                });
 
-            // Add role-specific fields into roleQuestions structure
+            formValues.electriumProjects = rankedProjects;
+
+            // 🔥 Remove the old "project_rank_0", "project_rank_1", etc. fields
+            SELECT_PROJECTS.forEach((_, index) => {
+                delete formValues[`project_rank_${index}`];
+            });
+
+            // Move role-specific fields into roleQuestions
             formValues.roleQuestions = {
                 role: formValues.role
             };
 
-            // Move role-specific fields into roleQuestions
             const roleSpecificFields = ['hopeToLearn', 'wouldYouRather', 'whyCrossRoad', 'fixWiring'];
             roleSpecificFields.forEach(field => {
                 if (formValues[field]) {
                     formValues.roleQuestions[field] = formValues[field];
-                    delete formValues[field]; // Remove from top level
+                    delete formValues[field];
                 }
             });
 
-            // Add skill evaluations to roleQuestions
+            // Also move skill evaluations into roleQuestions
             Object.keys(formValues).forEach(key => {
                 if (key.startsWith('skillEvaluation')) {
                     formValues.roleQuestions[key] = formValues[key];
@@ -112,27 +120,28 @@ const ApplicationForm = () => {
                 }
             });
 
+            delete formValues.electriumProjects;
+            if (formValues.roleQuestions) {
+                delete formValues.roleQuestions.role;
+            }
+
+
             console.log("Submitting form data:", formValues);
 
-            // Send data to Google Script
-            const response = await fetch(
-                'https://script.google.com/macros/s/AKfycbwD0CNpn-MEsdKmrxJCHtzw4SU6E43E-FFMg0KVAGARsao-BS-ruN7Jncd4Y8B_C53fbQ/exec',
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'text/plain',
-                    },
-                    body: JSON.stringify(formValues),
-                    mode: 'no-cors' // Using no-cors to avoid CORS issues
-                }
-            );
+            // Send to Google Apps Script
+            await fetch('https://script.google.com/macros/s/AKfycbwugwIPcsnid3NOyCHjXigSI0chX-_1r6IzQkBG09NOrElLMBLACHlJbPkb5K1R4EvGSQ/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'text/plain',
+                },
+                body: JSON.stringify(formValues),
+                mode: 'no-cors',
+            });
 
             console.log("Form submitted successfully");
 
-            // Show success and redirect
             setSuccess(true);
 
-            // Wait a moment then redirect
             setTimeout(() => {
                 console.log("Redirecting to thank you page");
                 history.push('/thankyou');
@@ -145,6 +154,7 @@ const ApplicationForm = () => {
             setSubmitting(false);
         }
     };
+
 
     return (
         <Layout>
