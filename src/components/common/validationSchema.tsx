@@ -1,10 +1,8 @@
 import * as Yup from 'yup';
 
-
 const baseRoleQuestionsSchema = Yup.object({
     role: Yup.string().required('Role selection is required'),
 });
-
 
 // Base validation schema for common fields
 const baseSchema = Yup.object().shape({
@@ -27,7 +25,10 @@ const baseSchema = Yup.object().shape({
     interests: Yup.string(),
     heardSource: Yup.string().required('Please select an option'),
     friendReferral: Yup.string(),
-    electriumProjects: Yup.array().of(Yup.string()).min(10, 'Please rank all projects').required('Please rank all projects'), // The number has to be cha
+    electriumProjects: Yup.array()
+        .of(Yup.number().min(1).max(6))
+        .min(1, 'Please rank at least one project')
+        .required('Project rankings are required'),
     comments: Yup.string(),
     commitment: Yup.number()
         .typeError("Please enter a valid number")
@@ -43,20 +44,20 @@ const roleSchemas = {
     Mechanical: Yup.object().shape({
         hopeToLearn: Yup.string().required('This field is required'),
         wouldYouRather: Yup.string(),
-        'skillEvaluationMechanical-Machining': Yup.string().required('This field is required'),//TypeScript syntax doesn't support it
-        'skillEvaluationMechanical-Solidworks': Yup.string().required('This field is required') //TypeScript syntax doesn't support it
+        'skillEvaluationMechanical-Machining': Yup.string().required('This field is required'),
+        'skillEvaluationMechanical-Solidworks': Yup.string().required('This field is required')
     }),
     Firmware: Yup.object().shape({
         hopeToLearn: Yup.string().required('This field is required'),
         whyCrossRoad: Yup.string(),
-        'skillEvaluationFirmware-VESC': Yup.string().required('This field is required'), //TypeScript syntax doesn't support it
-        'skillEvaluationFirmware-Arduino IDE': Yup.string().required('This field is required') //TypeScript syntax doesn't support it
+        'skillEvaluationFirmware-VESC': Yup.string().required('This field is required'),
+        'skillEvaluationFirmware-Arduino IDE': Yup.string().required('This field is required')
     }),
     Electrical: Yup.object().shape({
         hopeToLearn: Yup.string().required('This field is required'),
         fixWiring: Yup.string(),
-        // 'skillEvaluationElectrical-KiCAD': Yup.string().required('This field is required'),
-        // 'skillEvaluationElectrical-Soldering': Yup.string().required('This field is required')
+        'skillEvaluationElectrical-KiCAD': Yup.string().required('This field is required'),
+        'skillEvaluationElectrical-Soldering': Yup.string().required('This field is required')
     }),
     'Web Development': Yup.object().shape({
         hopeToLearn: Yup.string().required('This field is required'),
@@ -66,7 +67,6 @@ const roleSchemas = {
         'skillEvaluationWebDev-Next.js': Yup.string().required('This field is required'),
         'skillEvaluationWebDev-SQL/NoSQL Database': Yup.string().required('This field is required'),
         'skillEvaluationWebDev-General Programming skills': Yup.string().required('This field is required'),
-
     }),
     Management: Yup.object().shape({
         hopeToLearn: Yup.string().required('This field is required'),
@@ -74,14 +74,11 @@ const roleSchemas = {
     }),
     Marketing: Yup.object().shape({
         softwareExp: Yup.array()
-            .of(Yup.string().required("This field is required"))
+            .of(Yup.string())
             .min(1, "Please select at least one option")
             .required("This field is required"),
-
         relatedExperience: Yup.string(),
         relatedSoftSkills: Yup.string(),
-        resume: Yup.mixed(),
-        designPost: Yup.string(),
         discordEmoji: Yup.string(),
         'fieldsInterestedMarketing-Graphic design': Yup.string().required('This field is required'),
         'fieldsInterestedMarketing-Photography/ videography': Yup.string().required('This field is required'),
@@ -92,7 +89,6 @@ const roleSchemas = {
     Finance: Yup.object().shape({
         relatedExperience: Yup.string(),
         relatedSoftSkills: Yup.string(),
-        resume: Yup.mixed(),
         sponsorEmail: Yup.string(),
         otherRole: Yup.string().required('This field is required'),
         'fieldsInterestedFinance-Outreach to sponsors': Yup.string().required('This field is required'),
@@ -100,27 +96,22 @@ const roleSchemas = {
         'fieldsInterestedFinance-Draft endowment fund proposals/ slides': Yup.string().required('This field is required'),
         'fieldsInterestedFinance-Set budget/ handle reimbursements': Yup.string().required('This field is required'),
         'fieldsInterestedFinance-Plan/ execute fundraisers': Yup.string().required('This field is required'),
-
+    }),
+    Lead: Yup.object().shape({
+        WhyLead: Yup.string().required('This field is required'),
     }),
 };
 
-
 const getValidationSchema = (role) => {
-    let roleSpecificSchema = Yup.object({});
     let extendedRoleQuestionsSchema = baseRoleQuestionsSchema;
 
-    if (role) {
-        roleSpecificSchema = roleSchemas[role];
+    if (role && roleSchemas[role]) {
         extendedRoleQuestionsSchema = baseRoleQuestionsSchema.concat(roleSchemas[role]);
-
     }
 
     return baseSchema.shape({
         roleQuestions: extendedRoleQuestionsSchema,
-
     });
-
 };
-
 
 export default getValidationSchema;
