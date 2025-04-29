@@ -16,27 +16,32 @@ const CheckboxField: React.FC<CheckboxFieldProps> = ({
   options = [],
   required
 }) => {
-  const [, meta] = useField({ name, type: 'checkbox' });  // useField hook to access meta properties
+  const [, meta] = useField({ name, type: 'checkbox' });
 
   return (
     <div className="grid grid-cols-1 mb-5">
-      <label htmlFor={name} className="font-semibold">
+      <label className="font-semibold">
         {label} {required && <span className="text-red-600">*</span>}
       </label>
-      <label htmlFor={name} className="text-gray-500 text-sm">{caption}</label>
+      <div className="text-gray-500 text-sm">{caption}</div>
       <div className={`p-4 bg-grey border-2 ${meta.touched && meta.error ? 'border-red-500' : 'border-gray-300'} rounded-md`}>
-        {options.map(option => (
-          <label key={option} className="block">
-            <Field
-              type="checkbox"
-              id={name}
-              name={name}
-              value={option}
-              className="form-checkbox text-charcoal-600 border border-charcoal-300 rounded-md focus:outline-none focus:ring-green-700 focus:border-green-700"
-            />
-            {option}
-          </label>
-        ))}
+        {options.map(option => {
+          // Create unique ID for each checkbox option
+          const optionId = `${name.replace(/\./g, '-')}-${option.replace(/\s+/g, '-').toLowerCase()}`;
+
+          return (
+            <label key={optionId} htmlFor={optionId} className="block mb-2">
+              <Field
+                type="checkbox"
+                id={optionId}
+                name={name}
+                value={option}
+                className="form-checkbox text-charcoal-600 border border-charcoal-300 rounded-md mr-2 focus:outline-none focus:ring-green-700 focus:border-green-700"
+              />
+              {option}
+            </label>
+          );
+        })}
       </div>
       {meta.touched && meta.error ? (
         <div className="text-red-500 text-sm mt-1">{meta.error}</div>
