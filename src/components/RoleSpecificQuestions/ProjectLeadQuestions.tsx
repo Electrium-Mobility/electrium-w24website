@@ -9,12 +9,13 @@ const ProjectLeadQuestions = () => {
           <span className="text-red-600">*</span>
         </label>
         <textarea
-          id="WhyProjectLead"
-          name="WhyProjectLead"
+          id="whyProjectLead"
+          name="whyProjectLead"
           required
           className="form-textarea mt-2 text-charcoal-600 border border-charcoal-300 rounded-md w-full py-3 px-4"
           rows={6}
-        ></textarea>
+          defaultValue=""
+        />
       </div>
     </div>
   );
