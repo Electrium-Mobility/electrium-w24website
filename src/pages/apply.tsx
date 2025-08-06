@@ -12,7 +12,7 @@ import {
   SELECT_PROGRAMS,
   SELECT_HEARD_SOURCE,
   SELECT_ROLES,
-  // SELECT_PROJECTS, // TEMPORARILY COMMENTED OUT 
+  // SELECT_PROJECTS, // TEMPORARILY COMMENTED OUT
   SELECT_TERMS,
   SELECT_STREAMS,
 } from "../components/constants/apply-form-options";
@@ -101,35 +101,8 @@ const ApplicationForm = () => {
       */
       }
 
-      // Move role-specific fields into roleQuestions
-      formValues.roleQuestions = {
-        role: formValues.role,
-      };
-
-      const roleSpecificFields = [
-        "hopeToLearn",
-        "wouldYouRather",
-        "whyCrossRoad",
-        "fixWiring",
-      ];
-      roleSpecificFields.forEach((field) => {
-        if (formValues[field]) {
-          formValues.roleQuestions[field] = formValues[field];
-          delete formValues[field];
-        }
-      });
-
-      // Also move skill evaluations into roleQuestions
-      Object.keys(formValues).forEach((key) => {
-        if (key.startsWith("skillEvaluation")) {
-          formValues.roleQuestions[key] = formValues[key];
-          delete formValues[key];
-        }
-      });
-
-      if (formValues.roleQuestions) {
-        delete formValues.roleQuestions.role;
-      }
+      // Keep all fields as simple top-level fields for spreadsheet
+      // No complex nesting - just send everything directly
 
       console.log("Submitting form data:", formValues);
 
