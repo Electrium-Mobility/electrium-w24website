@@ -12,13 +12,20 @@ import {
   SELECT_PROGRAMS,
   SELECT_HEARD_SOURCE,
   SELECT_ROLES,
-  // SELECT_PROJECTS, // TEMPORARILY COMMENTED OUT
+  SELECT_PROJECTS,
   SELECT_TERMS,
   SELECT_STREAMS,
 } from "../components/constants/apply-form-options";
 
 import ProjectLeadQuestions from "../components/RoleSpecificQuestions/ProjectLeadQuestions";
 import LeadQuestions from "../components/RoleSpecificQuestions/LeadQuestions";
+import ElectricalQuestions from "../components/RoleSpecificQuestions/ElectricalQuestions";
+import FinanceQuestions from "../components/RoleSpecificQuestions/FinanceQuestions";
+import FirmwareQuestions from "../components/RoleSpecificQuestions/FirmwareQuestions";
+import ManagementQuestions from "../components/RoleSpecificQuestions/ManagementQuestions";
+import MarketingQuestions from "../components/RoleSpecificQuestions/MarketingQuestions";
+import MechanicalQuestions from "../components/RoleSpecificQuestions/MechanicalQuestions";
+import WebDevQuestions from "../components/RoleSpecificQuestions/WebDevQuestions";
 
 const ApplicationForm = () => {
   const [showImages, setShowImages] = useState(false);
@@ -47,6 +54,20 @@ const ApplicationForm = () => {
         return <ProjectLeadQuestions />;
       case "Team Lead":
         return <LeadQuestions />;
+      case "Electrical":
+        return <ElectricalQuestions />;
+      case "Finance":
+        return <FinanceQuestions />;
+      case "Firmware":
+        return <FirmwareQuestions />;
+      case "Management":
+        return <ManagementQuestions />;
+      case "Marketing":
+        return <MarketingQuestions />;
+      case "Mechanical":
+        return <MechanicalQuestions />;
+      case "Web Development":
+        return <WebDevQuestions />;
       default:
         return null;
     }
@@ -60,7 +81,7 @@ const ApplicationForm = () => {
     try {
       const formData = new FormData(event.target);
 
-      const formValues = {};
+      const formValues: any = {};
       formData.forEach((value, key) => {
         if (key.includes("-")) {
           const [category, skill] = key.split("-");
@@ -73,8 +94,6 @@ const ApplicationForm = () => {
         }
       });
 
-      {
-        /* TEMPORARILY COMMENTED OUT - Project Ranking Processing
       // Process project rankings
       SELECT_PROJECTS.forEach((project, index) => {
         const rank = formData.get(`project_rank_${index}`);
@@ -87,7 +106,7 @@ const ApplicationForm = () => {
       const rankedProjects = [];
       Object.keys(formValues)
         .filter((key) => key.startsWith("ProjectRank:"))
-        .sort((a, b) => Number(formValues[a]) - Number(formValues[b]))
+        .sort((a, b) => Number(formValues[b]) - Number(formValues[a]))
         .forEach((key) => {
           rankedProjects.push(key.replace("ProjectRank: ", ""));
         });
@@ -98,8 +117,6 @@ const ApplicationForm = () => {
       SELECT_PROJECTS.forEach((_, index) => {
         delete formValues[`project_rank_${index}`];
       });
-      */
-      }
 
       // Keep all fields as simple top-level fields for spreadsheet
       // No complex nesting - just send everything directly
@@ -213,7 +230,7 @@ const ApplicationForm = () => {
                 </h3>
                 <h3 className="font-semibold text-green-600 text-center">
                   {" "}
-                  Fall 2025 Project & Team Lead Applications are Open!
+                  Fall 2025 Applications are Open!
                 </h3>
                 <p className="text-center mb-4 md:leading-normal leading-normal">
                   Hi there! Thank you for your interest in joining Electrium
@@ -225,6 +242,9 @@ const ApplicationForm = () => {
                   </span>
                   , so if you are joining mid-term then you will be placed in
                   one of the teams in the current term.
+                  <br />
+                  This form is for both regular team member applications and
+                  leadership positions.
                 </p>
                 <p className="mb-4 md:leading-normal leading-normal text-red-600">
                   * Indicates required question
@@ -530,21 +550,6 @@ const ApplicationForm = () => {
                     {renderRoleQuestions()}
 
                     <div className="grid grid-cols-1 mb-5">
-                      <label htmlFor="leadership" className="font-semibold">
-                        Please explain what leadership is to you.{" "}
-                        <span className="text-red-600">*</span>
-                      </label>
-                      <textarea
-                        id="leadership"
-                        name="leadership"
-                        required
-                        className="form-textarea mt-2 text-charcoal-600 border border-charcoal-300 rounded-md w-full py-3 px-4"
-                        rows={6}
-                      ></textarea>
-                    </div>
-
-                    {/* TEMPORARILY COMMENTED OUT - Friend Referral Section
-                    <div className="grid grid-cols-1 mb-5">
                       <label htmlFor="friendReferral" className="font-semibold">
                         If you're applying with a friend, please put their full
                         name below.
@@ -556,9 +561,7 @@ const ApplicationForm = () => {
                         className="form-input mt-2 text-charcoal-600 border border-charcoal-300 rounded-md w-full py-3 px-4"
                       />
                     </div>
-                    */}
 
-                    {/* TEMPORARILY COMMENTED OUT - Project Ranking Section
                     <div className="grid grid-cols-1 mb-5">
                       <label className="font-semibold">
                         Please rank the projects you're interested in. (1 is
@@ -574,7 +577,7 @@ const ApplicationForm = () => {
                           <select
                             name={`project_rank_${index}`}
                             required
-                            className="form-select text-charcoal-600 border border-charcoal-300 rounded-md px-4 py-3 mr-4 w-24"
+                            className="form-select text-charcoal-600 border border-charcoal-600 rounded-md px-4 py-3 mr-4 w-24"
                           >
                             <option value="">-Rank-</option>
                             {[1, 2, 3, 4, 5, 6].map((num) => (
@@ -587,7 +590,6 @@ const ApplicationForm = () => {
                         </div>
                       ))}
                     </div>
-                    */}
 
                     <div className="grid grid-cols-1 mb-5">
                       <label htmlFor="comments" className="font-semibold">
