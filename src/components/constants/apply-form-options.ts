@@ -114,7 +114,17 @@ export const SELECT_HEARD_SOURCE = [
   "Other",
 ];
 
-export const SELECT_ROLES = ["Project Lead", "Team Lead"];
+export const SELECT_ROLES = [
+  "Project Lead", 
+  "Team Lead", 
+  "Electrical", 
+  "Finance", 
+  "Firmware", 
+  "Management", 
+  "Marketing", 
+  "Mechanical", 
+  "Web Development"
+];
 
 export const SELECT_PROJECTS = [
   "Crowdsourced PEV Charging Map",
