@@ -62,20 +62,22 @@ function Team() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-0 gap-[30px]">
             {coops.map((lead, index) => (
-              <Coop headshot={lead.headshot} name={lead.name} position={lead.position} />
+              <Coop
+                headshot={lead.headshot}
+                name={lead.name}
+                position={lead.position}
+              />
             ))}
           </div>
 
           <div className="container">
             <div className="grid grid-cols-1 pb-16 pt-16 text-center">
               <h3 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600">
-                Winter 2025 Kickoff!
+                Fall 2025 Kickoff!
               </h3>
               <div className="relative inline-block mx-auto overflow-hidden">
                 <img
-                  src={
-                    require("/static/img/kickoff/kickoff-w25.jpg").default
-                  }
+                  src={require("/static/img/kickoff/kickoff-f25.jpg").default}
                   className=" w-2/3 h-auto rounded-xl"
                 />
               </div>
@@ -85,13 +87,11 @@ function Team() {
           <div className="container">
             <div className="grid grid-cols-1 pb-16 pt-16 text-center">
               <h3 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600">
-                Fall 2024 Kickoff!
+                Spring 2025 Kickoff!
               </h3>
               <div className="relative inline-block mx-auto overflow-hidden">
                 <img
-                  src={
-                    require("/static/img/kickoff/kickoff-f24.jpg").default
-                  }
+                  src={require("/static/img/kickoff/kickoff-s25.jpg").default}
                   className=" w-2/3 h-auto rounded-xl"
                 />
               </div>

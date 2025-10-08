@@ -1,51 +1,45 @@
-import Henon_H from "/static/img/TeamLeads/Henon_H.png";
+import Omer_F from "/static/img/TeamLeads/Omer_F.png";
+import Placeholder from "/static/img/docusaurus.png";
+import Leo from "/static/img/TeamLeads/leo.jpg";
+import Bryan from "/static/img/Coops/bryan.jpg";
 import Josh_S from "/static/img/TeamLeads/joshstadnyk.jpg";
-import Justin_Z from "/static/img/Coops/justinzhang.jpg";
-import Matthew_E from "/static/img/Coops/matthewembaye.jpg";
-import Omer_S from "/static/img/TeamLeads/Omer_S.png";
-import Patrick_H from "/static/img/TeamLeads/Patrick_H.png";
-import Zachary_B from "/static/img/TeamLeads/zacharybarandino.jpg";
-import Kayla_L from "/static/img/Coops/kaylali.jpg";
+import Sarala from "/static/img/TeamLeads/sarala.jpg";
+import Alex from "/static/img/TeamLeads/alex.jpg";
 
 export const teamLeads = [
   {
-    name: "Matthew Embaye",
-    position: "Custom Remote Control Lead",
-    headshot: Matthew_E,
+    name: "Omer F",
+    position: "Midbike Lead",
+    headshot: Placeholder,
   },
   {
-    name: "Zachary Barandino",
-    position: "OneWheel Lead",
-    headshot: Zachary_B,
+    name: "Sarala",
+    position: "Bike Lead",
+    headshot: Sarala,
   },
   {
-    name: "Kayla Li",
+    name: "Leo",
+    position: "Skateboard Lead",
+    headshot: Leo,
+  },
+  {
+    name: "Robin",
+    position: "Media Player Lead",
+    headshot: Placeholder,
+  },
+  {
+    name: "Abdullah",
+    position: "Midbike Lead",
+    headshot: Placeholder,
+  },
+  {
+    name: "Bryan",
     position: "Web Development Lead",
-    headshot: Kayla_L,
-  },
-  {
-    name: "Justin Zhang",
-    position: "Electric Longtail Conversion Kit Lead",
-    headshot: Justin_Z,
+    headshot: Bryan,
   },
   {
     name: "Josh Stadnyk",
-    position: "Go-Kart Lead",
+    position: "Gokart Lead",
     headshot: Josh_S,
-  },
-  {
-    name: "Omer Syed",
-    position: "F24 Scooter Lead",
-    headshot: Omer_S,
-  },
-  {
-    name: "Henon Hailu",
-    position: "F24 Road Bike Lead",
-    headshot: Henon_H,
-  },
-  {
-    name: "Patrick He",
-    position: "F24 Electric Couch Lead",
-    headshot: Patrick_H,
   },
 ];
