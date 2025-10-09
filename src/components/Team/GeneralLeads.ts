@@ -42,11 +42,6 @@ export const generalLeads = [
     headshot: Justin_Z,
   },
   {
-    name: "Nathan Li",
-    position: "Web Development Lead",
-    headshot: Placeholder,
-  },
-  {
     name: "Alex",
     position: "Firmware Lead",
     headshot: Alex,
@@ -60,5 +55,10 @@ export const generalLeads = [
     name: "Mae-Lyn Nguyen",
     position: "Management Lead",
     headshot: Mae_Lyn_N,
+  },
+  {
+    name: "Nathan Li",
+    position: "Web Development Lead",
+    headshot: Placeholder,
   },
 ];
