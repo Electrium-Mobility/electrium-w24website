@@ -230,7 +230,7 @@ const ApplicationForm = () => {
                 </h3>
                 <h3 className="font-semibold text-green-600 text-center">
                   {" "}
-                  Fall 2025 Applications are Open!
+                  Winter 2026 Applications are Open!
                 </h3>
                 <p className="text-center mb-4 md:leading-normal leading-normal">
                   Hi there! Thank you for your interest in joining Electrium
@@ -331,7 +331,7 @@ const ApplicationForm = () => {
 
                     <div className="grid grid-cols-1 mb-5">
                       <label htmlFor="term" className="font-semibold">
-                        What term will you be in in the Fall 2025 term?{" "}
+                        What term will you be in in the Winter 2026 term?{" "}
                         <span className="text-red-600">*</span>
                       </label>
                       <select
@@ -448,7 +448,7 @@ const ApplicationForm = () => {
 
                     <div className="grid grid-cols-1 mb-5">
                       <label className="font-semibold">
-                        Will you be in-person at Waterloo in Fall 2025?{" "}
+                        Will you be in-person at Waterloo in Winter 2026?{" "}
                         <span className="text-red-600">*</span>
                       </label>
                       <div className="p-4 bg-grey border-2 border-gray-300 rounded-md">
