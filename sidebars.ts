@@ -29,6 +29,15 @@ const sidebars: SidebarsConfig = {
     'W2025-projects/electric_couch_2024',
     {
       type: 'category',
+      label: 'Fall 2025 Projects',
+      collapsed: false,
+      items: [
+        'F2025-projects/portable_media_player_f2025',
+        'F2025-projects/mid_bike_conversion_kit_f2025',
+      ],
+    },
+    {
+      type: 'category',
       label: '2023 Projects',
       collapsed: true,
       items: [
