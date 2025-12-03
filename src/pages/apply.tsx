@@ -33,6 +33,8 @@ const ApplicationForm = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
   const [selectedRole, setSelectedRole] = useState("");
+  const [eHumanRank, setEHumanRank] = useState("");
+  const [resumeFile, setResumeFile] = useState(null);
 
   const history = useHistory();
 
@@ -118,6 +120,17 @@ const ApplicationForm = () => {
         delete formValues[`project_rank_${index}`];
       });
 
+      if (eHumanRank === "1" && resumeFile) {
+        const base64 = await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.readAsDataURL(resumeFile);
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = (error) => reject(error);
+        });
+        formValues["resumeName"] = resumeFile.name;
+        formValues["resumeData"] = base64;
+      }
+
       // Keep all fields as simple top-level fields for spreadsheet
       // No complex nesting - just send everything directly
 
@@ -125,7 +138,7 @@ const ApplicationForm = () => {
 
       // Send to Google Apps Script
       await fetch(
-        "https://script.google.com/macros/s/AKfycbwugwIPcsnid3NOyCHjXigSI0chX-_1r6IzQkBG09NOrElLMBLACHlJbPkb5K1R4EvGSQ/exec",
+        "https://script.google.com/macros/s/AKfycbz1Yv5jPqBllazPlpMdTfdrEpWzM8inr9HFoOMF4M_lX1fw0Of_Hg-R43uu3kSWizJ_vA/exec",
         {
           method: "POST",
           headers: {
@@ -562,34 +575,81 @@ const ApplicationForm = () => {
                       />
                     </div>
 
-                    <div className="grid grid-cols-1 mb-5">
-                      <label className="font-semibold">
-                        Please rank the projects you're interested in. (1 is
-                        most interested and 6 is least interested){" "}
-                        <span className="text-red-600">*</span>
-                      </label>
-                      <div className="text-gray-500 text-sm">
-                        Feel free to add your own project idea under "Other".
-                      </div>
+                    {/* Hide Project Ranking for Leadership Roles */}
+                    {selectedRole !== "Project Lead" &&
+                      selectedRole !== "Team Lead" && (
+                        <div className="grid grid-cols-1 mb-5">
+                          <label className="font-semibold">
+                            Please rank the projects you're interested in. (1 is
+                            most interested and 6 is least interested){" "}
+                            <span className="text-red-600">*</span>
+                          </label>
+                          <div className="text-gray-500 text-sm">
+                            Feel free to add your own project idea under
+                            "Other".
+                          </div>
 
-                      {SELECT_PROJECTS.map((project, index) => (
-                        <div key={project} className="flex items-center mt-2">
-                          <select
-                            name={`project_rank_${index}`}
-                            required
-                            className="form-select text-charcoal-600 border border-charcoal-600 rounded-md px-4 py-3 mr-4 w-24"
-                          >
-                            <option value="">-Rank-</option>
-                            {[1, 2, 3, 4, 5, 6].map((num) => (
-                              <option key={num} value={num}>
-                                {num}
-                              </option>
-                            ))}
-                          </select>
-                          <span>{project}</span>
+                          {SELECT_PROJECTS.map((project, index) => (
+                            <div
+                              key={project}
+                              className="flex items-center mt-2"
+                            >
+                              <select
+                                name={`project_rank_${index}`}
+                                required
+                                className="form-select text-charcoal-600 border border-charcoal-600 rounded-md px-4 py-3 mr-4 w-24"
+                                onChange={(e) => {
+                                  if (project === "e-Human Powered Vehicle") {
+                                    setEHumanRank(e.target.value);
+                                  }
+                                }}
+                              >
+                                <option value="">-Rank-</option>
+                                {[1, 2, 3, 4, 5, 6].map((num) => (
+                                  <option key={num} value={num}>
+                                    {num}
+                                  </option>
+                                ))}
+                              </select>
+                              <span>{project}</span>
+                            </div>
+                          ))}
+                          {eHumanRank === "1" && (
+                            <div className="grid grid-cols-1 mb-5 mt-5">
+                              <label htmlFor="resume" className="font-semibold">
+                                Since you ranked e-Human Powered Vehicle as your
+                                first choice, please attach your resume.{" "}
+                                <span className="text-red-600">*</span>
+                              </label>
+                              <input
+                                id="resume"
+                                name="resume"
+                                type="file"
+                                accept=".pdf,.doc,.docx"
+                                required
+                                className="form-input mt-2 w-full"
+                                onChange={(e) => {
+                                  const file = e.target.files
+                                    ? e.target.files[0]
+                                    : null;
+                                  if (file) {
+                                    if (file.size > 5 * 1024 * 1024) {
+                                      // 5MB limit
+                                      alert("File size must be less than 5MB");
+                                      e.target.value = ""; // Clear input
+                                      setResumeFile(null);
+                                    } else {
+                                      setResumeFile(file);
+                                    }
+                                  } else {
+                                    setResumeFile(null);
+                                  }
+                                }}
+                              />
+                            </div>
+                          )}
                         </div>
-                      ))}
-                    </div>
+                      )}
 
                     <div className="grid grid-cols-1 mb-5">
                       <label htmlFor="comments" className="font-semibold">

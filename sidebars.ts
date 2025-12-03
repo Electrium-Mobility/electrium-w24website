@@ -34,6 +34,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'F2025-projects/portable_media_player_f2025',
         'F2025-projects/mid_bike_conversion_kit_f2025',
+        'F2025-projects/f25_ebike',
       ],
     },
     {

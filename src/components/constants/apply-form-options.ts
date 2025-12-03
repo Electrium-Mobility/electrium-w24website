@@ -115,23 +115,23 @@ export const SELECT_HEARD_SOURCE = [
 ];
 
 export const SELECT_ROLES = [
-  "Project Lead", 
-  "Team Lead", 
-  "Electrical", 
-  "Finance", 
-  "Firmware", 
-  "Management", 
-  "Marketing", 
-  "Mechanical", 
-  "Web Development"
+  "Project Lead",
+  "Team Lead",
+  "Electrical",
+  "Finance",
+  "Firmware",
+  "Management",
+  "Marketing",
+  "Mechanical",
+  "Web Development",
 ];
 
 export const SELECT_PROJECTS = [
+  "Electric Bike",
+  "Electric Skateboard",
+  "e-Human Powered Vehicle",
   "Crowdsourced PEV Charging Map",
-  "Bike Control Panel",
-  "Electric Go-Kart",
-  "Electric Cf-Skateboard",
-  "Electric Road Bike",
+  "Web Dev General Project",
   "Other",
 ];
 
