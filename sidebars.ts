@@ -1,4 +1,4 @@
-import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
+import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 
 /**
  * Creating a sidebar enables you to:
@@ -17,34 +17,39 @@ const sidebars: SidebarsConfig = {
   // But you can create a sidebar manually
 
   projectSidebar: [
-    'W2025-projects/bakfiets_2024',
-    'W2025-projects/electric_skateboard_2025',
-    'W2025-projects/onewheel_2025',
-    'W2025-projects/electric_longtail_conversion_kit_2025',
-    'W2025-projects/gokart_2025',
-    'W2025-projects/custom_remote_control_2025',
-    'W2025-projects/electrium_shop_2025',
-    'W2025-projects/scooter_2024',
-    'W2025-projects/road_bike_2024',
-    'W2025-projects/electric_couch_2024',
+    "W2025-projects/bakfiets_2024",
+    "W2025-projects/electric_skateboard_2025",
+    "W2025-projects/onewheel_2025",
+    "W2025-projects/electric_longtail_conversion_kit_2025",
+    "W2025-projects/gokart_2025",
+    "W2025-projects/custom_remote_control_2025",
+    "W2025-projects/electrium_shop_2025",
+    "W2025-projects/scooter_2024",
+    "W2025-projects/road_bike_2024",
+    "W2025-projects/electric_couch_2024",
     {
-      type: 'category',
-      label: 'Fall 2025 Projects',
+      type: "category",
+      label: "Fall 2025 Projects",
       collapsed: false,
       items: [
-        'F2025-projects/portable_media_player_f2025',
-        'F2025-projects/mid_bike_conversion_kit_f2025',
-        'F2025-projects/f25_ebike',
+        "F2025-projects/f25_ebike",
+        "F2025-projects/f25_auto_pr_bot",
+        "F2025-projects/mid_bike_conversion_kit_f2025",
+        "F2025-projects/f25_request_platform",
+        "F2025-projects/portable_media_player_f2025",
+        "F2025-projects/f25_meeting_note_bot",
+        "F2025-projects/f25_smart_qa_bot",
+        "F2025-projects/f25_electrium_shop",
       ],
     },
     {
-      type: 'category',
-      label: '2023 Projects',
+      type: "category",
+      label: "2023 Projects",
       collapsed: true,
       items: [
-        'projects/project1_2023',
-        'projects/project2_2023',
-        'projects/project3_2023'
+        "projects/project1_2023",
+        "projects/project2_2023",
+        "projects/project3_2023",
       ],
     },
     // // UNCOMMENT TO SEE TUTORIALS + TIPS
@@ -69,7 +74,6 @@ const sidebars: SidebarsConfig = {
     //   ],
     // },
   ],
-
 };
 
 export default sidebars;

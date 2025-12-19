@@ -1,6 +1,6 @@
 ---
 id: portable_media_player_f2025
-sidebar_position: 2
+sidebar_position: 5
 title: "Portable Media Player"
 ---
 
@@ -10,9 +10,9 @@ title: "Portable Media Player"
 
 ### Project Info
 
-| **Term:**         | Fall 2025                                       |
-| ----------------- | ----------------------------------------------- |
-| **Project Lead:** | Robin Yan                                       |
+| **Term:**         | Fall 2025                                               |
+| ----------------- | ------------------------------------------------------- |
+| **Project Lead:** | Robin Yan                                               |
 | **Team Member:**  | Tarek Chanouha, Thomas Martinez, Maria Khan, Jeremy Niu |
 
 ### **Project Description**
