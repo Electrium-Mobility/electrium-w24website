@@ -33,6 +33,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         "F2025-projects/f25_ebike",
+        "F2025-projects/F25 Skateboard",
         "F2025-projects/f25_auto_pr_bot",
         "F2025-projects/mid_bike_conversion_kit_f2025",
         "F2025-projects/f25_request_platform",
