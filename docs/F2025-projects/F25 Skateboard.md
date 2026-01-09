@@ -36,12 +36,15 @@ We built an electric skateboard with the battery pack, longboard deck, and elect
 ### Electronics Enclosure
 3D printed after optimizing SolidWorks model to pass height & weight clearances while housing all electronics, including the battery pack, VESC, power distribution, telemetry, and wiring harness.
 
+![Skateboard Picture 9](img/F25%20Skateboard%20Images/Picture9.jpg)
+![Skateboard Picture 10](img/F25%20Skateboard%20Images/Picture10.jpg)
+
 
 ### Battery Pack
 12S2P with nominal specs of 43.2 V, 5600 mAh, 242 Wh. Equipped with a BMS to safely power all other electronics.
 
 
-
+![Skateboard Picture 11](img/F25%20Skateboard%20Images/Picture11.jpg)
 ### Power Distribution
 2-stage power delivery using buck converters with a robust input protection circuit. Safely steps down the battery pack voltage from 43.2 V to 12 V to 3.3 V, feeding the head & tail lights and lighting control & telemetry MCUs, respectively. PCB designed in KiCad.
 
