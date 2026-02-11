@@ -1,22 +1,22 @@
-import Placeholder from "/static/img/docusaurus.png";
-import Bryan from "/static/img/Coops/bryan.jpg";
-import Abdullah from "/static/img/Coops/abdullah.jpg";
-import Robin from "/static/img/Coops/robin.jpg";
+
+import Nathan from "/static/img/Coops/IMG_8986 - Nathan Duprix.png";
+import Jumaana from "/static/img/Coops/Jumaana headshot - Jumaana Nainar.png";
+import Ishan from "/static/img/Coops/Ishan_Arya - Ishan.jpg";
 
 export const coops = [
   {
-    name: "Robin",
+    name: "Nathan Duprix",
     position: "Electrical/Firmware Co-op",
-    headshot: Robin,
+    headshot: Nathan,
   },
   {
-    name: "Abdullah",
+    name: "Jumaana Nainar",
     position: "Mechanical Engineering Co-op",
-    headshot: Abdullah,
+    headshot: Jumaana,
   },
   {
-    name: "Bryan",
+    name: "Ishan Arya",
     position: "Web Development Co-op",
-    headshot: Bryan,
+    headshot: Ishan,
   },
 ];

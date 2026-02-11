@@ -8,9 +8,9 @@ title: "Electrium Shop"
 
 ### Project Info
 
-| **Term:**         | Fall 2025   |
+| **Term:**         | Winter 2026   |
 | ----------------- | ----------- |
-| **Project Lead:** | Bryan Kuang |
+| **Project Lead:** | Ishan Arya |
 
 ### **Project Description**
 
