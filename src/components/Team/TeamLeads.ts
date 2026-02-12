@@ -7,6 +7,9 @@ import Abdullah from "/static/img/Coops/abdullah.jpg";
 import Josh_S from "/static/img/TeamLeads/joshstadnyk.jpg";
 import Sarala from "/static/img/TeamLeads/sarala.jpg";
 import Alex from "/static/img/TeamLeads/alex.jpg";
+import Nathan from "/static/img/Coops/IMG_8986 - Nathan Duprix.png";
+import Jumaana from "/static/img/Coops/Jumaana headshot - Jumaana Nainar.png";
+import Ishan from "/static/img/Coops/Ishan_Arya - Ishan.jpg";
 
 export const teamLeads = [
   {
@@ -30,14 +33,14 @@ export const teamLeads = [
     headshot: Robin,
   },
   {
-    name: "Abdullah",
-    position: "Midbike Lead",
-    headshot: Abdullah,
+    name: "Nathan",
+    position: "Electric Bike Lead",
+    headshot: Nathan,
   },
   {
-    name: "Bryan",
-    position: "Web Development Lead",
-    headshot: Bryan,
+    name: "Ishan",
+    position: "Electrium Shop Lead",
+    headshot: Ishan,
   },
   {
     name: "Josh Stadnyk",
