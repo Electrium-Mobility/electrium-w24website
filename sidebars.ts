@@ -17,6 +17,7 @@ const sidebars: SidebarsConfig = {
   // But you can create a sidebar manually
 
   projectSidebar: [
+    "overview",
     "W2025-projects/bakfiets_2024",
     "W2025-projects/electric_skateboard_2025",
     "W2025-projects/onewheel_2025",
