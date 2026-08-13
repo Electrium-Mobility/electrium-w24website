@@ -117,6 +117,7 @@ export const SELECT_HEARD_SOURCE = [
 export const SELECT_ROLES = [
   "Project Lead",
   "Team Lead",
+  /*
   "Electrical",
   "Finance",
   "Firmware",
@@ -124,6 +125,7 @@ export const SELECT_ROLES = [
   "Marketing",
   "Mechanical",
   "Web Development",
+  */
 ];
 
 export const SELECT_PROJECTS = [
