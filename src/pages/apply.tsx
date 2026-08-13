@@ -256,7 +256,7 @@ const ApplicationForm = () => {
                   , so if you are joining mid-term then you will be placed in
                   one of the teams in the current term.
                   <br />
-                  This form is for both regular team member applications and
+                  This form is for {/* both regular team member applications and */}
                   leadership positions.
                 </p>
                 <p className="mb-4 md:leading-normal leading-normal text-red-600">
