@@ -243,7 +243,7 @@ const ApplicationForm = () => {
                 </h3>
                 <h3 className="font-semibold text-green-600 text-center">
                   {" "}
-                  Fall 2026 Team/Project Lead Applications are Open!
+                  Fall 2026 General Applications are Open!
                 </h3>
                 <p className="text-center mb-4 md:leading-normal leading-normal">
                   Hi there! Thank you for your interest in joining Electrium
@@ -256,7 +256,7 @@ const ApplicationForm = () => {
                   , so if you are joining mid-term then you will be placed in
                   one of the teams in the current term.
                   <br />
-                  This form is for {/* both regular team member applications and */}
+                  This form is for both regular team member applications and
                   leadership positions.
                 </p>
                 <p className="mb-4 md:leading-normal leading-normal text-red-600">
