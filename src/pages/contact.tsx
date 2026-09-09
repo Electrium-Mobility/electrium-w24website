@@ -14,16 +14,18 @@ function ContactPageHeader() {
         <Layout>
             <section className="relative md:py-24 py-16">
                 <div className="container">
-                    <div className="grid grid-cols-1 pt-16 pb-8 text-center">
-                        <h3 className="pt-12 mb-4 md:leading-normal text-4xl leading-normal font-semibold">Contact Us</h3>
-
-                        <p className="mt-4 text-slate-400 max-w-xl mx-auto"> Have any questions?</p>
-                        <p className="mt-1 text-slate-400 max-w-xl mx-auto">Interested in learning
-                            more about Electrium?</p>
-                        <p className="mt-1 text-slate-400 max-w-xl mx-auto"> Let's chat! </p>
+                    <div className="grid grid-cols-1 pb-4 text-center">
+                        <h3 className="pt-1 mb-4 md:leading-normal text-4xl leading-normal font-semibold">Contact Us</h3>
                     </div>
-
-
+                    <div>
+                        <form className = "grid gap-4 max-w-sm w-full mx-auto font-sans" action = "https://formspree.io/f/xkovgqgd" method = "POST">
+                                <input className = "w-full border border-gray-450 rounded-md py-2 px-3 bg-transparent" placeholder = "Name" type = "text" required name = "name"/>
+                                <input  className = "w-full border border-gray-450 rounded-md py-2 px-3 bg-transparent"placeholder = "Email" type = "email" required name = "email"/>
+                                <input className = "w-full border border-gray-450 rounded-md py-2 px-3 bg-transparent" placeholder = "Subject" type = "text" required name = "subject"/>
+                                <textarea className = "border border-gray-450 rounded-md px-3 py-2 h-32 bg-transparent font-sans" placeholder = "Message" required name = "message"/>
+                                <input className="cursor-pointer bg-green-600 border-none text-white text-lg font-semibold py-2 px-6 rounded-md mx-auto mb-10 mt-4" type = "submit"/>
+                        </form>
+                    </div>
                     <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-[30px]">
                         <div className="text-center px-6 mt-6">
                             <div
