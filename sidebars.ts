@@ -21,7 +21,7 @@ const sidebars: SidebarsConfig = {
     "bikes/f2023-bmer",
     "bikes/w2025-bakfiets",
     "skateboards/w2025-electric-skateboard",
-    "W2025-projects/onewheel_2025",
+    "onewheels/w2025-onewheel",
     "bikes/w2025-longtail-conversion-kit",
     "W2025-projects/gokart_2025",
     "W2025-projects/custom_remote_control_2025",
@@ -52,8 +52,9 @@ const sidebars: SidebarsConfig = {
       items: [
         "bikes/s2023-volter",
         "skateboards/s2023-georges-skateboard",
-        "projects/project3_2023",
+        "onewheels/s2023-wonwheel",
         "skateboards/s2024-maelyns-skateboard",
+        "onewheels/w2024-onewheel",
       ],
     },
     // // UNCOMMENT TO SEE TUTORIALS + TIPS
