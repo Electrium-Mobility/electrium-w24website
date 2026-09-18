@@ -1,5 +1,4 @@
 ---
-id: mid_bike_conversion_kit_f2025
 sidebar_position: 3
 title: "Mid-Bike Conversion Kit"
 ---

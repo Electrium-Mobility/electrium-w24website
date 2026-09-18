@@ -17,25 +17,25 @@ const sidebars: SidebarsConfig = {
   // But you can create a sidebar manually
 
   projectSidebar: [
-    "W2025-projects/bakfiets_2024",
+    "bikes/w2025-bakfiets",
     "W2025-projects/electric_skateboard_2025",
     "W2025-projects/onewheel_2025",
-    "W2025-projects/electric_longtail_conversion_kit_2025",
+    "bikes/w2025-longtail-conversion-kit",
     "W2025-projects/gokart_2025",
     "W2025-projects/custom_remote_control_2025",
     "W2025-projects/electrium_shop_2025",
     "W2025-projects/scooter_2024",
-    "W2025-projects/road_bike_2024",
+    "bikes/w2025-road-bike",
     "W2025-projects/electric_couch_2024",
     {
       type: "category",
       label: "Fall 2025 Projects",
       collapsed: false,
       items: [
-        "F2025-projects/f25_ebike",
+        "bikes/f2025-ebike",
         "F2025-projects/F25 Skateboard",
         "F2025-projects/f25_auto_pr_bot",
-        "F2025-projects/mid_bike_conversion_kit_f2025",
+        "bikes/f2025-mid-bike-conversion-kit",
         "F2025-projects/f25_request_platform",
         "F2025-projects/portable_media_player_f2025",
         "F2025-projects/f25_meeting_note_bot",

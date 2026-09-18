@@ -1,5 +1,4 @@
 ---
-id: f25_ebike
 sidebar_position: 1
 title: "F25 eBike"
 ---

@@ -1,5 +1,4 @@
 ---
-id: bakfiets_2024
 sidebar_position: 1
 title: "Bakfiets"
 ---

@@ -1,5 +1,4 @@
 ---
-id: electric_longtail_conversion_kit_2025
 sidebar_position: 4
 title: "Electric Longtail Conversion Kit"
 ---
