@@ -20,7 +20,7 @@ const sidebars: SidebarsConfig = {
     "bikes/f2023-quickmefs",
     "bikes/f2023-bmer",
     "bikes/w2025-bakfiets",
-    "W2025-projects/electric_skateboard_2025",
+    "skateboards/w2025-electric-skateboard",
     "W2025-projects/onewheel_2025",
     "bikes/w2025-longtail-conversion-kit",
     "W2025-projects/gokart_2025",
@@ -35,7 +35,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         "bikes/f2025-ebike",
-        "F2025-projects/F25 Skateboard",
+        "skateboards/f2025-skateboard",
         "F2025-projects/f25_auto_pr_bot",
         "bikes/f2025-mid-bike-conversion-kit",
         "F2025-projects/f25_request_platform",
@@ -51,8 +51,9 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         "bikes/s2023-volter",
-        "projects/project2_2023",
+        "skateboards/s2023-georges-skateboard",
         "projects/project3_2023",
+        "skateboards/s2024-maelyns-skateboard",
       ],
     },
     // // UNCOMMENT TO SEE TUTORIALS + TIPS

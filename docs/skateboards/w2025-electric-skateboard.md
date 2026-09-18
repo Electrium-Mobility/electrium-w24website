@@ -1,5 +1,4 @@
 ---
-id: electric_skateboard_2025
 sidebar_position: 2
 title: "Electric Skateboard"
 ---
