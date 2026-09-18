@@ -17,6 +17,8 @@ const sidebars: SidebarsConfig = {
   // But you can create a sidebar manually
 
   projectSidebar: [
+    "bikes/f2023-quickmefs",
+    "bikes/f2023-bmer",
     "bikes/w2025-bakfiets",
     "W2025-projects/electric_skateboard_2025",
     "W2025-projects/onewheel_2025",
@@ -48,7 +50,7 @@ const sidebars: SidebarsConfig = {
       label: "2023 Projects",
       collapsed: true,
       items: [
-        "projects/project1_2023",
+        "bikes/s2023-volter",
         "projects/project2_2023",
         "projects/project3_2023",
       ],
