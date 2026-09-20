@@ -1,5 +1,4 @@
 ---
-id: custom_remote_control_2025
 sidebar_position: 6
 title: "Custom Remote Control"
 ---

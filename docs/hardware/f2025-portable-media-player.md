@@ -1,5 +1,4 @@
 ---
-id: portable_media_player_f2025
 sidebar_position: 5
 title: "Portable Media Player"
 ---

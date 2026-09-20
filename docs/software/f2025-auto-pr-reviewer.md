@@ -1,5 +1,4 @@
 ---
-id: f25_auto_pr_bot
 sidebar_position: 2
 title: "Auto PR Review Assistant"
 ---

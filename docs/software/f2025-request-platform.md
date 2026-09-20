@@ -1,5 +1,4 @@
 ---
-id: f25_request_platform
 sidebar_position: 4
 title: "Request Platform"
 ---

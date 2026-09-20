@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 sidebar: " OneWheel (W2024)"
+sidebar_label: "OneWheel (W2024)"
 ---
 
 # OneWheel

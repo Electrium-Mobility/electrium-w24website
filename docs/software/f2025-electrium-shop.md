@@ -1,7 +1,7 @@
 ---
-id: f25_electrium_shop
 sidebar_position: 8
 title: "Electrium Shop"
+sidebar_label: "Electrium Shop (F2025)"
 ---
 
 # Electrium Shop

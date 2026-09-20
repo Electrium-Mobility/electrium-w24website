@@ -1,7 +1,7 @@
 ---
-id: electrium_shop_2025
 sidebar_position: 7
 title: "Electrium Shop"
+sidebar_label: "Electrium Shop (W2025)"
 ---
 
 ### Project Info

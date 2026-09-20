@@ -1,5 +1,4 @@
 ---
-id: f25_smart_qa_bot
 sidebar_position: 7
 title: "Smart Q&A Bot"
 ---

@@ -1,5 +1,4 @@
 ---
-id: f25_meeting_note_bot
 sidebar_position: 6
 title: "Meeting Note Generator"
 ---
