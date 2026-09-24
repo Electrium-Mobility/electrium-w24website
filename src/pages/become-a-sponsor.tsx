@@ -54,7 +54,7 @@ export default function BecomeASponsor() {
                                 Tell us a bit about your organization and we'll get back to you with sponsorship options.
                             </p>
                     </div>
-                <div className="max-w-2xl max-auto">
+                <div className="max-w-2xl mx-auto">
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="grid grid-cols-1 mb-5">
                             <label htmlFor="contactName" className="font-semibold">
