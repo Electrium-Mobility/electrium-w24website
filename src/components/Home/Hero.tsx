@@ -1,44 +1,42 @@
 import React from "react";
 import Link from "@docusaurus/Link";
-import BikeLogo from "@site/static/img/bike-graphic-2.svg";
+import HeroGraphic from "./HeroGraphic";
 
 export default function Hero() {
     return (
-        <section className="relative w-full py-36 lg:py-44 flex justify-center items-center">
-            <div className="container mx-auto">
-                <div className="grid md:grid-cols-12 grid-cols-1 items-center mt-10 gap-[30px]">
-                    <div className="md:col-span-7">
-                        <div className="ltr:md:mr-6 rtl:md:ml-6">
-                            <h4 className="font-semibold lg:leading-normal leading-normal text-4xl lg:text-5xl mb-5 text-black dark:text-white">
-                                Building{" "}
-                                <span className="text-green-600">Sustainable, Affordable</span>{" "}
-                                Transportation
-                            </h4>
-                            <p className="text-slate-400 dark:text-slate-200 text-lg max-w-xl">
-                                Electrium Mobility is a student design team based at the University of Waterloo. Our goal is to create sustainable and affordable transportation in the form of Personal Electric Vehicles.
-                            </p>
+        <section className="relative w-full min-h-[80vh] flex items-end bg-[#1b2420]">
+            <div className="w-full max-w-6xl mx-auto px-6 md:px-12 pt-40 pb-20 md:pb-28">
+                <div>
+                <p className="m-0 mb-6 text-sm font-bold uppercase tracking-[0.14em] text-green-300">
+                    University of Waterloo . Student design team
+                </p>
+                <h1 className="m-0 text-5xl md:text-6xl font-semibold leading-[1.05] text-white">
+                    Building sustanable, affordable transportation.
+                </h1>
 
-                            <div className="mt-6">
-                                <Link 
-                                to ="/join-our-team"
-                                className="btn bg-green-600 hover:bg-transparent border-green-600 hover:border-green-600 text-white rounded-md ltr:mr-2 rtl:ml-2 mt-2 p-4"
-                                >
-                                    Join Our Team
-                                </Link>
-                                <Link
-                                to="/sponsors"
-                                className="btn bg-transparent hover:bg-green-600 border-green-600 text-green-600 hover:text-white rounded-md p-4"
-                                >
-                                    Become A Sponsor
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="md:col-span-5">
-                        <BikeLogo className="w-fit h-96 sm:w-fit sm:h-48 md:w-fit md:h-96" />
-                    </div>
+                <p className="m-0 mt-6 max-w-xl text-lg md:text-xl leading-relaxed text-gray-600 dark:text-[#b6c2ba]">
+                    We design and build personal electric vehicles, from cargo bikes to skateboards, in the Sedra Studenyt Design Centre.
+                </p>
+
+                <div className="mt-10 flex flex-wrap gap-4">
+                    <Link
+                    to="join-our-team"
+                    className="rounded-lg bg-green-700 px-7 py-4 text-lg font-bold text-white hover:bg-green-800 hover:text-white hover:no-underline"
+                    >
+                        Join Our Team
+                    </Link>
+                    <Link
+                    to="/sponsors"
+                    className="rounded-lg border-2 border-solid border-green-700 px-7 py-4 text-lg font-bold text-green-700 hover:bg-green-700 hover:text-white hover:no-underline dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-green-800"
+                    >
+                        Become a Sponsor
+                    </Link>
+                </div>
+            </div>
+            <div className="flex justify-center">
+                <HeroGraphic />
                 </div>
             </div>
         </section>
-    )
+    );
 }
