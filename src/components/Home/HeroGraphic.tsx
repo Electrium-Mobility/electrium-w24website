@@ -7,7 +7,7 @@ const panel = "fill-white dark:fill-[#141d18]";
 export default function HeroGraphic() {
   return (
     <svg
-      viewBox="0 0 480 420"
+      viewBox="0 130 480 290"
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -15,7 +15,7 @@ export default function HeroGraphic() {
       aria-label="Line drawing of an electric cargo bike"
       className="w-full max-w-xl h-auto"
     >
-      <circle cx="250" cy="215" r="200" className="fill-[#e1eee4] dark:fill-[#1c2a22]" />
+      <rect x="4" y="140" width="472" height="270" rx="36" className="fill-[#e1eee4] dark:fill-[#1c2a22]" />
 
       <path d="M24 278 L46 278" strokeWidth="4" className={accent} />
       <path d="M14 302 L44 302" strokeWidth="4" className={accent} />
