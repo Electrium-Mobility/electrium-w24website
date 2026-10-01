@@ -11,6 +11,7 @@ import Hero from "@site/src/components/Home/Hero"
 import ContactPageHeader from "@site/src/pages/contact";
 import HomePageIntro from "@site/src/components/UI Components/HomePageIntro";
 import GetInvolved from "@site/src/components/UI Components/GetInvolved";
+import MetricsBand from '../components/Home/MetricsBand';
 
 
 export default function Home(): JSX.Element {
@@ -19,6 +20,7 @@ export default function Home(): JSX.Element {
         <Layout
             description="Electrium Mobility!!!!"> {/*Description will go into a meta tag in <head /> */}
             <Hero />
+            <MetricsBand />
             <main>
                 <HomePageIntro />
                 <GetInvolved />
