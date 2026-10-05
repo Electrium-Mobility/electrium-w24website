@@ -27,6 +27,7 @@ export default function ProjectShowcase() {
                     {PROJECTS.map((project) => (
                         <Link
                         key={project.link}
+                        to={project.link}
                         className="group block overflow-hidden rounded-2xl border border-solid border-gray-200 bg-white hover:no-underline dark:border-[#26352c] dark:bg-[#141d18]"
                         >
                             <div className="flex h-48 items-center justify-center bg-[#e1eee4] text-gray-500 dark:bg-[#1c2a22] dark:text-[#8fa197]">
