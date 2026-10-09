@@ -34,9 +34,6 @@ const baseSchema = Yup.object().shape({
         .typeError("Please enter a valid number")
         .min(1, "Commitment must be at least 1 hour per week")
         .required("Please enter a number"),
-    roleQuestions: Yup.object({
-        role: Yup.string().required('Role selection is required'),
-    }),
 });
 
 // Hard-coded role-specific validation schemas
