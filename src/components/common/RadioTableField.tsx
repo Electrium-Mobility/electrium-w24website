@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field, ErrorMessage, useField } from 'formik';
+import { Field, useField } from 'formik';
 
 interface RadioTableFieldProps {
   name: string;
@@ -38,7 +38,6 @@ const RadioTableField: React.FC<RadioTableFieldProps> = ({
           </thead>
           <tbody>
             {rowOptions.map((row) => {
-              const rowValue = String(`${name}-${row}`);
               return(
                 <tr key={row}>
                   <td>{row}</td>
@@ -47,7 +46,6 @@ const RadioTableField: React.FC<RadioTableFieldProps> = ({
                       <label className="flex items-center">
                         <Field
                           type="radio"
-                          // name={String(`${name}-${row}`)}  // Ensure unique name for each skill
                           name={`['${name}-${row}']`}
                           value={column}  // Column option as value
                           className="form-radio text-green-600 border-green-600 rounded-md"
