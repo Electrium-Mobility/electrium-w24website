@@ -6,10 +6,10 @@ function FAQ() {
     // Array of FAQ objects
     const faqs = [
         { question: 'What does Electrium Mobility do?', answer: 'We are a student-led design team whose purpose is to help students learn how to build electric vehicles.' },
-        { question: 'Are there any specific competitions the team participates in?', answer: "There aren't any external competitions at the moment, but we have an internal competition at the end of the term where you will race your electric vehicles against each other." },
-        { question: 'What teams can I join?', answer: "We have 6 subteams: electrical, firmware, mechanical, web development, finance, and management/marketing. You can only join 1 subteam, but everyone is welcome to participate in other subteam's meetings and learning new skills!" },
-        { question: 'What projects can I work on?', answer: "Currently, you can choose to work on 1 of 3 projects: an electric bike, electric skateboard, and a onewheel. At the end of the term, you will be able to race your electric vehicles against each other!" },
-        { question: 'Is prior experience required to join the team?', answer: "Nope, all beginners are welcome! If you have no experience, will teach you as long as you are interested!" },
+        { question: 'Are there any specific competitions the team participates in?', answer: "There aren't any external competitions at the moment. We have an internal competition at the end of the term, where you will race your electric vehicles against each other's." },
+        { question: 'What teams can I join?', answer: "We have 6 subteams: electrical, firmware, mechanical, web development, finance, and management/marketing. You can only join 1 subteam, but everyone is welcome to participate in other subteam's meetings to learn new skills!" },
+        { question: 'What projects can I work on?', answer: "Currently, you can choose to work on 1 of 3 projects: an electric bike, electric skateboard, and a onewheel." },
+        { question: 'Is prior experience required to join the team?', answer: "Nope, beginners are welcome! If you have no experience, we will teach you as long as you are interested!" },
         { question: "Can I switch between sub-teams if I'm interested in multiple areas", answer: "Yes, you may switch between sub-teams." },
         // Add more FAQs as needed
     ];
