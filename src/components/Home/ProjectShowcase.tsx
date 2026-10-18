@@ -35,17 +35,13 @@ export default function ProjectShowcase() {
 
               className="group block overflow-hidden rounded-2xl border border-solid border-gray-200 bg-white hover:no-underline dark:border-[#26352c] dark:bg-[#141d18]"
             >
-              {console.log(project.image) ?? null}
               <div className="h-40 overflow-hidden bg-[#e1eee4] sm:h-48 dark:bg-[#1c2a22]">
                 <img
                   src={project.image}
-
                   alt={project.name}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-
                 />
-
               </div>
               <div className="p-5 sm:p-6">
                 <p className="m-0 text-sm font-bold uppercase tracking-[0.1em] text-green-700 dark:text-green-300">
