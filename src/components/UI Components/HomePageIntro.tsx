@@ -20,6 +20,27 @@ const HomePageIntro =() => {
                                 vehicles. With a strong focus on sustainability and innovation, our mission is to
                                 increase awareness and promote the adoption of greener transportation options. </p>
 
+                            <ul className="list-none text-slate-400 mt-4">
+                                <li className="mb-1 flex items-center">
+                                  <span className="text-green-500 flex items-center ">
+                                      <IoIosCheckmarkCircle/>
+                                  </span>
+                                    <span className="ml-2 flex items-center">Innovative Design</span>
+                                </li>
+                                <li className="mb-1 flex items-center">
+                                  <span className="text-green-500 flex items-center ">
+                                      <IoIosCheckmarkCircle/>
+                                  </span>
+                                    <span className="ml-2 flex items-center">Affordability and Accessibility</span>
+                                </li>
+                                <li className="mb-1 flex items-center">
+                                  <span className="text-green-500 flex items-center ">
+                                      <IoIosCheckmarkCircle/>
+                                  </span>
+                                    <span className="ml-2 flex items-center">Collaborative Approach</span>
+                                </li>
+                            </ul>
+
                         </div>
                     </div>
                 </div>
