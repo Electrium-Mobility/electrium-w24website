@@ -1,0 +1,46 @@
+{
+  "sections": [
+    {
+      "title": "Executive Team",
+      "members": [
+        { "name": "Samantha Chong", "position": "Team/Mechanical Lead", "photo": "TeamLeads/Samantha_C.png" },
+        { "name": "Omer Syed", "position": "Mechanical Lead", "photo": "TeamLeads/Omer_S.png" },
+        { "name": "Damir Gazizullin", "position": "Electrical Lead", "photo": "TeamLeads/Damir_G.png" },
+        { "name": "Matthew Embaye", "position": "Electrical Lead", "photo": "TeamLeads/matthewembaye.jpg" },
+        { "name": "Ling", "position": "Mechanical Lead", "photo": "TeamLeads/ling.jpg" },
+        { "name": "Justin Zhang", "position": "Mechanical Lead", "photo": "TeamLeads/justinzhang.jpg" },
+        { "name": "Alex", "position": "Firmware Lead", "photo": "TeamLeads/alex.jpg" },
+        { "name": "Kayla Li", "position": "Web Development Lead", "photo": "TeamLeads/kaylali.jpg" },
+        { "name": "Mae-Lyn Nguyen", "position": "Management Lead", "photo": "TeamLeads/maelynnguyen.jpg" },
+        { "name": "Nathan Li", "position": "Web Development Lead" }
+      ]
+    },
+    {
+      "title": "Project Leads",
+      "members": [
+        { "name": "Omer F", "position": "Midbike Lead", "photo": "TeamLeads/Omer_F.jpg" },
+        { "name": "Sarala", "position": "Bike Lead", "photo": "TeamLeads/sarala.jpg" },
+        { "name": "Leo", "position": "Skateboard Lead", "photo": "TeamLeads/leo.jpg" },
+        { "name": "Robin", "position": "Media Player Lead", "photo": "Coops/robin.jpg" },
+        { "name": "Nathan", "position": "Electric Bike Lead", "photo": "Coops/IMG_8986 - Nathan Duprix.png" },
+        { "name": "Ishan", "position": "Electrium Shop Lead", "photo": "Coops/Ishan_Arya - Ishan.jpg" },
+        { "name": "Josh Stadnyk", "position": "Gokart Lead", "photo": "TeamLeads/joshstadnyk.jpg" }
+      ]
+    },
+    {
+      "title": "Coops",
+      "members": [
+        { "name": "Nathan Duprix", "position": "Electrical/Firmware Co-op", "photo": "Coops/IMG_8986 - Nathan Duprix.png" },
+        { "name": "Jumaana Nainar", "position": "Mechanical Engineering Co-op", "photo": "Coops/Jumaana headshot - Jumaana Nainar.png" },
+        { "name": "Ishan Arya", "position": "Web Development Co-op", "photo": "Coops/Ishan_Arya - Ishan.jpg" }
+      ]
+    }
+  ],
+  "kickoffs": [
+    { "term": "Fall 2025", "photo": "kickoff/kickoff-f25.jpg" },
+    { "term": "Spring 2025", "photo": "kickoff/kickoff-s25.jpg" },
+    { "term": "Winter 2025", "photo": "kickoff/kickoff-w25.jpg" },
+    { "term": "Fall 2024", "photo": "kickoff/kickoff-f24.jpg" },
+    { "term": "Spring 2023", "photo": "kickoff/kickoff-s23.jpg" }
+  ]
+}
