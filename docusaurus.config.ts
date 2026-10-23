@@ -47,10 +47,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Electrium-Mobility/electrium-w24website/tree/main/',
         },
         blog: false,
 
@@ -90,8 +86,8 @@ const config: Config = {
         {to: '/about', label: 'About', position: 'left'},
         {to: '/team', label: 'Team', position: 'left'},
         {
-          type: 'docSidebar',
-          sidebarId: 'projectSidebar',
+          type: 'doc',
+          docId: 'overview',
           position: 'left',
           label: 'Projects',
         },
