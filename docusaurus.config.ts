@@ -132,15 +132,15 @@ const config: Config = {
           items: [
             {
               label: 'Electric Bike',
-              to: '/docs/W2024-projects/project1_2023',
+              to: '/docs/bikes/w2025-bakfiets',
             },
             {
               label: 'Electric Skateboard',
-              to: '/docs/W2024-projects/project2_2023',
+              to: '/docs/skateboards/w2025-electric-skateboard',
             },
             {
               label: 'OneWheel',
-              to: '/docs/W2024-projects/project3_2023',
+              to: '/docs/onewheels/w2025-onewheel',
             },
           ],
         },
