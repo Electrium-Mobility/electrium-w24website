@@ -19,7 +19,7 @@ function About() {
 
                         <div className="ltr:lg:ml-8 rtl:lg:mr-8 text-center md:text-left">
                             <h4 className="mb-6 md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600">About Us</h4>
-                            <p className="text-slate-400">Electrium Mobility is a student-led design team at the University of Waterloo focused on shaping the future of transportation through electric vehicles. With a strong emphasis on sustainability and innovation, we create affordable electric vehicles and promote their adoption. Our mission is to inspire students, build awareness, and advocate for the economic and environmental benefits of electric mobility. Join us as we revolutionize the automotive industry and contribute to a greener future.</p>
+                            <p className="text-slate-400">Electrium Mobility is a student-led design team at the University of Waterloo, focused on shaping the future of transportation through electric vehicles. Our mission is to inspire students and to advocate for the benefits of electric mobility. Join us as we revolutionize the automotive industry and contribute to a greener future.</p>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,8 @@ function About() {
         
                                 <div className="content mt-7">
                                     <a href="" className="title h5 text-lg font-medium hover:text-green-600">Sustainability</a>
-                                    <p className="text-slate-400 mt-3">We aim to raise awareness and create sustainable vehicle technologies, empowering students to make greener transportation choices.</p>
+                                    <p className="text-slate-400 mt-3">We aim to create sustainable vehicle technologies, in order to empower students to make greener transportation choices.
+</p>
                                 </div>
                             </div>
                             
@@ -50,7 +51,7 @@ function About() {
         
                                 <div className="content mt-7">
                                     <a href="" className="title h5 text-lg font-medium hover:text-red-600">Affordability</a>
-                                    <p className="text-slate-400 mt-3">We are dedicated to raising awareness about the economic benefits of electric vehicles, advocating for sustainable transportation for students.</p>
+                                    <p className="text-slate-400 mt-3">We are dedicated to raising awareness about the economic benefits of electric vehicles.</p>
                                 </div>
                             </div>
                             
@@ -61,7 +62,7 @@ function About() {
         
                                 <div className="content mt-7">
                                     <a href="" className="title h5 text-lg font-medium hover:text-emerald-600">Portability</a>
-                                    <p className="text-slate-400 mt-3">We aim to create convenient and compact electric vehicles that empower students to commute efficiently and sustainably.</p>
+                                    <p className="text-slate-400 mt-3">We aim to create convenient and compact electric vehicles that empower students to commute sustainably.</p>
                                 </div>
                             </div>
                             
@@ -72,7 +73,7 @@ function About() {
         
                                 <div className="content mt-7">
                                     <a href="" className="title h5 text-lg font-medium hover:text-amber-600">Student Learning</a>
-                                    <p className="text-slate-400 mt-3">We are dedicated to empowering students with the knowledge and skills to design and build electric vehicles. </p>
+                                    <p className="text-slate-400 mt-3">We are dedicated to teaching students the knowledge and skills to design and build electric vehicles. </p>
                                 </div>
                             </div>
                         </div>
