@@ -20,9 +20,7 @@ const UploadField: FunctionComponent<IUploadField> = ({
   name,
   label,
   caption = <></>,
-  data,
   setFieldValue,
-  errors,
   required
 }) => {
   return (
@@ -32,7 +30,7 @@ const UploadField: FunctionComponent<IUploadField> = ({
       </label>
       <label htmlFor={name} className="text-gray-500 text-sm">{caption}</label>
       <Field name={name}>
-        {({ field, form }) => (
+        {({ form }) => (
           <div>
             <input
               type="file"

@@ -6,7 +6,6 @@ interface RadioFieldProps {
   label: string;
   caption?: React.ReactNode;
   options?: string[];
-  value?: string;
   required?: boolean;
 }
 
@@ -15,7 +14,6 @@ const RadioField: React.FC<RadioFieldProps> = ({
   label,
   caption = <></>,
   options = [],
-  value = "",
   required
 }) => {
   const [, meta] = useField(name);

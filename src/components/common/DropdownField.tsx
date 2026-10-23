@@ -32,7 +32,7 @@ const DropdownField: React.FC<DropdownFieldProps> = ({
         className={`form-select mt-2 text-charcoal-600 border ${meta.touched && meta.error ? 'border-red-500' : 'border-charcoal-300'
           } rounded-md px-4 py-3 focus:outline-none focus:ring-green-700 focus:border-green-700`}
       >
-        <option value="">{"-Select option-"}</option>
+        <option value="">-Select option-</option>
         {options.map(option => (
           <option key={option} value={option}>{option}</option>
         ))}
