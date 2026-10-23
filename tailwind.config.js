@@ -23,6 +23,7 @@ module.exports = {
     extend: {
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
+        lexend: ['Lexend', 'sans-serif']
       },
       borderRadius: {
         sm: '4px',

@@ -38,7 +38,7 @@ const Responsibilities: React.FC = () => {
           )}
         </div>
         <div style={{ maxWidth: '750px', margin: '0 auto', padding: '20px', boxSizing: 'border-box' }}>
-          <h1 style={{ fontFamily: "'Lexend', sans-serif", color: '#53bd4b', textAlign: 'center', fontWeight: 700 }}>Role Responsibilities</h1>
+          <h1 className="font-lexend text-[#53bd4b] text-center font-bold">Role Responsibilities</h1>
           <p>
             Below are the various roles that the team is recruiting for. As part of your application, we ask that you select one role of interest.
           </p>
@@ -47,7 +47,7 @@ const Responsibilities: React.FC = () => {
           </p>
 
           <section style={{ margin: '20px 0' }}>
-            <h2 style={{ fontFamily: "'Nunito', sans-serif", color: '#333333', marginBottom: '10px', fontWeight: 600 }}>Micromobility Project Roles</h2>
+            <h2 className="font-nunito text-[#333333] mb-[10px] font-semibold">Micromobility Project Roles</h2>
             <p>
               These roles are focused around making our electric vehicle projects. By signing up for one of these roles, you will be responsible for attending project meetings and technical workshops.
             </p>
@@ -84,7 +84,7 @@ const Responsibilities: React.FC = () => {
           </section>
 
           <section style={{ margin: '20px 0' }}>
-            <h2 style={{ fontFamily: "'Nunito', sans-serif", color: '#333333', marginBottom: '10px', fontWeight: 600 }}>External Roles</h2>
+            <h2 className="font-nunito text-[#333333] mb-[10px] font-semibold">External Roles</h2>
             <p>
               These roles work on aspects of the team outside of our EV projects, but are still important nonetheless!
             </p>
