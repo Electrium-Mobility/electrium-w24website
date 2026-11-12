@@ -15,11 +15,15 @@ const { fontFamily } = require('tailwindcss/defaultTheme');
 module.exports = {
   corePlugins: {
     preflight: false,
-    container: false,
   },
   darkMode: ['class', '[data-theme="dark"]'],
   content: ['./src/**/*.{js,jsx,ts,tsx,html}'],
+
   theme: {
+    container: {
+      center: true,
+      padding: '1rem',
+    },
     extend: {
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
@@ -28,7 +32,7 @@ module.exports = {
         sm: '4px',
       },
       screens: {
-        sm: '0px',
+        sm: '576px',
         lg: '997px',
       },
       colors: {},
