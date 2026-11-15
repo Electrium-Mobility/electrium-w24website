@@ -3,8 +3,6 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,500,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,19 +14,19 @@
  @font-face {
   font-family: 'Nunito';
   src: url('../../static/fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Lexend';
   src: url('../../static/fonts/Lexend/Lexend-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 } 
 
-/* :root {
-  --ifm-color-primary: #2e32ae;
-  --ifm-font-family-base: 'Poppins-Regular';
-  --ifm-heading-font-family: 'Poppins-Bold';
-  --ifm-font-family-monospace: 'Poppins-Regular';
-}
 
 /* You can override the default Infima variables here. */
 :root {
