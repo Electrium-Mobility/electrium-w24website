@@ -1,14 +1,14 @@
 import React from "react";
 import Layout from "@theme/Layout";
-import TeamLead from "../components/Team/TeamLead";
-import Coop from "../components/Team/Coop";
-import { generalLeads } from "../components/Team/GeneralLeads";
-import { teamLeads } from "../components/Team/TeamLeads";
-import { coops } from "../components/Team/Coops";
+import { useBaseUrlUtils } from "@docusaurus/useBaseUrl";
+import PersonCard from "../components/Team/PersonCard";
+import team from "../data/team.json";
 
 function Team() {
+  const { withBaseUrl } = useBaseUrlUtils();
+
   return (
-    <Layout>
+    <Layout title="Team">
       <section className="relative md:py-5 py-16">
         <div className="container">
           <div className="grid grid-cols-1 pt-16 pb-8 text-center">
@@ -22,127 +22,46 @@ function Team() {
         </div>
 
         <div className="container">
-          <div className="grid grid-cols-1 pt-8 pb-8 text-center">
-            <h3 className="mb-1 md:text-3xl md:leading-normal text-2xl leading-normal font-normal">
-              Executive Team
-            </h3>
-          </div>
+          {team.sections.map((section, i) => (
+            <div key={section.title}>
+              <div className={`grid grid-cols-1 pb-8 text-center ${i === 0 ? "pt-8" : "pt-16"}`}>
+                <h3 className={`mb-1 md:text-3xl md:leading-normal text-2xl leading-normal font-normal ${i === 0 ? "" : "mt-6"}`}>
+                  {section.title}
+                </h3>
+              </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-0 gap-[30px]">
-            {generalLeads.map((lead, index) => (
-              <TeamLead
-                headshot={lead.headshot}
-                name={lead.name}
-                position={lead.position}
-              />
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 pt-16 pb-8 text-center">
-            <h3 className="mb-1 mt-6 md:text-3xl md:leading-normal text-2xl leading-normal font-normal">
-              Project Leads
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-0 gap-[30px]">
-            {teamLeads.map((lead, index) => (
-              <TeamLead
-                headshot={lead.headshot}
-                name={lead.name}
-                position={lead.position}
-              />
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 pt-16 pb-8 text-center">
-            <h3 className="mb-1 mt-6 md:text-3xl md:leading-normal text-2xl leading-normal font-normal">
-              Coops
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-0 gap-[30px]">
-            {coops.map((lead, index) => (
-              <Coop
-                headshot={lead.headshot}
-                name={lead.name}
-                position={lead.position}
-              />
-            ))}
-          </div>
-
-          <div className="container">
-            <div className="grid grid-cols-1 pb-16 pt-16 text-center">
-              <h3 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600">
-                Fall 2025 Kickoff!
-              </h3>
-              <div className="relative inline-block mx-auto overflow-hidden">
-                <img
-                  src={require("/static/img/kickoff/kickoff-f25.jpg").default}
-                  className=" w-2/3 h-auto rounded-xl"
-                />
+              <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-0 gap-[30px]">
+                {section.members.map((person) => (
+                  <PersonCard
+                  key={person.name}
+                  name={person.name}
+                  position={person.position}
+                  photo={person.photo}
+                  />
+                ))}
               </div>
             </div>
-          </div>
+          ))}
 
-          <div className="container">
-            <div className="grid grid-cols-1 pb-16 pt-16 text-center">
-              <h3 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600">
-                Spring 2025 Kickoff!
-              </h3>
-              <div className="relative inline-block mx-auto overflow-hidden">
-                <img
-                  src={require("/static/img/kickoff/kickoff-s25.jpg").default}
-                  className=" w-2/3 h-auto rounded-xl"
-                />
+          {team.kickoffs.map((kickoff) => (
+            <div key={kickoff.term} className="container">
+              <div className="grid grid-cols-1 pb-16 pt-16 text-center">
+                <h3 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600">
+                  {kickoff.term} Kickoff!
+                </h3>
+                <div className="relative inline-block mx-auto overflow-hidden">
+                  <img
+                  src={withBaseUrl(`/img/${kickoff.photo}`)}
+                  alt={`${kickoff.term} kickoff group photo`}
+                  className="w-2/3 h-auto rounded-xl"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="container">
-            <div className="grid grid-cols-1 pb-16 pt-16 text-center">
-              <h3 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600">
-                Winter 2025 Kickoff!
-              </h3>
-              <div className="relative inline-block mx-auto overflow-hidden">
-                <img
-                  src={require("/static/img/kickoff/kickoff-w25.jpg").default}
-                  className=" w-2/3 h-auto rounded-xl"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="container">
-            <div className="grid grid-cols-1 pb-16 pt-16 text-center">
-              <h3 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600">
-                Fall 2024 Kickoff!
-              </h3>
-              <div className="relative inline-block mx-auto overflow-hidden">
-                <img
-                  src={require("/static/img/kickoff/kickoff-f24.jpg").default}
-                  className=" w-2/3 h-auto rounded-xl"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="container">
-            <div className="grid grid-cols-1 pb-16 pt-16 text-center">
-              <h3 className="md:text-4xl text-3xl lg:leading-normal leading-normal font-medium text-green-600">
-                Spring 2023 Kickoff!
-              </h3>
-              <div className="relative inline-block mx-auto overflow-hidden">
-                <img
-                  src={require("/static/img/kickoff/kickoff-s23.jpg").default}
-                  className=" w-2/3 h-auto rounded-xl"
-                />
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </Layout>
   );
 }
-
 export default Team;
