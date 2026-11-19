@@ -1,8 +1,11 @@
 import React from "react";
 import Link from "@docusaurus/Link";
+import { useBaseUrlUtils } from "@docusaurus/useBaseUrl";
 import { PROJECTS, ALL_PROJECTS_LINK } from "./homeData";
 
 export default function ProjectShowcase() {
+  const { withBaseUrl } = useBaseUrlUtils();
+
   return (
     <section
       aria-label="Featured projects"
@@ -37,7 +40,7 @@ export default function ProjectShowcase() {
             >
               <div className="h-40 overflow-hidden bg-[#e1eee4] sm:h-48 dark:bg-[#1c2a22]">
                 <img
-                  src={project.image}
+                  src={withBaseUrl(project.image)}
                   alt={project.name}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
