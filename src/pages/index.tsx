@@ -53,7 +53,7 @@ export default function Home(): JSX.Element {
     const {siteConfig} = useDocusaurusContext();
     return (
         <Layout
-            description="Electrium Mobility!!!!"> {/*Description will go into a meta tag in <head /> */}
+            description="Electrium Mobility is a student design team at the University of Waterloo. Our goal is to create sustainable and affordable Personal Electric Vehicles."> {/*Description will go into a meta tag in <head /> */}
             <HomepageHeader />
             <main>
                 <HomePageIntro />

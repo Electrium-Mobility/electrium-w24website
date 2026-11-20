@@ -5,7 +5,7 @@ import tailwindPlugin from "./plugins/tailwind-config.cjs"; // add this
 
 const config: Config = {
   title: 'Electrium Mobility',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Building Sustainable, Affordable Transportation',
   favicon: 'img/favicon.png',
 
   // Set the production url of your site here
@@ -77,8 +77,8 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
 
-    // Replace with your project's social card
-    //image: 'img/docusaurus-social-card.jpg',
+    //  your project's social card
+    image: 'img/social-card.png',
     navbar: {
       title: '',
       logo: {
